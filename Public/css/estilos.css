@@ -1,0 +1,18 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+.titulo {
+  background-color: #a7c686;
+  text-align: center;
+  margin: 0;
+  padding: auto;
+}
+
+/* 
+Paleta de cores do projeto:
+.color1 { #3c515d }
+.color2 { #3d6868 }
+.color3 { #40957f }
+.color4 { #a7c686 }
+.color5 { #fcee8c } 
+*/
