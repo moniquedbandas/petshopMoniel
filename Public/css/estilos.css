@@ -1,11 +1,17 @@
 body {
   font-family: "Nunito", sans-serif;
 }
+
+.areaTitulo{
+  
+}
+
 .titulo {
   background-color: #a7c686;
   text-align: center;
   margin: 0;
   padding: auto;
+  height: 50px;
 }
 
 /* 
@@ -16,3 +22,12 @@ Paleta de cores do projeto:
 .color4 { #a7c686 }
 .color5 { #fcee8c } 
 */
+
+
+/* CSS DO HEADER */
+
+.areaLogoLogin {
+  background-color: aliceblue;
+}
+
+/* FIM DO CSS DO HEADER */
