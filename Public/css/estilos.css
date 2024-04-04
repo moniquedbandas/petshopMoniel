@@ -1,19 +1,47 @@
 body {
   font-family: "Nunito", sans-serif;
-}
-
-.areaTitulo{
-  
-}
-
-.titulo {
-  background-color: #a7c686;
-  text-align: center;
   margin: 0;
-  padding: auto;
-  height: 50px;
+  padding: 0;
 }
 
+.areaTitulo {
+  position: fixed;
+  width: 100%;
+  background-color: #40957e5e;
+  text-align: center;
+  z-index: 1000;
+}
+.areaLogos {
+  /* background-color: #a7c6865d; */
+  text-align: center;
+  padding-top: 60px;
+}
+.areaLogo {
+  display: block;
+  text-align: center;
+}
+.patinha {
+  padding-top: 15px;
+  padding-left: 50px;
+}
+.areaLogin {
+  float: right;
+  padding-top: 35px;
+  padding-right: 20px;
+}
+
+.menuHeader {
+  text-align: center;
+  background-color: #a7c6865d;
+}
+.menuHeader a {
+  text-decoration: none;
+  color: black;
+  margin: 0 20px;
+}
+.menuHeader a:hover {
+  color: none;
+}
 /* 
 Paleta de cores do projeto:
 .color1 { #3c515d }
@@ -22,12 +50,3 @@ Paleta de cores do projeto:
 .color4 { #a7c686 }
 .color5 { #fcee8c } 
 */
-
-
-/* CSS DO HEADER */
-
-.areaLogoLogin {
-  background-color: aliceblue;
-}
-
-/* FIM DO CSS DO HEADER */

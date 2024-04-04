@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Public/css/estilosLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
+    <title>PETSHOP MONIEL</title>
+</head>
+
+<body>
+    <header>
+        <div class="areaTitulo">
+            <h2 class="titulo">Petshop Moniel</h2>
+        </div>
+        <div class="areaLogos">
+            <div class="areaLogo">
+                <a href="../../index.html" title="Petshop Moniel">
+                    <img src="../../Public/imagens/iconePet.png" alt="Petshop Moniel" class="patinha">
+                </a>
+            </div>
+        </div>
+        <nav class="menuHeader">
+            <h3>Área de login</h3>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="telaLogin">
+            <h3 class="boas-vindas">Welcome</h3>
+            <form action="../../App/controller/Processamento/ProcessarUsuario.php" method="post">
+                <label for="username">E-mail: </label>
+                <br>
+                <input type="text" id="email" name="email" autocomplete="off" placeholder="Informe seu e-mail"><br><br>
+                <label for="password">Senha: </label>
+                <br>
+                <input type="password" id="password" name="password" autocomplete="off"
+                    placeholder="Senha de 5 a 10 caracteres">
+                <br>
+                <input type="hidden" id="op" name="op">
+                <div class="areaBotoes">
+                    <input type="submit" name="signin" value="SIGN IN"
+                        onclick="document.getElementById('op').value='autenticar'">
+                    <P>Precisa de uma conta?</P>
+                    <input type="submit" name="signup" value="SIGN UP"
+                        onclick="document.getElementById('op').value='criarTela'">
+            </form>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
