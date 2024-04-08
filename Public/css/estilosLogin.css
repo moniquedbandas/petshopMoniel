@@ -46,9 +46,19 @@ body {
   border: 5px solid;
   border-radius: 20px;
   border-color: #40957e5e;
-  margin: 2rem 48rem;
+  margin: 2rem 50rem;
   width: 12.5rem;
   height: 25rem;
+  padding: 4rem;
+}
+
+.telaCadastro {
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #40957e5e;
+  margin: 1rem 50rem;
+  width: 12.5rem;
+  height: 32rem;
   padding: 4rem;
 }
 input[type="text"],
@@ -66,7 +76,7 @@ input:focus {
 input[type="submit"] {
   border-radius: 5px;
   width: 100px;
-  height: 25px;
+  height: 35px;
   border: none;
   cursor: pointer;
   background-color: #3d686873;

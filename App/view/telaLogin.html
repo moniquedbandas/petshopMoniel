@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Public/css/estilosLogin.css">
+    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
     <title>PETSHOP MONIEL</title>
 </head>
@@ -32,7 +34,7 @@
         <div class="telaLogin">
             <h3 class="boas-vindas">Welcome</h3>
             <form action="../../App/controller/Processamento/ProcessarUsuario.php" method="post">
-                <label for="username">E-mail: </label>
+                <label for="email">E-mail: </label>
                 <br>
                 <input type="text" id="email" name="email" autocomplete="off" placeholder="Informe seu e-mail"><br><br>
                 <label for="password">Senha: </label>
@@ -42,11 +44,12 @@
                 <br>
                 <input type="hidden" id="op" name="op">
                 <div class="areaBotoes">
-                    <input type="submit" name="signin" value="SIGN IN"
+                    <input type="submit" name="signin" value="Entrar"
                         onclick="document.getElementById('op').value='autenticar'">
                     <P>Precisa de uma conta?</P>
-                    <input type="submit" name="signup" value="SIGN UP"
+                    <input type="submit" name="signup" value="Criar"
                         onclick="document.getElementById('op').value='criarTela'">
+                </div>
             </form>
         </div>
 
