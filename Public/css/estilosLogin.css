@@ -1,5 +1,7 @@
 body {
   font-family: "Nunito", sans-serif;
+  background-image: url("../imagens/fundo.png");
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -46,7 +48,8 @@ body {
   border: 5px solid;
   border-radius: 20px;
   border-color: #40957e5e;
-  margin: 2rem 50rem;
+  /* margin: 1rem 50rem;  */
+  margin: 2rem 55rem;
   width: 12.5rem;
   height: 25rem;
   padding: 4rem;
@@ -56,9 +59,10 @@ body {
   border: 5px solid;
   border-radius: 20px;
   border-color: #40957e5e;
-  margin: 1rem 50rem;
+  /* margin: 1rem 50rem;  */
+  margin: 2rem 55rem;
   width: 12.5rem;
-  height: 32rem;
+  height: 35rem;
   padding: 4rem;
 }
 input[type="text"],
