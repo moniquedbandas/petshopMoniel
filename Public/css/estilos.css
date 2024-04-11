@@ -36,6 +36,10 @@ body {
   text-align: center;
   background-color: #a7c6865d;
 }
+.menuHeader li {
+  margin-right: 8px;
+  display: inline;
+}
 .menuHeader a {
   text-decoration: none;
   color: black;
@@ -43,6 +47,22 @@ body {
 }
 .menuHeader a:hover {
   color: none;
+}
+
+.informacoes {
+  text-align: center;
+  margin-left: 80px;
+}
+.informacoes ul {
+  padding: 0 20px;
+  list-style-type: none;
+}
+.informacoes li {
+  display: inline;
+  margin: 10px;
+}
+.direitos {
+  text-align: center;
 }
 /* 
 Paleta de cores do projeto:
