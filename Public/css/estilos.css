@@ -5,40 +5,40 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.areaHeader {
+  top: 0;
+}
 .areaTitulo {
   position: fixed;
   width: 100%;
   background-color: #40957e5e;
   text-align: center;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 .areaLogos {
   /* background-color: #a7c6865d; */
   text-align: center;
-  padding-top: 60px;
+  padding-top: 72px;
 }
-.areaLogo {
-  display: block;
-  text-align: center;
-}
+
 .patinha {
   padding-top: 15px;
   padding-left: 50px;
 }
 .areaLogin {
   float: right;
-  padding-top: 35px;
-  padding-right: 20px;
+  padding-top: 36px;
+  padding-right: 50px;
 }
 
 .menuHeader {
+  padding-top: 1px;
   text-align: center;
   background-color: #a7c6865d;
 }
 .menuHeader li {
-  margin-right: 8px;
   display: inline;
+  list-style-type: none;
 }
 .menuHeader a {
   text-decoration: none;
@@ -47,21 +47,22 @@ body {
 }
 .menuHeader a:hover {
   color: none;
+  background-color: rgba(106, 156, 156, 0.37);
 }
 
 .informacoes {
   text-align: center;
-  margin-left: 80px;
+  margin: auto 80px;
 }
 .informacoes ul {
-  padding: 0 20px;
   list-style-type: none;
 }
 .informacoes li {
   display: inline;
-  margin: 10px;
+  margin: auto 10px;
 }
 .direitos {
+  margin: auto;
   text-align: center;
 }
 /* 
