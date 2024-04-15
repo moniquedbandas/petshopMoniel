@@ -6,7 +6,9 @@ body {
   padding: 0;
 }
 .areaHeader {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
 }
 .areaTitulo {
   position: fixed;
@@ -15,7 +17,6 @@ body {
   text-align: center;
 }
 .areaLogos {
-  /* background-color: #a7c6865d; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -30,7 +31,6 @@ body {
 }
 
 .menuHeader ul {
-  /* padding-top: 1px; */
   display: flex;
   justify-content: center;
   align-items: center;
