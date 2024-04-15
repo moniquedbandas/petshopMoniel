@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="areaHeader">
         <div class="areaTitulo">
             <h2 class="titulo">Petshop Moniel</h2>
         </div>
@@ -24,7 +24,9 @@
             </div>
         </div>
         <nav class="menuHeader">
-            <h3>Área de cadastro</h3>
+            <ul>
+                <li><strong>Área de cadastro usuário</strong></li>
+            </ul>
         </nav>
 
     </header>
