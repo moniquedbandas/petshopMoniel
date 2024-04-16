@@ -38,7 +38,7 @@
             <form action="../../controller/Processamento/ProcessarUsuario.php" method="post">
                 <label for="nome">Nome: </label>
                 <br>
-                <input type="text" id="nome" name="email" autocomplete="off"><br><br>
+                <input type="text" id="nome" name="nome" autocomplete="off"><br><br>
                 <label for="tel">Telefone: </label>
                 <br>
                 <input type="text" id="tel" name="tel" autocomplete="off"><br><br>
