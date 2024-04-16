@@ -1,5 +1,7 @@
 <?php 
+       
     class UsuarioDAO {
+
 
         public function cadastrarUsuario(Usuario $usuario){
             include_once 'Conexao.php';
@@ -23,6 +25,25 @@
             }
             
         }
+
+        public function logarUsuario(Usuario $usuario) {
+            include_once 'Conexao.php';
+            $conex = new Conexao();
+            $conex->fazConexao();
+            $sql = "SELECT * FROM usuario WHERE email='$username' AND senha='$password'";
+            $result = $conn->query($sql);
+
+            // Verifica se encontrou um registro correspondente
+            if ($result->num_rows == 1) {
+                // Login bem sucedido, redireciona para a página menuAdmin.html
+                header("Location: ");
+                exit();
+            } 
+
+        }
+
+
     }
 
+$conn->close();
 ?>
