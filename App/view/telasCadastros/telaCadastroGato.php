@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../../Public/css/estilosLogin.css">
+    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
+    <title>PETSHOP MONIEL</title>
 </head>
 
 <body>
@@ -39,10 +43,10 @@
                 <input type="text" id="nome" name="nome" autocomplete="off"><br><br>
                 <label for="idade">Idade: </label>
                 <br>
-                <input type="number" id="idade" name="idade" autocomplete="off"><br><br>
+                <input type="text" id="idade" name="idade" autocomplete="off"><br><br>
                 <label for="peso">Peso: </label>
                 <br>
-                <input type="number" id="peso" name="peso" autocomplete="off"><br><br>
+                <input type="text" id="peso" name="peso" autocomplete="off"><br><br>
                 <label for="sexo">Sexo: </label>
                 <br>
                 <input type="text" id="sexo" name="sexo" autocomplete="off"><br><br>
