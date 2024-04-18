@@ -42,7 +42,7 @@
                     <h3>Welcome</h3>
                 </div>
                 <div class="formLogin">
-                    <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarUsuario.php"
+                    <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarCliente.php"
                         method="post">
                         <label for="email">E-mail: </label>
                         <br>
@@ -55,10 +55,10 @@
                         <br>
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
-                            <input type="submit" name="signin" value="Entrar"
+                            <input type="submit" name="entrar" value="Entrar"
                                 onclick="document.getElementById('op').value='autenticar'">
                             <P>Precisa de uma conta?</P>
-                            <input type="submit" name="signup" value="Criar"
+                            <input type="submit" name="criar" value="Criar"
                                 onclick="document.getElementById('op').value='criarTela'">
                         </div>
                     </form>
