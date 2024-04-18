@@ -23,6 +23,9 @@
         case "autenticar":
             autenticar();
             break;
+        case "telaBoasVindas":
+            telaBoasVindas();
+            break;
         default:
             echo "Erro no processamento das requisições.";
     }
@@ -37,6 +40,11 @@
 
     function autenticar()
     {
+    }
+
+    function telaBoasVindas()
+    {
+        echo "<script>location.href='../../view/telasCadastros/telaEscolherCadastro.php';</script>";
     }
     ?>
 </body>
