@@ -6,64 +6,72 @@ body {
   padding: 0;
 }
 
+/* parte do header */
+.areaHeader {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
 .areaTitulo {
-  position: fixed;
-  width: 100%;
-  background-color: #40957e5e;
-  text-align: center;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-color: #287e675e;
 }
 .areaLogos {
-  /* background-color: #a7c6865d; */
-  text-align: center;
-  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
 }
-.areaLogo {
-  display: block;
-  text-align: center;
+.menuHeader ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #a7c6865d;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-.patinha {
-  padding-top: 15px;
+
+/* parte do main agora */
+main {
+  display: flex;
+  justify-content: center;
 }
 .areaLogin {
-  float: right;
-  padding-top: 35px;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
-
-.menuHeader {
-  text-align: center;
-  background-color: #a7c6865d;
+.tituloForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
-.menuHeader a {
-  text-decoration: none;
-  color: black;
-  margin: 0 20px;
-}
-
-.boas-vindas {
+.tituloForm h3 {
+  margin: 10px;
   text-align: center;
 }
 .telaLogin {
+  display: flex;
+  flex-direction: column;
   border: 5px solid;
   border-radius: 20px;
   border-color: #40957e5e;
-  /* margin: 1rem 50rem;  */
-  margin: 2rem 55rem;
-  width: 12.5rem;
-  height: 25rem;
-  padding: 4rem;
+  width: 320px;
 }
 
-.telaCadastro {
-  border: 5px solid;
-  border-radius: 20px;
-  border-color: #40957e5e;
-  /* margin: 1rem 50rem;  */
-  margin: 2rem 55rem;
-  width: 12.5rem;
-  height: 35rem;
-  padding: 4rem;
+/* partes do formulario aqui */
+.formularioLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 57px;
 }
 input[type="text"],
 input[type="password"] {
@@ -74,18 +82,52 @@ input[type="password"] {
   outline: none;
 }
 input:focus {
-  border: 1px solid #413e4a;
+  border: 1px solid #5d5966;
+  opacity: 0.7;
   box-shadow: 0 0 5px#413e4a;
 }
 input[type="submit"] {
   border-radius: 5px;
   width: 100px;
-  height: 35px;
+  height: 25px;
   border: none;
   cursor: pointer;
   background-color: #3d686873;
 }
 .areaBotoes {
   text-align: center;
-  padding: 2.5rem;
+  margin: 35px 0;
+}
+
+/* área do footer aqui */
+.linhaFooter {
+  border-bottom: 2px dashed #a7c686;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+.informacoes {
+  display: flex;
+  justify-content: center;
+}
+.informacoes ul {
+  display: inline-flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 10px;
+  padding: 0;
+}
+.direitos {
+  margin: 0;
+  text-align: center;
+}
+
+.telaCadastro {
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #40957e5e;
+  margin: 1rem 50rem;
+  /* margin: 2rem 55rem; */
+  width: 12.5rem;
+  height: 35rem;
+  padding: 4rem;
 }

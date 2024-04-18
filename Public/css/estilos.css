@@ -1,72 +1,74 @@
 body {
-  /* font-family: "Nunito", sans-serif; */
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Nunito", sans-serif;
   background-image: url("../imagens/fundo.png");
   background-size: cover;
   margin: 0;
   padding: 0;
 }
+
+/* parte do header */
 .areaHeader {
-  top: 0;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
 }
 .areaTitulo {
-  position: fixed;
-  width: 100%;
-  background-color: #40957e5e;
-  text-align: center;
-  /* z-index: 1000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-color: #287e675e;
 }
 .areaLogos {
-  /* background-color: #a7c6865d; */
-  text-align: center;
-  padding-top: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+  position: relative;
 }
-
-.patinha {
-  padding-top: 15px;
-  padding-left: 50px;
+.iconeLogin {
+  position: absolute;
+  right: 50px;
 }
-.areaLogin {
-  float: right;
-  padding-top: 36px;
-  padding-right: 50px;
-}
-
-.menuHeader {
-  padding-top: 1px;
-  text-align: center;
+.menuHeader ul {
+  display: flex;
+  justify-content: center;
   background-color: #a7c6865d;
-}
-.menuHeader li {
-  display: inline;
+  margin: 0;
+  padding: 0;
+  gap: 55px;
   list-style-type: none;
 }
 .menuHeader a {
   text-decoration: none;
   color: black;
-  margin: 0 20px;
 }
 .menuHeader a:hover {
   color: none;
   background-color: rgba(106, 156, 156, 0.37);
+  border-radius: 4px;
+}
+
+/* área do footer aqui */
+.linhaFooter {
+  border-bottom: 2px dashed #a7c686;
+  padding-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .informacoes {
-  text-align: center;
-  margin: auto 80px;
+  display: flex;
+  justify-content: center;
 }
 .informacoes ul {
+  display: inline-flex;
+  justify-content: space-between;
   list-style-type: none;
-}
-.informacoes li {
-  display: inline;
-  margin: auto 10px;
+  gap: 10px;
+  padding: 0;
 }
 .direitos {
-  margin: auto;
+  margin: 0;
   text-align: center;
 }
 /* 
