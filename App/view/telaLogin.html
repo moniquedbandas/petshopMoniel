@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/css/estilosLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="../../Public/css/estilosLogin.css">
     <title>PETSHOP MONIEL</title>
 </head>
 
 <body>
     <header class="areaHeader">
         <div class="areaTitulo">
-            <h2 class="titulo">Petshop Moniel</h2>
+            <h3>Petshop Moniel</h3>
         </div>
         <div class="areaLogos">
             <div class="areaLogo">
@@ -32,31 +36,71 @@
     </header>
 
     <main>
-
-        <div class="telaLogin">
-            <h3 class="boas-vindas">Welcome</h3>
-            <form action="../../App/controller/Processamento/ProcessarUsuario.php" method="post">
-                <label for="email">E-mail: </label>
-                <br>
-                <input type="text" id="email" name="email" autocomplete="off" placeholder="Informe seu e-mail"><br><br>
-                <label for="password">Senha: </label>
-                <br>
-                <input type="password" id="password" name="password" autocomplete="off"
-                    placeholder="Senha de 5 a 10 caracteres">
-                <br>
-                <input type="hidden" id="op" name="op">
-                <div class="areaBotoes">
-                    <input type="submit" name="signin" value="Entrar"
-                        onclick="document.getElementById('op').value='autenticar'">
-                    <P>Precisa de uma conta?</P>
-                    <input type="submit" name="signup" value="Criar"
-                        onclick="document.getElementById('op').value='criarTela'">
+        <div class="areaLogin">
+            <div class="telaLogin">
+                <div class="tituloForm">
+                    <h3>Welcome</h3>
                 </div>
-            </form>
+                <div class="formLogin">
+                    <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarUsuario.php"
+                        method="post">
+                        <label for="email">E-mail: </label>
+                        <br>
+                        <input type="text" id="email" name="email" autocomplete="off"
+                            placeholder="Informe seu e-mail"><br><br>
+                        <label for="password">Senha: </label>
+                        <br>
+                        <input type="password" id="password" name="password" autocomplete="off"
+                            placeholder="Senha de 5 a 10 caracteres">
+                        <br>
+                        <input type="hidden" id="op" name="op">
+                        <div class="areaBotoes">
+                            <input type="submit" name="signin" value="Entrar"
+                                onclick="document.getElementById('op').value='autenticar'">
+                            <P>Precisa de uma conta?</P>
+                            <input type="submit" name="signup" value="Criar"
+                                onclick="document.getElementById('op').value='criarTela'">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
     </main>
 
+    <div id="js-heightControl" style="height: 0;">&nbsp;</div>
+    <div class="linhaFooter"></div>
+    <footer class="footerIndex">
+
+        <section class="informacoes">
+            <ul class="lista-info">
+                <li class="info-redes">
+                    <a href="https:/www.facebook.com/monique.bandas/" target="_blank">
+                        <i class="fab fa-facebook" style="font-size: 20px; color: blue;"></i>
+                    </a>
+                </li>
+                <li class="info-redes">
+                    <a href="https:/www.instagram.com/moniquebandas/" target="_blank">
+                        <i class="fab fa-instagram" style="font-size: 20px; color: violet;"></i>
+                    </a>
+                </li>
+                <li class="info-redes">
+                    <a href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp" style="font-size: 20px; color: green;"></i>
+                    </a>
+                </li>
+                <li class="info-redes">
+                    <a href="mailto:moniquedbandas@gmail.com?cc=xxhereistandxx@hotmail.com">
+                        <i class="fas fa-envelope" style="font-size: 20px; color: blueviolet"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <p class="direitos"><b>&copy;2024 Petshop Moniel. All rights reserved</b></p>
+    </footer>
+
+    <script src="../../Public/JS/script.js"></script>
 </body>
 
 </html>

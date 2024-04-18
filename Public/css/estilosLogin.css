@@ -5,24 +5,26 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* parte do header */
 .areaHeader {
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
 }
 .areaTitulo {
-  position: fixed;
-  width: 100%;
-  background-color: #40957e5e;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-color: #287e675e;
 }
 .areaLogos {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 85px;
+  margin-top: 6px;
 }
-
 .menuHeader ul {
   display: flex;
   justify-content: center;
@@ -33,18 +35,90 @@ body {
   padding: 0;
   list-style-type: none;
 }
-.boas-vindas {
+
+/* parte do main agora */
+main {
+  display: flex;
+  justify-content: center;
+}
+.areaLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.tituloForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.tituloForm h3 {
+  margin: 10px;
   text-align: center;
 }
 .telaLogin {
+  display: flex;
+  flex-direction: column;
   border: 5px solid;
   border-radius: 20px;
   border-color: #40957e5e;
-  margin: 1rem 50rem;
-  /* margin: 2rem 55rem; */
-  width: 12.5rem;
-  height: 25rem;
-  padding: 4rem;
+  width: 320px;
+}
+
+/* partes do formulario aqui */
+.formularioLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 57px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+}
+input:focus {
+  border: 1px solid #5d5966;
+  opacity: 0.7;
+  box-shadow: 0 0 5px#413e4a;
+}
+input[type="submit"] {
+  border-radius: 5px;
+  width: 100px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #3d686873;
+}
+.areaBotoes {
+  text-align: center;
+  margin: 35px 0;
+}
+
+/* área do footer aqui */
+.linhaFooter {
+  border-bottom: 2px dashed #a7c686;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+.informacoes {
+  display: flex;
+  justify-content: center;
+}
+.informacoes ul {
+  display: inline-flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 10px;
+  padding: 0;
+}
+.direitos {
+  margin: 0;
+  text-align: center;
 }
 
 .telaCadastro {
@@ -56,28 +130,4 @@ body {
   width: 12.5rem;
   height: 35rem;
   padding: 4rem;
-}
-input[type="text"],
-input[type="password"] {
-  width: 200px;
-  height: 25px;
-  border-radius: 5px;
-  border: 1px solid;
-  outline: none;
-}
-input:focus {
-  border: 1px solid #413e4a;
-  box-shadow: 0 0 5px#413e4a;
-}
-input[type="submit"] {
-  border-radius: 5px;
-  width: 100px;
-  height: 35px;
-  border: none;
-  cursor: pointer;
-  background-color: #3d686873;
-}
-.areaBotoes {
-  text-align: center;
-  padding: 2.5rem;
 }
