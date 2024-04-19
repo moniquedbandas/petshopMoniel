@@ -11,58 +11,48 @@
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="../../Public/css/estilosLogin.css">
+    <!-- <link rel="stylesheet" href="../../../Public/css/estilosLogin.css"> -->
+    <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>PETSHOP MONIEL</title>
 </head>
 
 <body>
     <header class="areaHeader">
         <div class="areaTitulo">
-            <h3>Petshop Moniel</h3>
+            <h2 class="titulo">Petshop Moniel</h2>
         </div>
         <div class="areaLogos">
             <div class="areaLogo">
-                <a href="../../index.html" title="Petshop Moniel">
-                    <img src="../../Public/imagens/iconePet.png" alt="Petshop Moniel" class="patinha">
+                <a href="../../../index.html" title="Petshop Moniel">
+                    <img src="../../../Public/imagens/iconePet.png" alt="Petshop Moniel" class="patinha">
                 </a>
             </div>
         </div>
         <nav class="menuHeader">
             <ul>
-                <li><strong>Área de login</strong></li>
+                <li><strong>Área de cadastro</strong></li>
             </ul>
         </nav>
 
     </header>
 
     <main>
-        <div class="areaLogin">
-            <div class="telaLogin">
-                <div class="tituloForm">
-                    <h3>Welcome</h3>
+        <div class="areaEscolha">
+
+            <div class="tituloEscolha">
+                <h2>O que deseja cadastrar?</h2>
+            </div>
+
+            <div class="escolha">
+                <div class="opcao">
+                    <input type="radio" id="cachorro" name="animal" value="Cachorro">
+                    <label for="cachorro">Cachorro</label><br>
                 </div>
-                <div class="formLogin">
-                    <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarCliente.php"
-                        method="post">
-                        <label for="email">E-mail: </label>
-                        <br>
-                        <input type="text" id="email" name="email" autocomplete="off"
-                            placeholder="Informe seu e-mail"><br><br>
-                        <label for="password">Senha: </label>
-                        <br>
-                        <input type="password" id="password" name="password" autocomplete="off"
-                            placeholder="Senha de 5 a 10 caracteres">
-                        <br>
-                        <input type="hidden" id="op" name="op">
-                        <div class="areaBotoes">
-                            <input type="submit" name="entrar" value="Entrar"
-                                onclick="document.getElementById('op').value='autenticar'">
-                            <P>Precisa de uma conta?</P>
-                            <input type="submit" name="criar" value="Criar"
-                                onclick="document.getElementById('op').value='criarTela'">
-                        </div>
-                    </form>
+                <div class="opcao">
+                    <input type="radio" id="gato" name="animal" value="Gato">
+                    <label for="gato">Gato</label><br><br>
                 </div>
+                <input type="submit" value="Selecionar">
             </div>
         </div>
     </main>
@@ -84,8 +74,7 @@
                     </a>
                 </li>
                 <li class="info-redes">
-                    <a href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank"
-                        rel="noopener noreferrer">
+                    <a href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp" style="font-size: 20px; color: green;"></i>
                     </a>
                 </li>
@@ -100,7 +89,8 @@
         <p class="direitos"><b>&copy;2024 Petshop Moniel. All rights reserved</b></p>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
+
 </body>
 
 </html>
