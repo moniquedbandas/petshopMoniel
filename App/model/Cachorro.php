@@ -6,9 +6,9 @@ class Cachorro extends Animal
     protected $idCachorro;
     protected $porte;
 
-    public function __construct($idCachorro, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte)
+    public function __construct($idCachorro, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente)
     {
-        parent::__construct($nomePet, $idade, $peso, $sexo, $raca, $castrado);
+        parent::__construct($nomePet, $idade, $peso, $sexo, $raca, $castrado, $idCliente);
         $this->idCachorro = $idCachorro;
         $this->porte = $porte;
     }

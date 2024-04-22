@@ -9,8 +9,9 @@ class Animal
     protected $sexo;
     protected $raca;
     protected $castrado;
+    protected $idCliente;
 
-    public function __construct($nomePet, $idade, $peso, $sexo, $raca, $castrado)
+    public function __construct($nomePet, $idade, $peso, $sexo, $raca, $castrado, $idCliente)
     {
 
         $this->nomePet = $nomePet;
@@ -19,6 +20,7 @@ class Animal
         $this->sexo = $sexo;
         $this->raca = $raca;
         $this->castrado = $castrado;
+        $this->idCliente = $idCliente;
     }
 
     public function getNomePet()
@@ -79,5 +81,9 @@ class Animal
     public function setCastrado($value)
     {
         $this->castrado = $value;
+    }
+    public function getIdCliente()
+    {
+        return $this->idCliente;
     }
 }

@@ -7,9 +7,9 @@ class Gato extends Animal
     protected $idGato;
     protected $temperamento;
 
-    public function __construct($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento)
+    public function __construct($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente)
     {
-        parent::__construct($nomePet, $idade, $peso, $sexo, $raca, $castrado);
+        parent::__construct($nomePet, $idade, $peso, $sexo, $raca, $castrado, $idCliente);
         $this->idGato = $idGato;
         $this->temperamento = $temperamento;
     }

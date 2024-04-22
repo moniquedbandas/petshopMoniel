@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Public/css/estilosLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
-    <title>PETSHOP MONIEL</title>
+    <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
 </head>
 
 <body>
@@ -25,17 +28,23 @@
             </div>
         </div>
         <nav class="menuHeader">
-            <h3>Área de cadastro</h3>
+            <ul>
+                <li><strong>Área de cadastro cachorro</strong></li>
+            </ul>
         </nav>
 
     </header>
 
-    <main>
+    <main class="cadastro">
+        <div class="areaCadastro">
 
-        <div class="telaCadastro">
-            <h3 class="boas-vindas">Área cadastro de cachorro</h3>
+            <div class="tituloFormCad">
+                <h3>Bem vindo</h3>
+            </div>
+
             <form action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <label for="id">ID do Tutor: </label>
+                <br>
                 <input type="text" id="id" name="id" autocomplete="off" required><br><br>
                 <label for="nome">Nome do pet: </label>
                 <br>
@@ -60,7 +69,7 @@
                 <input type="text" id="porte" name="porte" autocomplete="off"><br><br>
 
                 <input type="hidden" id="oc" name="oc">
-                <div class="areaBotoes">
+                <div class="areaBotoes2">
                     <input type="hidden" name="oc" value="criarCachorro">
                     <input type="submit" name="create" value="Cadastrar">
 
@@ -72,6 +81,39 @@
 
     </main>
 
+    <div id="js-heightControl" style="height: 0;">&nbsp;</div>
+    <div class="linhaFooter"></div>
+    <footer class="footerIndex">
+
+        <section class="informacoes">
+            <ul class="lista-info">
+                <li class="info-redes">
+                    <a href="https:/www.facebook.com/monique.bandas/" target="_blank">
+                        <i class="fab fa-facebook" style="font-size: 20px; color: blue;"></i>
+                    </a>
+                </li>
+                <li class="info-redes">
+                    <a href="https:/www.instagram.com/moniquebandas/" target="_blank">
+                        <i class="fab fa-instagram" style="font-size: 20px; color: violet;"></i>
+                    </a>
+                </li>
+                <li class="info-redes">
+                    <a href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp" style="font-size: 20px; color: green;"></i>
+                    </a>
+                </li>
+                <li class="info-redes">
+                    <a href="mailto:moniquedbandas@gmail.com?cc=xxhereistandxx@hotmail.com">
+                        <i class="fas fa-envelope" style="font-size: 20px; color: blueviolet"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <p class="direitos"><b>&copy;2024 Petshop Moniel. All rights reserved</b></p>
+    </footer>
+
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

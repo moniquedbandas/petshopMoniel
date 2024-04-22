@@ -36,8 +36,8 @@ body {
   list-style-type: none;
 }
 
-/* parte do main agora */
-main {
+/* parte do main da tela de escolher oq cadastrar agora */
+.escolherCadastro {
   margin-top: 100px;
   display: flex;
   justify-content: center;
@@ -69,6 +69,68 @@ main {
 /* .escolha input[type="radio"] {
     ainda nao decidi o que fazer aqui.
 } */
+input[type="submit"] {
+  /* margin-top: 20px; */
+  border-radius: 5px;
+  width: 100px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #3d686873;
+}
+.cadastro {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.areaCadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #40957e5e;
+  padding: 0 40px;
+}
+.tituloFormCad {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.tituloFormCad h3 {
+  margin: auto;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #40957f;
+  outline: none;
+  margin-top: 5px;
+}
+input:focus {
+  border: 1px solid #3d6868;
+  box-shadow: 0 0 5px#40957e5e;
+}
+.areaBotoes {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.areaBotoes2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 15px;
+}
+.areaBotoes3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 15px;
+}
 
 /* área do footer aqui */
 .linhaFooter {
