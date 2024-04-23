@@ -1,9 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Nunito", sans-serif;
   background-image: url("../imagens/fundo.png");
   background-size: cover;
-  margin: 0;
-  padding: 0;
 }
 
 /* parte do header */
@@ -78,8 +80,9 @@ input[type="submit"] {
   cursor: pointer;
   background-color: #3d686873;
 }
+
 .cadastro {
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -92,15 +95,34 @@ input[type="submit"] {
   border-color: #40957e5e;
   padding: 0 40px;
 }
-.tituloFormCad {
+/* .tituloFormCad {
   display: flex;
   align-items: center;
   height: 45px;
-}
-.tituloFormCad h3 {
+} */
+/* .tituloFormCad h3 {
   margin: auto;
+} */
+fieldset {
+  border: none;
 }
-
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+fieldset legend {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  padding-top: 10px;
+  border-bottom: 1px solid #3c515d71;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* height: 50px; */
+}
 input[type="text"],
 input[type="password"] {
   width: 200px;
@@ -133,6 +155,10 @@ input:focus {
 }
 
 /* área do footer aqui */
+
+footer {
+  background-color: rgba(60, 89, 93, 0.349);
+}
 .linhaFooter {
   border-bottom: 2px dashed #a7c686;
   padding-bottom: 10px;

@@ -38,44 +38,54 @@
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <div class="tituloFormCad">
-                <h3>Bem vindo</h3>
-            </div>
-
             <form action="../../controller/Processamento/ProcessarCachorro.php" method="post">
-                <label for="id">ID do Tutor: </label>
-                <br>
-                <input type="text" id="id" name="id" autocomplete="off" required><br><br>
-                <label for="nome">Nome do pet: </label>
-                <br>
-                <input type="text" id="nome" name="nome" autocomplete="off"><br><br>
-                <label for="idade">Idade: </label>
-                <br>
-                <input type="text" id="idade" name="idade" autocomplete="off"><br><br>
-                <label for="peso">Peso: </label>
-                <br>
-                <input type="text" id="peso" name="peso" autocomplete="off"><br><br>
-                <label for="sexo">Sexo: </label>
-                <br>
-                <input type="text" id="sexo" name="sexo" autocomplete="off"><br><br>
-                <label for="raca">Raça: </label>
-                <br>
-                <input type="text" id="raca" name="raca" autocomplete="off"><br><br>
-                <label for="castrado">Castrado: </label>
-                <br>
-                <input type="text" id="castrado" name="castrado" autocomplete="off"><br><br>
-                <label for="porte">Porte: </label>
-                <br>
-                <input type="text" id="porte" name="porte" autocomplete="off"><br><br>
+                <fieldset>
+                    <legend><strong>Bem vindo</strong></legend>
 
-                <input type="hidden" id="oc" name="oc">
-                <div class="areaBotoes2">
-                    <input type="hidden" name="oc" value="criarCachorro">
-                    <input type="submit" name="create" value="Cadastrar">
+                    <div class="fieldset-wrapper">
+                        <div class="input-wrapper">
+                            <label for="id">ID do Tutor: </label>
+                            <input type="text" id="id" name="id" autocomplete="off" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="nome">Nome do pet: </label>
+                            <input type="text" id="nome" name="nome" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="idade">Idade: </label>
+                            <input type="text" id="idade" name="idade" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="peso">Peso: </label>
+                            <input type="text" id="peso" name="peso" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="sexo">Sexo: </label>
+                            <input type="text" id="sexo" name="sexo" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="raca">Raça: </label>
+                            <input type="text" id="raca" name="raca" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="castrado">Castrado: </label>
+                            <input type="text" id="castrado" name="castrado" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="porte">Porte: </label>
+                            <input type="text" id="porte" name="porte" autocomplete="off">
+                        </div>
 
-                    <input type="hidden" name="oc" value="listarCachorro">
-                    <input type="submit" name="listar" value="Listar">
-                </div>
+                        <input type="hidden" id="oc" name="oc">
+                        <div class="areaBotoes2">
+                            <input type="hidden" name="oc" value="criarCachorro">
+                            <input type="submit" name="create" value="Cadastrar">
+
+                            <input type="hidden" name="oc" value="listarCachorro">
+                            <input type="submit" name="listar" value="Listar">
+                        </div>
+                    </div>
+                </fieldset>
             </form>
         </div>
 

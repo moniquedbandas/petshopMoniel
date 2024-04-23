@@ -35,36 +35,37 @@
 
     </header>
 
-    <main>
-        <div class="areaLogin">
-            <div class="telaLogin">
-                <div class="tituloForm">
-                    <h3>Welcome</h3>
-                </div>
-                <div class="formLogin">
-                    <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarCliente.php"
-                        method="post">
-                        <label for="email">E-mail: </label>
-                        <br>
-                        <input type="text" id="email" name="email" autocomplete="off"
-                            placeholder="Informe seu e-mail"><br><br>
-                        <label for="password">Senha: </label>
-                        <br>
-                        <input type="password" id="password" name="password" autocomplete="off"
-                            placeholder="Senha de 5 a 10 caracteres">
-                        <br>
-                        <input type="hidden" id="op" name="op">
-                        <div class="areaBotoes">
-                            <input type="submit" name="entrar" value="Entrar"
-                                onclick="document.getElementById('op').value='autenticar'">
-                            <P>Precisa de uma conta?</P>
-                            <input type="submit" name="criar" value="Criar"
-                                onclick="document.getElementById('op').value='criarTela'">
-                        </div>
-                    </form>
-                </div>
+    <main class="login">
+        <div class="telaLogin">
+
+            <div class="tituloForm">
+                <h3>Welcome</h3>
+            </div>
+
+            <div class="formLogin">
+                <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarCliente.php"
+                    method="post">
+                    <label for="email">E-mail: </label>
+                    <br>
+                    <input type="text" id="email" name="email" autocomplete="off"
+                        placeholder="Informe seu e-mail"><br><br>
+                    <label for="password">Senha: </label>
+                    <br>
+                    <input type="password" id="password" name="password" autocomplete="off"
+                        placeholder="Senha de 5 a 10 caracteres">
+                    <br>
+                    <input type="hidden" id="op" name="op">
+                    <div class="areaBotoes">
+                        <input type="submit" name="entrar" value="Entrar"
+                            onclick="document.getElementById('op').value='autenticar'">
+                        <P>Precisa de uma conta?</P>
+                        <input type="submit" name="criar" value="Criar"
+                            onclick="document.getElementById('op').value='criarTela'">
+                    </div>
+                </form>
             </div>
         </div>
+
     </main>
 
     <div id="js-heightControl" style="height: 0;">&nbsp;</div>

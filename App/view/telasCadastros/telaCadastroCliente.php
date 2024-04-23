@@ -38,35 +38,42 @@
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <div class="tituloFormCad">
-                <h3>Welcome</h3>
-            </div>
-
             <form class="formularioCadUsuario" action="../../controller/Processamento/ProcessarCliente.php" method="post">
-                <label for="nome">Nome: </label>
-                <br>
-                <input type="text" id="nome" name="nome" autocomplete="off"><br><br>
-                <label for="tel">Telefone: </label>
-                <br>
-                <input type="text" id="tel" name="tel" autocomplete="off"><br><br>
-                <label for="endereco">Endereço: </label>
-                <br>
-                <input type="text" id="endereco" name="endereco" autocomplete="off"><br><br>
-                <label for="cpf">CPF: </label>
-                <br>
-                <input type="text" id="cpf" name="cpf" autocomplete="off"><br><br>
-                <label for="email">E-mail: </label>
-                <br>
-                <input type="text" id="email" name="email" autocomplete="off"><br><br>
-                <label for="password">Senha: </label>
-                <br>
-                <input type="password" id="password" name="password" autocomplete="off">
-                <br>
-                <input type="hidden" id="op" name="op">
-                <div class="areaBotoes">
-                    <input type="hidden" name="op" value="criarUsuario">
-                    <input type="submit" name="criar" value="Criar" onclick="document.getElementById('op').value='telaBoasVindas'">
-                </div>
+                <fieldset>
+                    <legend><strong>Bem vindo</strong></legend>
+
+                    <div class="fieldset-wrapper">
+                        <div class="input-wrapper">
+                            <label for="nome">Nome: </label>
+                            <input type="text" id="nome" name="nome" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="tel">Telefone: </label>
+                            <input type="text" id="tel" name="tel" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="endereco">Endereço: </label>
+                            <input type="text" id="endereco" name="endereco" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="cpf">CPF: </label>
+                            <input type="text" id="cpf" name="cpf" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email">E-mail: </label>
+                            <input type="text" id="email" name="email" autocomplete="off">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="password">Senha: </label>
+                            <input type="password" id="password" name="password" autocomplete="off">
+                        </div>
+                        <input type="hidden" id="op" name="op">
+                        <div class="areaBotoes">
+                            <input type="hidden" name="op" value="criarUsuario">
+                            <input type="submit" name="criar" value="Criar" onclick="document.getElementById('op').value='telaBoasVindas'">
+                        </div>
+                    </div>
+                </fieldset>
             </form>
 
         </div>

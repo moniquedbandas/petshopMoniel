@@ -37,16 +37,21 @@ body {
 }
 
 /* parte do main agora */
-main {
+.login {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
-.areaLogin {
+.telaLogin {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  padding: 0 40px;
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: #40957e5e;
 }
 .tituloForm {
   display: flex;
@@ -54,32 +59,23 @@ main {
   margin-top: 5px;
 }
 .tituloForm h3 {
-  margin: 10px;
-  text-align: center;
-}
-.telaLogin {
-  display: flex;
-  flex-direction: column;
-  border: 5px solid;
-  border-radius: 20px;
-  border-color: #40957e5e;
-  width: 320px;
+  margin: auto;
 }
 
 /* partes do formulario aqui */
-.formularioLogin {
+/* .formularioLogin {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto 57px;
-}
+ } */
 input[type="text"],
 input[type="password"] {
   width: 200px;
   height: 25px;
   border-radius: 5px;
-  border: 1px solid;
+  border: 1px solid #40957f;
   outline: none;
+  margin-top: 5px;
 }
 input:focus {
   border: 1px solid #5d5966;
@@ -100,6 +96,10 @@ input[type="submit"] {
 }
 
 /* área do footer aqui */
+footer {
+  background-color: rgba(60, 89, 93, 0.349);
+}
+
 .linhaFooter {
   border-bottom: 2px dashed #a7c686;
   padding-bottom: 10px;
@@ -119,15 +119,4 @@ input[type="submit"] {
 .direitos {
   margin: 0;
   text-align: center;
-}
-
-.telaCadastro {
-  border: 5px solid;
-  border-radius: 20px;
-  border-color: #40957e5e;
-  margin: 1rem 50rem;
-  /* margin: 2rem 55rem; */
-  width: 12.5rem;
-  height: 35rem;
-  padding: 4rem;
 }

@@ -50,6 +50,10 @@ body {
 }
 
 /* área do footer aqui */
+footer {
+  background-color: rgba(60, 89, 93, 0.349);
+}
+
 .linhaFooter {
   border-bottom: 2px dashed #a7c686;
   padding-bottom: 10px;
