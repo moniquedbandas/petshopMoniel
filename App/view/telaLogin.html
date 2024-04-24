@@ -16,92 +16,91 @@
 </head>
 
 <body>
-    <header class="areaHeader">
-        <div class="areaTitulo">
-            <h3>Petshop Moniel</h3>
-        </div>
-        <div class="areaLogos">
-            <div class="areaLogo">
-                <a href="../../index.html" title="Petshop Moniel">
-                    <img src="../../Public/imagens/iconePet.png" alt="Petshop Moniel" class="patinha">
-                </a>
+    <div class="content">
+        <header class="areaHeader">
+            <div class="areaTitulo">
+                <h2>Petshop Moniel</h2>
             </div>
-        </div>
-        <nav class="menuHeader">
-            <ul>
-                <li><strong>Área de login</strong></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <main class="login">
-        <div class="telaLogin">
-
-            <div class="tituloForm">
-                <h3>Welcome</h3>
+            <div class="areaLogos">
+                <div class="areaLogo">
+                    <a href="../../index.html" title="Petshop Moniel">
+                        <img src="../../Public/imagens/iconePet.png" alt="Petshop Moniel" class="patinha">
+                    </a>
+                </div>
             </div>
+            <nav class="menuHeader">
+                <ul>
+                    <li><strong>Área de login</strong></li>
+                </ul>
+            </nav>
 
-            <div class="formLogin">
+        </header>
+
+        <main class="login">
+            <div class="telaLogin">
+
                 <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarCliente.php"
                     method="post">
-                    <label for="email">E-mail: </label>
-                    <br>
-                    <input type="text" id="email" name="email" autocomplete="off"
-                        placeholder="Informe seu e-mail"><br><br>
-                    <label for="password">Senha: </label>
-                    <br>
-                    <input type="password" id="password" name="password" autocomplete="off"
-                        placeholder="Senha de 5 a 10 caracteres">
-                    <br>
-                    <input type="hidden" id="op" name="op">
-                    <div class="areaBotoes">
-                        <input type="submit" name="entrar" value="Entrar"
-                            onclick="document.getElementById('op').value='autenticar'">
-                        <P>Precisa de uma conta?</P>
-                        <input type="submit" name="criar" value="Criar"
-                            onclick="document.getElementById('op').value='criarTela'">
-                    </div>
+                    <fieldset>
+                        <legend><strong>Bem vindo</strong></legend>
+                        <div class="fieldset-wrapper">
+                            <div class="input-wrapper">
+                                <label for="email">E-mail: </label>
+                                <input type="text" id="email" name="email" autocomplete="off"
+                                    placeholder="Informe seu e-mail">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="password">Senha: </label>
+                                <input type="password" id="password" name="password" autocomplete="off"
+                                    placeholder="Senha de 5 a 10 caracteres">
+                            </div>
+                            <input type="hidden" id="op" name="op">
+                            <div class="areaBotoes">
+                                <input type="submit" name="entrar" value="Entrar"
+                                    onclick="document.getElementById('op').value='autenticar'">
+                                <P>Precisa de uma conta?</P>
+                                <input type="submit" name="criar" value="Criar"
+                                    onclick="document.getElementById('op').value='criarTela'">
+                            </div>
+                        </div>
+                    </fieldset>
                 </form>
             </div>
-        </div>
 
-    </main>
+        </main>
 
-    <div id="js-heightControl" style="height: 0;">&nbsp;</div>
-    <div class="linhaFooter"></div>
-    <footer class="footerIndex">
+        <footer class="footerIndex">
 
-        <section class="informacoes">
-            <ul class="lista-info">
-                <li class="info-redes">
-                    <a href="https:/www.facebook.com/monique.bandas/" target="_blank">
-                        <i class="fab fa-facebook" style="font-size: 20px; color: blue;"></i>
-                    </a>
-                </li>
-                <li class="info-redes">
-                    <a href="https:/www.instagram.com/moniquebandas/" target="_blank">
-                        <i class="fab fa-instagram" style="font-size: 20px; color: violet;"></i>
-                    </a>
-                </li>
-                <li class="info-redes">
-                    <a href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp" style="font-size: 20px; color: green;"></i>
-                    </a>
-                </li>
-                <li class="info-redes">
-                    <a href="mailto:moniquedbandas@gmail.com?cc=xxhereistandxx@hotmail.com">
-                        <i class="fas fa-envelope" style="font-size: 20px; color: blueviolet"></i>
-                    </a>
-                </li>
-            </ul>
-        </section>
+            <section class="informacoes">
+                <ul class="lista-info">
+                    <li class="info-redes">
+                        <a href="https:/www.facebook.com/monique.bandas/" target="_blank">
+                            <i class="fab fa-facebook" style="font-size: 20px; color: blue;"></i>
+                        </a>
+                    </li>
+                    <li class="info-redes">
+                        <a href="https:/www.instagram.com/moniquebandas/" target="_blank">
+                            <i class="fab fa-instagram" style="font-size: 20px; color: violet;"></i>
+                        </a>
+                    </li>
+                    <li class="info-redes">
+                        <a href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" style="font-size: 20px; color: green;"></i>
+                        </a>
+                    </li>
+                    <li class="info-redes">
+                        <a href="mailto:moniquedbandas@gmail.com?cc=xxhereistandxx@hotmail.com">
+                            <i class="fas fa-envelope" style="font-size: 20px; color: blueviolet"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
 
-        <p class="direitos"><b>&copy;2024 Petshop Moniel. All rights reserved</b></p>
-    </footer>
+            <p class="direitos"><b>&copy;2024 Petshop Moniel. All rights reserved</b></p>
+        </footer>
+    </div>
 
-    <script src="../../Public/JS/script.js"></script>
 </body>
 
 </html>

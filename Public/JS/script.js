@@ -17,9 +17,9 @@ function validarFormulario() {
 }
 
 //Abaixo: script para fixar o footer na parte de baixo do navegador
-$(function () {
-  $("#js-heightControl").css(
-    "height",
-    $(window).height() - $("html").height() + "px"
-  );
-});
+// $(function () {
+//   $("#js-heightControl").css(
+//     "height",
+//     $(window).height() - $("html").height() + "px"
+//   );
+// });
