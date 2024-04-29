@@ -5,7 +5,7 @@ class Cachorro extends Animal
 {
     protected $idCachorro;
     protected $porte;
-    
+
 
     public function __construct($idCachorro, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente)
     {
@@ -14,12 +14,12 @@ class Cachorro extends Animal
         $this->porte = $porte;
     }
 
-    public function getIdCachorro()
+    public function getidCachorro()
     {
         return $this->idCachorro;
     }
 
-    public function setIdCachorro($value)
+    public function setidCachorro($value)
     {
         $this->idCachorro = $value;
     }
