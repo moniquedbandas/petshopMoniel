@@ -5,6 +5,7 @@ class Cachorro extends Animal
 {
     protected $idCachorro;
     protected $porte;
+    
 
     public function __construct($idCachorro, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente)
     {

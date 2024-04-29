@@ -2,7 +2,6 @@
 
 class Animal
 {
-
     protected $nomePet;
     protected $idade;
     protected $peso;
@@ -82,7 +81,8 @@ class Animal
     {
         $this->castrado = $value;
     }
-    public function getIdCliente()
+
+    public function getidCliente()
     {
         return $this->idCliente;
     }
