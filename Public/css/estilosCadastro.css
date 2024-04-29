@@ -67,16 +67,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 10px;
 }
 .opcao {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 /* .escolha input[type="radio"] {
     ainda nao decidi o que fazer aqui.
 } */
 input[type="submit"] {
-  /* margin-top: 20px; */
   border-radius: 5px;
   width: 100px;
   height: 25px;
@@ -119,7 +120,6 @@ fieldset legend {
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  /* height: 50px; */
 }
 input[type="text"],
 input[type="password"] {

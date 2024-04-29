@@ -7,9 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>PETSHOP MONIEL</title>
