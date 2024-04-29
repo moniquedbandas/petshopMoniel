@@ -82,7 +82,7 @@ class Animal
         $this->castrado = $value;
     }
 
-    public function getidCliente()
+    public function getIdCliente()
     {
         return $this->idCliente;
     }
