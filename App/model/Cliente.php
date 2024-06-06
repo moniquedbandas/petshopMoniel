@@ -95,12 +95,7 @@ class Cliente
     public function cadastrarCliente(Cliente $cliente)
     {
     }
-    public function autenticarCliente($email, $senha)
-    {
-        $clienteDAO = new ClienteDAO();
-        $autenticado = $clienteDAO->autenticarCliente($email, $senha);
-        return $autenticado;
-    }
+
     public function listarCliente()
     {
     }

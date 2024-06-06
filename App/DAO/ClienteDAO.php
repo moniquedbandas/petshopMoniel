@@ -29,26 +29,7 @@ class ClienteDAO
         }
         echo "<script>location.href='../view/telasCadastros/telaEscolherCadastro.php';</script>";
     }
-    public function autenticarCliente($email, $senha)
-    {
-        include_once 'Conexao.php';
-        $conex = new Conexao();
-        $conex->fazConexao();
-        $sql = "SELECT * FROM cliente WHERE email = :email AND senha = :senha";
-        $stmt = $conex->conn->prepare($sql);
-        $stmt->bindValue(':email', $cliente->getEmail());
-        $stmt->bindValue(':senha', $cliente->getSenha());
-        $stmt->execute();
-        $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if($cliente && $senha == $cliente['senha']){
-            return $cliente['idCliente'];
-        }
-        else {
-            return false;
-        }
-
-    }
+    
     public function listarCliente()
     {
         include_once 'Conexao.php';

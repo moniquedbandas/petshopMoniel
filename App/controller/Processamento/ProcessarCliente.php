@@ -20,9 +20,7 @@
         case "criarUsuario":
             criarUsuario();
             break;
-        case "autenticar":
-            autenticar();
-            break;
+     
         case "telaBoasVindas":
             telaBoasVindas();
             break;
@@ -36,11 +34,17 @@
 
     function criarUsuario()
     {
+    $nomeCliente = $_POST["nome"];
+    $telefone = $_POST["telefone"];
+    $endereco = $_POST["endereco"];
+    $cpf = $_POST["cpf"];
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
+    include 'ClienteController.php';
+    $contr = new ClienteController();
+    $contr->cadastrarCliente($nomeCliente, $telefone, $endereco, $cpf, $email, $senha);
     }
 
-    function autenticar()
-    {
-    }
 
     function telaBoasVindas()
     {
