@@ -2,17 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --text-base: 1rem;
+  --text-cor: hsl(207, 21%, 10%);
 }
 body {
-  font-family: "Nunito", sans-serif;
+  font: 400 var(--text-base) / 160% "Mulish", sans-serif;
   background-image: url("../imagens/fundo.png");
+  color: var(--text-cor);
   background-size: cover;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* parte do header */
+/* area do header */
 .areaHeader {
   /* border: 1px solid red; */
   display: flex;
@@ -47,7 +55,7 @@ body {
 }
 .menuHeader a {
   text-decoration: none;
-  color: black;
+  color: var(--text-cor);
 }
 .menuHeader a:hover {
   color: none;

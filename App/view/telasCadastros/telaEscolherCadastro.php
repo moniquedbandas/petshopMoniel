@@ -50,6 +50,10 @@
                     <input type="radio" id="gato" name="animal" value="Gato">
                     <label for="gato">Gato</label>
                 </div>
+                <div class="opcao">
+                    <input type="radio" id="tutor" name="tutor" value="Tutor">
+                    <label for="tutor">Tutor</label>
+                </div>
                 <input type="submit" value="Selecionar">
             </div>
         </div>
