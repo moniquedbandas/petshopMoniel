@@ -27,43 +27,49 @@ body {
 #headerMenu {
   background-color: var(--color-for-menu);
 }
-.container {
+#contLogos {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 5px;
 }
 #iconeLogin {
   position: absolute;
-  right: 20px;
+  right: 1.25rem;
 }
 /* área do main */
 .p-3 {
   padding: 0rem !important;
   margin-bottom: 1rem;
 }
+.textos {
+  padding: 1.875rem;
+  text-align: justify;
+}
 
 /* área do footer */
+.linhaFoot {
+  border-bottom: 2px dashed var(--color-for-footer);
+}
+
 #footerIndex {
   padding: 1rem !important;
   justify-content: space-between;
   width: 100%;
   border-top: 2px dashed var(--color-for-footer);
 }
-#voltarInicio {
+#btn-back-to-top {
   position: fixed;
-  bottom: 4.375rem;
-  right: 5px;
-  background-color: var(--color-for-setaUp);
-  padding: 0.625rem;
-  border-radius: 1.25rem;
-  cursor: pointer;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: none;
+  opacity: 0.7;
 }
 
 @media (min-width: 52rem) {
   .carousel-inner {
     text-align: center;
     background-color: var(--color-for-menuhover);
-    /* width: 100%; */
   }
   .carousel-control-next,
   .carousel-control-prev {
@@ -72,6 +78,5 @@ body {
   #footerIndex {
     width: 100%;
     justify-content: center;
-    border-top: 2px dashed var(--color-for-footer);
   }
 }

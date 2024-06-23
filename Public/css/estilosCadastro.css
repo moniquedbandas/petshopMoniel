@@ -1,35 +1,36 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
-  font-family: "Nunito", sans-serif;
   background-image: url("../imagens/fundo.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+:root {
+  --color-for-footer: hsla(187, 22%, 30%, 0.349);
+  --color-for-title: hsla(164, 52%, 33%, 0.369);
+  --color-for-menu: hsla(89, 36%, 65%, 0.365);
+  --color-for-menuhover: hsla(180, 20%, 51%, 0.37);
+  --color-for-setaUp: hsla(345, 5%, 66%, 0.714);
+  --color-for-borda: hsl(89, 22%, 42%);
+}
 
 /* parte do header */
-.areaHeader {
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: column;
+.container-fluid {
+  width: auto;
 }
-.areaTitulo {
+.navbar {
+  background-color: var(--color-for-title);
+}
+
+#contLogos {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
-  background-color: #287e675e;
-}
-.areaLogos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6px;
+  padding-top: 5px;
 }
 .menuHeader ul {
   display: flex;
@@ -87,10 +88,9 @@ input[type="submit"] {
 }
 
 .cadastro {
-  margin-top: 10px;
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
 }
 .areaCadastro {
   display: flex;
@@ -99,7 +99,7 @@ input[type="submit"] {
   border: 5px solid;
   border-radius: 20px;
   border-color: #40957e5e;
-  padding: 0 40px;
+  padding: 0 1rem;
 }
 
 fieldset {
@@ -154,29 +154,22 @@ input:focus {
 
 /* área do footer aqui */
 
-.content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.linhaFoot {
+  border-bottom: 2px dashed var(--color-for-footer);
 }
-.footerIndex {
-  background-color: rgba(60, 89, 93, 0.349);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+#footerIndex {
+  padding: 1rem !important;
+  justify-content: space-between;
   width: 100%;
-  height: 100px;
-  bottom: 0;
-  margin-top: auto;
-  border-top: 2px dashed #6b8153;
+  border-top: 2px dashed var(--color-for-footer);
 }
-.informacoes {
-  display: flex;
-  padding: 20px 0;
-}
-.informacoes ul {
-  display: inline-flex;
-  list-style-type: none;
-  gap: 10px;
+
+@media (min-width: 52rem) {
+  #footerIndex {
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+  }
 }
