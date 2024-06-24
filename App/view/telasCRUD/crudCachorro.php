@@ -40,9 +40,57 @@
     </header>
 
     <main class="crud">
-        <div class="areaCrud">
-
-        </div>
+        <form id="formComp" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
+            <div class="table-responsive-sm">
+                <table class="table caption-top">
+                    <caption>Listagem de cachorros</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Sexo</th>
+                            <th scope="col">Raça</th>
+                            <th scope="col">Castrado</th>
+                            <th scope="col">Porte</th>
+                            <th scope="col">IdTutor</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include("../../controller/CachorroController.php");
+                        $res = CachorroController::listarCachorro();
+                        if ($res && $res->rowCount() > 0) {
+                            while ($row = $res->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                                <tr>
+                                    <td><?= $row->idCachorro ?></td>
+                                    <td><?= $row->nomePet ?></td>
+                                    <td><?= $row->idade ?></td>
+                                    <td><?= $row->peso ?></td>
+                                    <td><?= $row->sexo ?></td>
+                                    <td><?= $row->raca ?></td>
+                                    <td><?= $row->castrado ?></td>
+                                    <td><?= $row->porte ?></td>
+                                    <td><?= $row->idCliente ?></td>
+                                    <td>
+                                        <button class="btListar"><a href="../view/PaginaAlterarCompromisso.php?idCompromisso=<?= $row->idCompromisso ?>">Editar</a></button>
+                                        <button class="btListar"><a href="../controller/ProcessarCompromisso.php?oc=deletarCompromisso&idCompromisso=<?= $row->idCompromisso ?>">Excluir</a></button>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                        } else {
+                            ?>
+                            <tr>
+                                <td colspan="6">Nenhum compromisso encontrado.</td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+        </form>
 
     </main>
 
@@ -72,3 +120,21 @@
 </body>
 
 </html>
+<!-- <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr> -->
