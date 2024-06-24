@@ -1,13 +1,13 @@
 <?php
 class ClienteController
 {
-    public function cadastrarCliente($nomeCliente, $telefone, $endereco, $cpf, $email, $senha)
+    public static function cadastrarCliente($nomeCliente, $telefone, $endereco, $cpf, $email, $senha)
     {
         include_once '../model/Cliente.php';
         $cliente = new Cliente(null, $nomeCliente, $telefone, $endereco, $cpf, $email, $senha);
         $cliente->cadastrarCliente($cliente);
     }
-    public function autenticarCliente($email, $senha)
+    public static function autenticarCliente($email, $senha)
     {
         include_once '../model/Cliente.php';
         include_once '../DAO/ClienteDAO.php';
@@ -15,8 +15,11 @@ class ClienteController
         $resultado = $dao->autenticarCliente($email, $senha);
         return $resultado;
     }
-    public function listarCliente()
+    public static function listarCliente()
     {
+        include_once '../model/Cliente.php';
+        $clienteDAO = new Cliente(null, null, null, null, null, null, null);
+        return $clienteDAO->listarCliente();
     }
     public function alterarCliente(Cliente $cliente)
     {

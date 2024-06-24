@@ -76,8 +76,8 @@
                                     <td><?= $row->porte ?></td>
                                     <td><?= $row->idCliente ?></td>
                                     <td>
-                                        <button class="btListar"><a href="../view/PaginaAlterarCompromisso.php?idCompromisso=<?= $row->idCompromisso ?>">Editar</a></button>
-                                        <button class="btListar"><a href="../controller/ProcessarCompromisso.php?oc=deletarCompromisso&idCompromisso=<?= $row->idCompromisso ?>">Excluir</a></button>
+                                        <button class="btListar"><a href="../../view/alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a></button>
+                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarCachorro.php?oc=deletarCachorro&idCachorro=<?= $row->idCachorro ?>">Excluir</a></button>
                                     </td>
                                 </tr>
                             <?php
@@ -85,7 +85,7 @@
                         } else {
                             ?>
                             <tr>
-                                <td colspan="6">Nenhum compromisso encontrado.</td>
+                                <td colspan="6">Nenhum cachorro encontrado.</td>
                             </tr>
                         <?php } ?>
                     </tbody>

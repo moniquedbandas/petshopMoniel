@@ -40,9 +40,53 @@
     </header>
 
     <main class="crud">
-        <div class="areaCrud">
-
-        </div>
+        <form id="formComp" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+            <div class="table-responsive-sm">
+                <table class="table caption-top">
+                    <caption>Listagem de clientes</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Senha</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include("../../controller/ClienteController.php");
+                        $res = ClienteController::listarCliente();
+                        if ($res && $res->rowCount() > 0) {
+                            while ($row = $res->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                                <tr>
+                                    <td><?= $row->idCliente ?></td>
+                                    <td><?= $row->nomeCliente ?></td>
+                                    <td><?= $row->telefone ?></td>
+                                    <td><?= $row->endereco ?></td>
+                                    <td><?= $row->cpf ?></td>
+                                    <td><?= $row->email ?></td>
+                                    <td><?= $row->senha ?></td>
+                                    <td>
+                                        <button class="btListar"><a href="../../view/alterarCliente.php?idCliente=<?= $row->idCliente ?>">Editar</a></button>
+                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarCliente.php?oc=deletarCliente&idCliente=<?= $row->idCliente ?>">Excluir</a></button>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                        } else {
+                            ?>
+                            <tr>
+                                <td colspan="6">Nenhum cliente encontrado.</td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+        </form>
 
     </main>
 

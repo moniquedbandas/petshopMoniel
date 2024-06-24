@@ -103,6 +103,9 @@ class Cliente
     }
     public function listarCliente()
     {
+        include_once '../DAO/ClienteDAO.php';
+        $dao = new ClienteDAO();
+        return $dao->listarCliente();
     }
     public function alterarCliente(Cliente $cliente)
     {
