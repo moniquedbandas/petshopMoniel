@@ -27,7 +27,7 @@
         </nav>
         <nav class="areaLogos">
             <div class="container" id="contLogos">
-                <a class="navbar-brand" href="../../index.html">
+                <a class="navbar-brand" href="../../../index.html">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
                 </a>
             </div>
