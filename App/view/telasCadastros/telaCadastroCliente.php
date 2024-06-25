@@ -67,10 +67,10 @@
                             <label for="email">E-mail: </label>
                             <input type="text" id="email" name="email" autocomplete="off">
                         </div>
-                        <div class="input-wrapper">
+                        <!-- <div class="input-wrapper">
                             <label for="password">Senha: </label>
                             <input type="password" id="password" name="password" autocomplete="off">
-                        </div>
+                        </div> -->
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
                             <input type="hidden" name="op" value="criarUsuario">

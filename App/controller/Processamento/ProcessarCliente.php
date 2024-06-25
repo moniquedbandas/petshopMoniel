@@ -20,11 +20,17 @@
         case "criarUsuario":
             criarUsuario();
             break;
-        case "autenticar":
-            autenticar();
+        case "listarTela";
+            listarTela();
+            break;
+        case "alterarCliente";
+            alterarCliente();
             break;
         case "telaBoasVindas":
             telaBoasVindas();
+            break;
+        case "deletarCliente";
+            deletarCliente();
             break;
         default:
             echo "Erro no processamento das requisições.";
@@ -37,14 +43,28 @@
     function criarUsuario()
     {
     }
-
-    function autenticar()
+    function listarTela()
+    {
+        echo "<script>location.href='./../view/telasCRUD/listarCliente.php';</script>";
+    }
+    function alterarCliente()
     {
     }
-
     function telaBoasVindas()
     {
         echo "<script>location.href='../../view/telasCadastros/telaEscolherCadastro.php';</script>";
+    }
+    function deletarCliente()
+    {
+        if (isset($_GET['idCliente'])) {
+            $idCliente = $_GET['idCliente'];
+            include_once 'CompromissoController.php';
+            $controller = new ClienteController();
+            $controller->excluirCliente($idCliente);
+            echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</script>";
+        } else {
+            echo 'Erro: ID do compromisso não fornecido.';
+        }
     }
     ?>
 </body>

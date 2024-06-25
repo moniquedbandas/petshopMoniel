@@ -40,7 +40,7 @@
     }
     function listarTela()
     {
-        echo "<script>location.href='../../view/telasCRUD/crudGato.php';</script>";
+        echo "<script>location.href='../../view/telasCRUD/listarGato.php';</script>";
     }
     function cadastrarGato()
     {

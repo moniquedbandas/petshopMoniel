@@ -1,7 +1,6 @@
 <?php
 class Cliente
 {
-
     protected $idCliente;
     protected $nomeCliente;
     protected $telefone;
@@ -9,8 +8,8 @@ class Cliente
     protected $cpf;
     protected $email;
     protected $senha;
-
-    public function __construct($idCliente, $nomeCliente, $telefone, $endereco, $cpf, $email, $senha)
+    // retirei senha pq o unico que logará sera o funcionario..
+    public function __construct($idCliente, $nomeCliente, $telefone, $endereco, $cpf, $email)
     {
 
         $this->idCliente = $idCliente;
@@ -19,7 +18,7 @@ class Cliente
         $this->endereco = $endereco;
         $this->cpf = $cpf;
         $this->email = $email;
-        $this->senha = $senha;
+        // $this->senha = $senha;
     }
 
     public function getIdCliente()
@@ -82,35 +81,50 @@ class Cliente
         $this->email = $value;
     }
 
-    public function getSenha()
-    {
-        return $this->senha;
-    }
+    // public function getSenha()
+    // {
+    //     return $this->senha;
+    // }
 
-    public function setSenha($value)
-    {
-        $this->senha = $value;
-    }
+    // public function setSenha($value)
+    // {
+    //     $this->senha = $value;
+    // }
 
     public function cadastrarCliente(Cliente $cliente)
     {
-    }
-    public function autenticarCliente($email, $senha)
-    {
+        include_once '../DAO/ClienteDAO.php';
         $clienteDAO = new ClienteDAO();
-        $autenticado = $clienteDAO->autenticarCliente($email, $senha);
-        return $autenticado;
+        $clienteDAO->cadastrarCliente($this);
     }
+    // public function autenticarCliente($email, $senha)
+    // {
+    //     $clienteDAO = new ClienteDAO();
+    //     $autenticado = $clienteDAO->autenticarCliente($email, $senha);
+    //     return $autenticado;
+    // }
     public function listarCliente()
     {
         include_once '../DAO/ClienteDAO.php';
         $dao = new ClienteDAO();
-        return $dao->listarCliente();
+        return $dao->listarCliente($cpf);
+    }
+    public function resgataPorID($idCliente)
+    {
+        include_once '../DAO/ClienteDAO.php';
+        $model = new ClienteDAO(null);
+        return $model->resgataPorID($idCliente);
     }
     public function alterarCliente(Cliente $cliente)
     {
+        include_once '../DAO/ClienteDAO.php';
+        $clienteDAO = new ClienteDAO();
+        $clienteDAO->alterarCliente($cliente);
     }
     public function excluirCliente($idCliente)
     {
+        include_once '../DAO/ClienteDAO.php';
+        $cliente = new ClienteDAO();
+        $cliente->excluirCliente($idCliente);
     }
 }
