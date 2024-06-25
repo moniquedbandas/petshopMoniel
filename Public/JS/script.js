@@ -1,17 +1,17 @@
-function validarFormulario() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+// function validarFormulario() {
+//   var email = document.getElementById("email").value;
+//   var password = document.getElementById("password").value;
 
-  if (document.activeElement.value == "Entrar") {
-    if (email == "" || password == "") {
-      alert("Preencha todos os campos");
-      return false;
-    }
-    document.getElementById("formularioLogin").action =
-      "../../App/controller/Processamento/ProcessarUsuario.php?ou=autenticar";
-  }
-  return true;
-}
+//   if (document.activeElement.value == "Entrar") {
+//     if (email == "" || password == "") {
+//       alert("Preencha todos os campos");
+//       return false;
+//     }
+//     document.getElementById("formularioLogin").action =
+//       "../../App/controller/Processamento/ProcessarUsuario.php?ou=autenticar";
+//   }
+//   return true;
+// }
 //Abaixo: script para fixar o footer na parte de baixo do navegador
 // $(function () {
 //   $("#js-heightControl").css(

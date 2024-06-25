@@ -48,19 +48,20 @@
 
             <div class="escolha">
                 <div class="opcao">
-                    <input type="radio" id="cachorro" name="animal" value="Cachorro">
+                    <input type="radio" id="cachorro" name="escolha" value="Cachorro">
                     <label for="cachorro">Cachorro</label>
                 </div>
                 <div class="opcao">
-                    <input type="radio" id="gato" name="animal" value="Gato">
+                    <input type="radio" id="gato" name="escolha" value="Gato">
                     <label for="gato">Gato</label>
                 </div>
                 <div class="opcao">
-                    <input type="radio" id="tutor" name="tutor" value="Tutor">
+                    <input type="radio" id="tutor" name="escolha" value="Tutor">
                     <label for="tutor">Tutor</label>
                 </div>
                 <input type="submit" value="Selecionar">
             </div>
+
         </div>
     </main>
 

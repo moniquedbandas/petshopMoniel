@@ -1,4 +1,5 @@
 <?php
+include_once "../../DAO/UsuarioDAO.php";
 class Usuario
 {
 
@@ -41,7 +42,6 @@ class Usuario
     // }
     public function autenticarUsuario($email, $senha)
     {
-        include_once "../DAO/UsuarioDAO.php";
         $usuarioDAO = new UsuarioDAO();
         $autenticado = $usuarioDAO->autenticarUsuario($email, $senha);
         return $autenticado;
