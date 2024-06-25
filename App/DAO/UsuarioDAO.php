@@ -11,8 +11,8 @@ class UsuarioDAO
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindValue(':email', $email);
         $stmt->execute();
-        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($usuario && $senha == $usuario['senha']) {
+        $email = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($email && $senha == $email['senha']) {
             return true;
         } else {
             return false;

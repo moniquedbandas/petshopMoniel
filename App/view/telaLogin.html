@@ -43,8 +43,9 @@
     <main class="login p-3 border-0 border-0">
         <div class="telaLogin">
 
-            <form class="formularioLogin" action="../../App/controller/Processamento/ProcessarUsuario.php"
-                method="post">
+            <form id="formularioLogin" class="formularioLogin"
+                action="../../App/controller/Processamento/ProcessarUsuario.php" method="post"
+                onsubmit="return validarFormulario()">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
                     <div class="fieldset-wrapper">
@@ -58,10 +59,10 @@
                             <input type="password" id="password" name="password" autocomplete="off"
                                 placeholder="Senha de 5 a 10 caracteres">
                         </div>
-                        <input type="hidden" id="op" name="op">
+                        <input type="hidden" id="ou" name="ou" value="ou">
                         <div class="areaBotoes">
                             <input type="submit" name="entrar" value="Entrar"
-                                onclick="document.getElementById('op').value='autenticar'">
+                                onclick="document.getElementById('ou').value='autenticar'">
                         </div>
                     </div>
                 </fieldset>

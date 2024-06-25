@@ -8,14 +8,10 @@ function validarFormulario() {
       return false;
     }
     document.getElementById("formularioLogin").action =
-      "./App/controller/Processamento/ProcessarCliente.php?op=autenticar";
-  } else if (document.activeElement.value == "Criar") {
-    document.getElementById("form").action =
-      "./App/controller/Processamento/ProcessarCliente.php?op=criarTela";
+      "../../App/controller/Processamento/ProcessarUsuario.php?ou=autenticar";
   }
   return true;
 }
-
 //Abaixo: script para fixar o footer na parte de baixo do navegador
 // $(function () {
 //   $("#js-heightControl").css(

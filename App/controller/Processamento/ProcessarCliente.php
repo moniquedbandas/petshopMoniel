@@ -26,9 +26,7 @@
         case "alterarCliente";
             alterarCliente();
             break;
-        case "telaBoasVindas":
-            telaBoasVindas();
-            break;
+
         case "deletarCliente";
             deletarCliente();
             break;
@@ -50,10 +48,7 @@
     function alterarCliente()
     {
     }
-    function telaBoasVindas()
-    {
-        echo "<script>location.href='../../view/telasCadastros/telaEscolherCadastro.php';</script>";
-    }
+
     function deletarCliente()
     {
         if (isset($_GET['idCliente'])) {

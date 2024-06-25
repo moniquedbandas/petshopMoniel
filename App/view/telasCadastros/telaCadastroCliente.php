@@ -74,7 +74,7 @@
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
                             <input type="hidden" name="op" value="criarUsuario">
-                            <input type="submit" name="criar" value="Criar" onclick="document.getElementById('op').value='telaBoasVindas'">
+                            <!-- <input type="submit" name="criar" value="Criar" onclick="document.getElementById('op').value='telaBoasVindas'"> -->
                         </div>
                     </div>
                 </fieldset>
