@@ -59,7 +59,7 @@
                     <input type="radio" id="tutor" name="escolha" value="Tutor">
                     <label for="tutor">Tutor</label>
                 </div>
-                <input type="submit" value="Selecionar">
+                <input type="submit" value="Selecionar" onclick="redirecionarCadastro()">
             </div>
 
         </div>
@@ -86,7 +86,7 @@
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

@@ -42,3 +42,32 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+function redirecionarCadastro() {
+  var selecionado = "";
+
+  if (document.getElementById("cachorro").checked) {
+    selecionado = "Cachorro";
+  } else if (document.getElementById("gato").checked) {
+    selecionado = "Gato";
+  } else if (document.getElementById("tutor").checked) {
+    selecionado = "Tutor";
+  }
+
+  if (selecionado === "") {
+    alert("Por favor, selecione uma opção.");
+    return false;
+  }
+
+  var url = "";
+  if (selecionado === "Cachorro") {
+    url = "../../view/telasCadastros/telaCadastroCachorro.php";
+  } else if (selecionado === "Gato") {
+    url = "../../view/telasCadastros/telaCadastroGato.php";
+  } else if (selecionado === "Tutor") {
+    url = "../../view/telasCadastros/telaCadastroCliente.php";
+  }
+
+  window.location.href = url;
+  return true;
+}
