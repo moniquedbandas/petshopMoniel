@@ -28,7 +28,7 @@ class CachorroDAO
         } else {
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
-        echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
+        // echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
     }
 
     public function listarCachorro()
