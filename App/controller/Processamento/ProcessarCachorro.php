@@ -71,6 +71,5 @@
 
     ?>
 </body>
-<form action="../../view/"></form>
 
 </html>
