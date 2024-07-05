@@ -77,15 +77,15 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="idCliente">ID do Tutor: </label>
-                            <input type="text" id="idCliente" name="idCliente" autocomplete="off" required>
+                            <input type="text" id="idCliente" name="idCliente" autocomplete="off">
                         </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes2">
                             <input type="hidden" name="oc" value="cadastrarCachorro">
-                            <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('ou').value='cadastrarCachorro'">
+                            <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'">
 
-                            <!-- <input type="hidden" name="oc" value="listarCachorro"> -->
-                            <input type="submit" name="listar" value="Listar" onclick="document.getElementById('ou').value='listarTela'">
+                            <input type="hidden" name="oc" value="listarTela">
+                            <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTela'">
                         </div>
                     </div>
                 </fieldset>

@@ -43,7 +43,7 @@ class Cachorro extends Animal
 
     public function listarCachorro()
     {
-        include_once "../DAO/CachorroDAO.php";
+        include_once "../../DAO/CachorroDAO.php";
         $dao = new CachorroDAO();
         return $dao->listarCachorro();
     }

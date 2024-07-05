@@ -33,10 +33,9 @@ class CachorroDAO
 
     public function listarCachorro()
     {
-
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM cachorro WHERE idCachorro= :idCachorro ORDER BY idCliente";
+        $sql = "SELECT * FROM cachorro WHERE idCachorro= ':idCachorro' ORDER BY idCliente";
         $query = $conex->conn->prepare($sql);
         $query->execute();
         return $query;

@@ -56,7 +56,7 @@
         include_once '../CachorroController.php';
         $contr = new CachorroController();
         $contr->cadastrarCachorro($nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente);
-        echo "<script>location.href='../../view/telasCRUD/listarCachorro.php';</script>";
+        echo "<script>location.href='../../view/telasCadastros/telaCadastroCachorro.php';</script>";
     }
     function telaAlterarCachorro()
     {
