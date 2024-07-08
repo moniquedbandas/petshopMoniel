@@ -34,34 +34,60 @@
         </nav>
         <nav class="menuHeader">
             <ul>
-                <li><strong>Área de login</strong></li>
+                <li><strong>Listagem de clientes</strong></li>
             </ul>
         </nav>
     </header>
 
-    <main class="escolherCadastro">
-        <div class="areaEscolha">
+    <main class="crud">
+        <form id="formComp" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+            <div class="table-responsive-sm">
+                <table class="table caption-top">
+                    <caption>Listagem de clientes</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Senha</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include("../../controller/ClienteController.php");
+                        $res = ClienteController::listarCliente();
+                        if ($res && $res->rowCount() > 0) {
+                            while ($row = $res->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                                <tr>
+                                    <td><?= $row->idCliente ?></td>
+                                    <td><?= $row->nomeCliente ?></td>
+                                    <td><?= $row->telefone ?></td>
+                                    <td><?= $row->endereco ?></td>
+                                    <td><?= $row->cpf ?></td>
+                                    <td><?= $row->email ?></td>
+                                    <td><?= $row->senha ?></td>
+                                    <td>
+                                        <button class="btListar"><a href="../../view/alterarCliente.php?idCliente=<?= $row->idCliente ?>">Editar</a></button>
+                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarCliente.php?oc=deletarCliente&idCliente=<?= $row->idCliente ?>">Excluir</a></button>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                        } else {
+                            ?>
+                            <tr>
+                                <td colspan="6">Nenhum cliente encontrado.</td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+        </form>
 
-            <div class="tituloEscolha">
-                <h2>O que deseja cadastrar?</h2>
-            </div>
-
-            <div class="escolha">
-                <div class="opcao">
-                    <input type="radio" id="cachorro" name="animal" value="Cachorro">
-                    <label for="cachorro">Cachorro</label>
-                </div>
-                <div class="opcao">
-                    <input type="radio" id="gato" name="animal" value="Gato">
-                    <label for="gato">Gato</label>
-                </div>
-                <div class="opcao">
-                    <input type="radio" id="tutor" name="tutor" value="Tutor">
-                    <label for="tutor">Tutor</label>
-                </div>
-                <input type="submit" value="Selecionar">
-            </div>
-        </div>
     </main>
 
     <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
@@ -86,6 +112,7 @@
     </footer>
 
     <script src="../../Public/JS/script.js"></script>
+
 </body>
 
 </html>

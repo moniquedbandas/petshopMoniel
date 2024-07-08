@@ -2,17 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --text-base: 1rem;
+  --text-cor: hsl(207, 21%, 10%);
 }
 body {
-  font-family: "Nunito", sans-serif;
+  font: 400 var(--text-base) / 160% "Mulish", sans-serif;
   background-image: url("../imagens/fundo.png");
+  color: var(--text-cor);
   background-size: cover;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* parte do header */
+/* area do header */
 .areaHeader {
   /* border: 1px solid red; */
   display: flex;
@@ -47,7 +55,7 @@ body {
 }
 .menuHeader a {
   text-decoration: none;
-  color: black;
+  color: var(--text-cor);
 }
 .menuHeader a:hover {
   color: none;
@@ -62,6 +70,7 @@ body {
   flex-direction: column;
   height: 100%;
 }
+/* é a parte do .content que faz fixar no bottom msm */
 .footerIndex {
   background-color: rgba(60, 89, 93, 0.349);
   display: flex;
@@ -81,6 +90,15 @@ body {
   display: inline-flex;
   list-style-type: none;
   gap: 10px;
+}
+#voltarInicio {
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  background-color: #ada5a7b6;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 /* 
 Paleta de cores do projeto:

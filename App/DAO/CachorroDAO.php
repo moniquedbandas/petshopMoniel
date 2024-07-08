@@ -1,7 +1,8 @@
-<?php 
+<?php
 include_once 'Conexao.php';
 
-class CachorroDAO {
+class CachorroDAO
+{
 
     public function cadastrarCachorro(Cachorro $cachorro)
     {
@@ -19,52 +20,50 @@ class CachorroDAO {
         $stmt->bindValue(':castrado', $cachorro->getCastrado());
         $stmt->bindValue(':porte', $cachorro->getPorte());
         $stmt->bindValue(':idCliente', $cachorro->getIdCliente());
-       
+
 
         $res = $stmt->execute();
-        if($res)
-        {
+        if ($res) {
             echo "<script>alert('O cachorro foi cadastrado com sucesso');</script>";
-        }
-        else{
+        } else {
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
         echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
     }
 
-    public function listarCachorro(){
-            include_once 'Conexao.php';
+    public function listarCachorro()
+    {
 
-            $conex = new Conexao();
-            $conex->fazConexao();
-            $sql = "SELECT * FROM cachorro ORDER BY idCachorro";
-            return $conex->conn->query($sql);
-        
+        $conex = new Conexao();
+        $conex->fazConexao();
+        $sql = "SELECT * FROM cachorro WHERE idCachorro= :idCachorro ORDER BY idCliente";
+        $query = $conex->conn->prepare($sql);
+        $query->execute();
+        return $query;
     }
 
     public function alterarCachorro(Cachorro $cachorro)
     {
-       
-            include_once 'Conexao.php';
-            $conex = new Conexao();
-            $conex->fazConexao();
-            $sql = "UPDATE cachorro SET nomePet = :nome, idade = :idade, peso = :peso,
+
+        include_once 'Conexao.php';
+        $conex = new Conexao();
+        $conex->fazConexao();
+        $sql = "UPDATE cachorro SET nomePet = :nome, idade = :idade, peso = :peso,
             sexo = :sexo, raca= :raca, castrado = :castrado, porte = :porte WHERE idCachorro = :id";
-        
-            $stmt = $conex->conn->prepare($sql);
-            $stmt->bindValue(':nome', $cachorro->getNomePet());
-            $stmt->bindValue(':idade', $cachorro->getIdade());
-            $stmt->bindValue(':peso', $cachorro->getPeso());
-            $stmt->bindValue(':sexo', $cachorro->getSexo());
-            $stmt->bindValue(':raca', $cachorro->getRaca());
-            $stmt->bindValue(':castrado', $cachorro->getCastrado());
-            $stmt->bindValue('porte', $cachorro->getPorte());
-            $stmt->bindValue(':id', $cachorro->getIdCachorro());
-        
-            $res = $stmt->execute();
-        
-            return $res;
-        
+
+        $stmt = $conex->conn->prepare($sql);
+        $stmt->bindValue(':nome', $cachorro->getNomePet());
+        $stmt->bindValue(':idade', $cachorro->getIdade());
+        $stmt->bindValue(':peso', $cachorro->getPeso());
+        $stmt->bindValue(':sexo', $cachorro->getSexo());
+        $stmt->bindValue(':raca', $cachorro->getRaca());
+        $stmt->bindValue(':castrado', $cachorro->getCastrado());
+        $stmt->bindValue('porte', $cachorro->getPorte());
+        $stmt->bindValue(':id', $cachorro->getIdCachorro());
+
+        $res = $stmt->execute();
+
+        return $res;
     }
     public function excluirCachorro($idCachorro)
     {
@@ -73,17 +72,11 @@ class CachorroDAO {
         $conex->fazConexao();
         $sql = "DELETE FROM cachorro WHERE idCachorro='$idCachorro'";
         $res = $conex->conn->query($sql);
-        if($res)
-        {
+        if ($res) {
             echo "<script>alert('Exclusão do cachorro realizada com sucesso!');</script>";
-        }
-        else{
+        } else {
             echo "<script>alert('Não foi possível excluir o cachorro!');</script>";
         }
         echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
-    
     }
-
 }
-
-?>

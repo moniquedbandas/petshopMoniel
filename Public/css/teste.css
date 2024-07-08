@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("../imagens/fundo.png");
+  background-size: cover;
+  /* display: flex;
+  flex-direction: column; */
+  min-height: 100vh;
+}
+:root {
+  --color-for-footer: hsla(187, 22%, 30%, 0.349);
+  --color-for-title: hsla(164, 52%, 33%, 0.369);
+  --color-for-menu: hsla(89, 36%, 65%, 0.365);
+  --color-for-menuhover: hsla(180, 20%, 51%, 0.37);
+  --color-for-setaUp: hsla(345, 5%, 66%, 0.714);
+  --color-for-borda: hsl(89, 22%, 42%);
+}
+/* área do header */
+.container-fluid {
+  width: auto;
+}
+.navbar {
+  background-color: var(--color-for-title);
+}
+#headerMenu {
+  background-color: var(--color-for-menu);
+}
+#contLogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+#iconeLogin {
+  position: absolute;
+  right: 1.25rem;
+}
+/* área do main */
+.p-3 {
+  padding: 0rem !important;
+  margin-bottom: 1rem;
+}
+.textos {
+  padding: 1.875rem;
+  text-align: justify;
+}
+
+/* área do footer */
+.linhaFoot {
+  border-bottom: 2px dashed var(--color-for-footer);
+}
+
+#footerIndex {
+  padding: 1rem !important;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px dashed var(--color-for-footer);
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: none;
+  opacity: 0.7;
+}
+
+@media (min-width: 52rem) {
+  .carousel-inner {
+    text-align: center;
+    background-color: var(--color-for-menuhover);
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 40%;
+  }
+  #footerIndex {
+    width: 100%;
+    justify-content: center;
+  }
+}

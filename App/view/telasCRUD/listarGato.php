@@ -34,34 +34,64 @@
         </nav>
         <nav class="menuHeader">
             <ul>
-                <li><strong>Área de login</strong></li>
+                <li><strong>Listagem de gatos</strong></li>
             </ul>
         </nav>
     </header>
 
-    <main class="escolherCadastro">
-        <div class="areaEscolha">
+    <main class="crud">
+        <form id="formComp" action="../../controller/Processamento/ProcessarGato.php" method="post">
+            <div class="table-responsive-sm">
+                <table class="table caption-top">
+                    <caption>Listagem de gatos</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Sexo</th>
+                            <th scope="col">Raça</th>
+                            <th scope="col">Castrado</th>
+                            <th scope="col">Temperamento</th>
+                            <th scope="col">IdTutor</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include("../../controller/GatoController.php");
+                        $res = GatoController::listarGato();
+                        if ($res && $res->rowCount() > 0) {
+                            while ($row = $res->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                                <tr>
+                                    <td><?= $row->idGato ?></td>
+                                    <td><?= $row->nomePet ?></td>
+                                    <td><?= $row->idade ?></td>
+                                    <td><?= $row->peso ?></td>
+                                    <td><?= $row->sexo ?></td>
+                                    <td><?= $row->raca ?></td>
+                                    <td><?= $row->castrado ?></td>
+                                    <td><?= $row->temperamento ?></td>
+                                    <td><?= $row->idCliente ?></td>
+                                    <td>
+                                        <button class="btListar"><a href="../../view/alterarGato.php?idCachorro=<?= $row->idGato ?>">Editar</a></button>
+                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarGato.php?oc=deletarGato&idGato=<?= $row->idGato ?>">Excluir</a></button>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                        } else {
+                            ?>
+                            <tr>
+                                <td colspan="6">Nenhum gato encontrado.</td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+        </form>
 
-            <div class="tituloEscolha">
-                <h2>O que deseja cadastrar?</h2>
-            </div>
-
-            <div class="escolha">
-                <div class="opcao">
-                    <input type="radio" id="cachorro" name="animal" value="Cachorro">
-                    <label for="cachorro">Cachorro</label>
-                </div>
-                <div class="opcao">
-                    <input type="radio" id="gato" name="animal" value="Gato">
-                    <label for="gato">Gato</label>
-                </div>
-                <div class="opcao">
-                    <input type="radio" id="tutor" name="tutor" value="Tutor">
-                    <label for="tutor">Tutor</label>
-                </div>
-                <input type="submit" value="Selecionar">
-            </div>
-        </div>
     </main>
 
     <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
@@ -86,6 +116,7 @@
     </footer>
 
     <script src="../../Public/JS/script.js"></script>
+
 </body>
 
 </html>

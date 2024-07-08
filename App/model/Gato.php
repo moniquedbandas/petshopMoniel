@@ -39,6 +39,9 @@ class Gato extends Animal
     }
     public function listarGato()
     {
+        include_once "../DAO/GatoDAO.php";
+        $dao = new GatoDAO();
+        return $dao->listarGato();
     }
     public function alterarGato(Gato $gato)
     {
