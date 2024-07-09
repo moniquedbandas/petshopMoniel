@@ -34,6 +34,7 @@
         </nav>
         <nav class="menuHeader">
             <ul>
+                <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
                 <li><strong>Área de login</strong></li>
             </ul>
         </nav>
@@ -81,11 +82,12 @@
                         </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes2">
-                            <input type="hidden" name="oc" value="cadastrarCachorro">
-                            <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'">
-
-                            <input type="hidden" name="oc" value="listarTela">
-                            <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTela'">
+                            <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
+                            <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
+                            <input type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <!-- <input type="hidden" name="oc" value="listarTela"> -->
+                            <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTela'"> -->
+                            <input type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>
@@ -115,7 +117,7 @@
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

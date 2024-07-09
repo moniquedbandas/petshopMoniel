@@ -70,3 +70,10 @@ function redirecionarCadastro() {
   window.location.href = url;
   return true;
 }
+
+function setOcValue(value) {
+  document.getElementById("oc").value = value;
+}
+function setOgValue(value) {
+  document.getElementById("og").value = value;
+}

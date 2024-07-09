@@ -21,6 +21,7 @@
 
 <body>
     <?php
+    echo $_REQUEST['oc'];
     var_dump('oc');
     switch ($_REQUEST['oc']) {
         case "listarTela";

@@ -21,7 +21,6 @@ class CachorroDAO
         $stmt->bindValue(':porte', $cachorro->getPorte());
         $stmt->bindValue(':idCliente', $cachorro->getIdCliente());
 
-
         $res = $stmt->execute();
         if ($res) {
             echo "<script>alert('O cachorro foi cadastrado com sucesso');</script>";
@@ -69,13 +68,10 @@ class CachorroDAO
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "DELETE FROM cachorro WHERE idCachorro='$idCachorro'";
-        $res = $conex->conn->query($sql);
-        if ($res) {
-            echo "<script>alert('Exclusão do cachorro realizada com sucesso!');</script>";
-        } else {
-            echo "<script>alert('Não foi possível excluir o cachorro!');</script>";
-        }
-        echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
+        $sql = "DELETE FROM cachorro WHERE idCachorro= :idCachorro";
+        $stmt = $conex->conn->prepare($sql);
+        $stmt->bindParam(':idCachorro', $idCachorro, PDO::PARAM_INT);
+        $res = $stmt->execute();
+        return $res;
     }
 }
