@@ -77,3 +77,6 @@ function setOcValue(value) {
 function setOgValue(value) {
   document.getElementById("og").value = value;
 }
+function setOpValue(value) {
+  document.getElementById("op").value = value;
+}

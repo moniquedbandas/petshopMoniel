@@ -56,7 +56,7 @@ class CachorroDAO
         $stmt->bindValue(':sexo', $cachorro->getSexo());
         $stmt->bindValue(':raca', $cachorro->getRaca());
         $stmt->bindValue(':castrado', $cachorro->getCastrado());
-        $stmt->bindValue('porte', $cachorro->getPorte());
+        $stmt->bindValue(':porte', $cachorro->getPorte());
         $stmt->bindValue(':id', $cachorro->getIdCachorro());
 
         $res = $stmt->execute();

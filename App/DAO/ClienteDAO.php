@@ -7,22 +7,20 @@ class ClienteDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "INSERT INTO cliente (nomeCliente,telefone, endereco, cpf, email, senha)
-        VALUES (:nomeCliente, :telefone, :endereco, :cpf, :email, :senha)";
+        $sql = "INSERT INTO cliente (nomeCliente, telefone, endereco, cpf, email)
+        VALUES (:nomeCliente, :telefone, :endereco, :cpf, :email)";
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindValue(':nomeCliente', $cliente->getNomeCliente());
         $stmt->bindValue(':telefone', $cliente->getTelefone());
         $stmt->bindValue(':endereco', $cliente->getEndereco());
         $stmt->bindValue(':cpf', $cliente->getCpf());
         $stmt->bindValue(':email', $cliente->getEmail());
-        // $stmt->bindValue(':senha', $cliente->getSenha());
         $res = $stmt->execute();
         if ($res) {
             echo "<script>alert('Cadastro realizado com sucesso');</script>";
         } else {
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
-        // echo "<script>location.href='../../App/view/telasCadastros/telaEscolherCadastro.php';</script>"; 
     }
 
     public function resgataPorID($idCliente)
@@ -36,13 +34,13 @@ class ClienteDAO
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 
-    public function listarCliente($cpf)
+    public function listarCliente()
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM cliente WHERE cpf= :cpf ORDER BY idCliente";
+        $sql = "SELECT * FROM cliente WHERE cpf= ':cpf' ORDER BY idCliente";
         $stmt = $conex->conn->prepare($sql);
-        $stmt->bindValue(':cpf', $cpf);
+        // $stmt->bindValue(':cpf', $cpf);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
     }

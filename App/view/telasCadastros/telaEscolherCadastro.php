@@ -12,8 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
 </head>
