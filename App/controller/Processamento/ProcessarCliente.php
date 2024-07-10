@@ -35,8 +35,8 @@
             alterarCliente();
             break;
 
-        case "deletarCliente";
-            deletarCliente();
+        case "excluirCliente";
+            excluirCliente();
             break;
         default:
             echo "Erro no processamento das requisições.";
@@ -66,7 +66,7 @@
     {
     }
 
-    function deletarCliente()
+    function excluirCliente()
     {
         if (isset($_GET['idCliente'])) {
             $idCliente = $_GET['idCliente'];
