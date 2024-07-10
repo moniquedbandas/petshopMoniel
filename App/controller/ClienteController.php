@@ -8,7 +8,6 @@ class ClienteController
         $cliente = new Cliente(null, $nomeCliente, $telefone, $endereco, $cpf, $email);
         $cliente->cadastrarCliente($cliente);
     }
-
     public static function listarCliente()
     {
         // include_once '../model/Cliente.php';
