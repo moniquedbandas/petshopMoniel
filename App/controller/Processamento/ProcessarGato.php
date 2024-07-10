@@ -20,9 +20,8 @@
 </head>
 
 <body>
-    
+
     <?php
-    //Teste
     echo $_REQUEST['og'];
     switch ($_REQUEST['og']) {
         case "listarTela";
@@ -81,10 +80,11 @@
     }
     function deletarGato()
     {
-        $idGato = $_REQUEST['idGato'];
+        $idGato = $_GET['idGato'];
         include '../GatoController.php';
         $contr = new GatoController();
-        $contr->excluirGato($idGato);
+        $contr->deletarGato($idGato);
+        echo "<script>location.href='../../view/telasCRUD/listarGato.php';</script>";
     }
 
     ?>

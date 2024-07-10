@@ -50,7 +50,10 @@ class Cachorro extends Animal
     public function alterarCachorro(Cachorro $cachorro)
     {
     }
-    public function excluirCachorro($idCachorro)
+    public function deletarCachorro($idCachorro)
     {
+        include_once "../../DAO/CachorroDAO.php";
+        $cachorro = new CachorroDAO();
+        $cachorro->deletarCachorro($idCachorro);
     }
 }

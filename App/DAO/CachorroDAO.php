@@ -6,7 +6,6 @@ class CachorroDAO
 
     public function cadastrarCachorro(Cachorro $cachorro)
     {
-        include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
         $sql = "INSERT INTO cachorro (nomePet, idade, peso, sexo, raca, castrado, porte, idCliente)
@@ -27,7 +26,6 @@ class CachorroDAO
         } else {
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
-        // echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
     }
 
     public function listarCachorro()
@@ -42,12 +40,10 @@ class CachorroDAO
 
     public function alterarCachorro(Cachorro $cachorro)
     {
-
-        include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
         $sql = "UPDATE cachorro SET nomePet = :nome, idade = :idade, peso = :peso,
-            sexo = :sexo, raca= :raca, castrado = :castrado, porte = :porte WHERE idCachorro = :id";
+            sexo = :sexo, raca= :raca, castrado = :castrado, porte = :porte WHERE idCachorro = :idCachorro";
 
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindValue(':nome', $cachorro->getNomePet());
@@ -57,21 +53,26 @@ class CachorroDAO
         $stmt->bindValue(':raca', $cachorro->getRaca());
         $stmt->bindValue(':castrado', $cachorro->getCastrado());
         $stmt->bindValue(':porte', $cachorro->getPorte());
-        $stmt->bindValue(':id', $cachorro->getIdCachorro());
+        $stmt->bindValue(':idCachorro', $cachorro->getIdCachorro());
 
         $res = $stmt->execute();
 
         return $res;
     }
-    public function excluirCachorro($idCachorro)
+
+    public function deletarCachorro($idCachorro)
     {
-        // include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
         $sql = "DELETE FROM cachorro WHERE idCachorro= :idCachorro";
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindParam(':idCachorro', $idCachorro, PDO::PARAM_INT);
         $res = $stmt->execute();
+        if ($res) {
+            echo "<script>alert('O cachorro foi deletadinho com sucesso!');</script>";
+        } else {
+            echo "<script>alert('Erro: Não foi possível realizar a exclusão.');</script>";
+        }
         return $res;
     }
 }

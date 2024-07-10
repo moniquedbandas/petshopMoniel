@@ -43,6 +43,7 @@ class ClienteDAO
         $query->execute();
         return $query;
     }
+
     public function alterarCliente(Cliente $cliente)
     {
         try {
@@ -55,7 +56,7 @@ class ClienteDAO
             email = :email WHERE idCliente = :idCliente";
             $stmt = $conex->conn->prepare($sql);
 
-            $stmt->bindValue(':id', $cliente->getIdCliente());
+            $stmt->bindValue(':idCliente', $cliente->getIdCliente());
             $stmt->bindValue(':nome', $cliente->getNomeCliente());
             $stmt->bindValue(':telefone', $cliente->getTelefone());
             $stmt->bindValue(':endereco', $cliente->getEndereco());
@@ -73,6 +74,7 @@ class ClienteDAO
             return false;
         }
     }
+
     public function excluirCliente($idCliente)
     {
         $conex = new Conexao();
@@ -81,12 +83,11 @@ class ClienteDAO
         $stmt = $conex->conn->prepare($sql);
         $stmt->bindParam(':idCliente', $idCliente, PDO::PARAM_INT);
         $res = $stmt->execute();
-        return $res;
-
         if ($res) {
             echo "<script>alert('Exclusão realizada com sucesso!');</script>";
         } else {
             echo "<script>alert('Não foi possível excluir o usuário!');</script>";
         }
+        return $res;
     }
 }

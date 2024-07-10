@@ -144,6 +144,7 @@ input:focus {
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  gap: 15px;
 }
 .areaBotoes2 {
   display: flex;
@@ -169,6 +170,21 @@ input:focus {
   justify-content: space-between;
   width: 100%;
   border-top: 2px dashed var(--color-for-footer);
+}
+
+.btListar {
+  border: none;
+  border-radius: 8px;
+  width: 6.25rem;
+  cursor: pointer;
+  background-color: #3d686825;
+}
+.btListar a {
+  text-decoration: none;
+  color: black;
+}
+.btListar:hover {
+  scale: 1.1;
 }
 
 @media (min-width: 52rem) {

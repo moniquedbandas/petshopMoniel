@@ -17,14 +17,14 @@ class GatoController
     }
     public static function alterarGato($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente)
     {
-     //   include_once '../../model/Gato.php';
+        //   include_once '../../model/Gato.php';
         $gato = new Gato($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente);
         $gato = alterarGato($gato);
     }
-    public function excluirGato($idGato)
+    public function deletarGato($idGato)
     {
-       // include_once '../../model/Gato.php';
-        $gato = new Gato(null, null, null, null, null, null, null, null , null);
-        $gato -> excluirGato($idGato);
+        // include_once '../../model/Gato.php';
+        $gato = new Gato(null, null, null, null, null, null, null, null, null);
+        $gato->deletarGato($idGato);
     }
 }

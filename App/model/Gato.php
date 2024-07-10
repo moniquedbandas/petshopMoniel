@@ -49,7 +49,10 @@ class Gato extends Animal
     public function alterarGato(Gato $gato)
     {
     }
-    public function excluirGato($idGato)
+    public function deletarGato($idGato)
     {
+        include_once "../../DAO/GatoDAO.php";
+        $gato = new GatoDAO();
+        $gato->deletarGato($idGato);
     }
 }

@@ -34,6 +34,7 @@
         </nav>
         <nav class="menuHeader">
             <ul>
+                <li><a href="../telasCadastros/telaCadastroCliente.php"><strong>Voltar</strong></a></li>
                 <li><strong>Listagem de clientes</strong></li>
             </ul>
         </nav>
@@ -79,7 +80,7 @@
                         } else {
                             ?>
                             <tr>
-                                <td colspan="6">Nenhum cliente encontrado.</td>
+                                <td colspan="10">Nenhum cliente encontrado.</td>
                             </tr>
                         <?php } ?>
                     </tbody>

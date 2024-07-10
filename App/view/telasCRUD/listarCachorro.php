@@ -34,6 +34,7 @@
         </nav>
         <nav class="menuHeader">
             <ul>
+                <li><a href="../telasCadastros/telaCadastroCachorro.php"><strong>Voltar</strong></a></li>
                 <li><strong>Listagem de cachorros</strong></li>
             </ul>
         </nav>
@@ -85,7 +86,7 @@
                         } else {
                             ?>
                             <tr>
-                                <td colspan="6">Nenhum cachorro encontrado.</td>
+                                <td colspan="10">Nenhum cachorro encontrado.</td>
                             </tr>
                         <?php } ?>
                     </tbody>

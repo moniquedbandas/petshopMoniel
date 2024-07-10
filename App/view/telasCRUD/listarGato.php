@@ -34,6 +34,7 @@
         </nav>
         <nav class="menuHeader">
             <ul>
+                <li><a href="../telasCadastros/telaCadastroGato.php"><strong>Voltar</strong></a></li>
                 <li><strong>Listagem de gatos</strong></li>
             </ul>
         </nav>
@@ -76,8 +77,8 @@
                                     <td><?= $row->temperamento ?></td>
                                     <td><?= $row->idCliente ?></td>
                                     <td>
-                                        <button class="btListar"><a href="../../view/alterarGato.php?idGato=<?= $row->idGato ?>">Editar</a></button>
-                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarGato.php?oc=deletarGato&idGato=<?= $row->idGato ?>">Excluir</a></button>
+                                        <button class="btListar"><a href="./alterarGato.php?idGato=<?= $row->idGato ?>">Editar</a></button>
+                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarGato.php?og=deletarGato&idGato=<?= $row->idGato ?>">Excluir</a></button>
                                     </td>
                                 </tr>
                             <?php
@@ -85,7 +86,7 @@
                         } else {
                             ?>
                             <tr>
-                                <td colspan="6">Nenhum gato encontrado.</td>
+                                <td colspan="10">Nenhum gato encontrado.</td>
                             </tr>
                         <?php } ?>
                     </tbody>
