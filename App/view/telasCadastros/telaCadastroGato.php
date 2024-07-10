@@ -15,7 +15,7 @@
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
-    <title>Petshop Moniel</title>
+    <title>Petshop Moniels</title>
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
