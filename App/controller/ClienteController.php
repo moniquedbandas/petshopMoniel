@@ -8,11 +8,6 @@ class ClienteController
         $cliente = new Cliente(null, $nomeCliente, $telefone, $endereco, $cpf, $email);
         $cliente->cadastrarCliente($cliente);
     }
-<<<<<<< HEAD
-   
-    public function listarCliente()
-=======
-
     public static function listarCliente()
     {
         // include_once '../model/Cliente.php';
@@ -20,7 +15,6 @@ class ClienteController
         return $clienteDAO->listarCliente();
     }
     public static function resgataPorID($idCliente)
->>>>>>> c106afb0ead034e203a2d3bb17182bae117f2ed0
     {
         // include '../model/Cliente.php';
         $model = new Cliente(null, null, null, null, null, null);
