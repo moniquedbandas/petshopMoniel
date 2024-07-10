@@ -34,6 +34,7 @@
         </nav>
         <nav class="menuHeader">
             <ul>
+                <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
                 <li><strong>Área de login</strong></li>
             </ul>
         </nav>
@@ -48,12 +49,8 @@
 
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
-                            <label for="id">ID do Tutor: </label>
-                            <input type="text" id="id" name="id" autocomplete="off" required>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="nome">Nome do pet: </label>
-                            <input type="text" id="nome" name="nome" autocomplete="off">
+                            <label for="nomePet">Nome do pet: </label>
+                            <input type="text" id="nomePet" name="nomePet" autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
@@ -79,14 +76,18 @@
                             <label for="porte">Porte: </label>
                             <input type="text" id="porte" name="porte" autocomplete="off">
                         </div>
-
+                        <div class="input-wrapper">
+                            <label for="idCliente">ID do Tutor: </label>
+                            <input type="text" id="idCliente" name="idCliente" autocomplete="off">
+                        </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes2">
-                            <input type="hidden" name="oc" value="criarCachorro">
-                            <input type="submit" name="create" value="Cadastrar">
-
-                            <input type="hidden" name="oc" value="listarCachorro">
-                            <input type="submit" name="listar" value="Listar">
+                            <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
+                            <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
+                            <input type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <!-- <input type="hidden" name="oc" value="listarTela"> -->
+                            <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTela'"> -->
+                            <input type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>
@@ -116,7 +117,7 @@
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

@@ -91,13 +91,9 @@ class Cliente
     //     $this->senha = $value;
     // }
 
-    public function cadastrarCliente(Cliente $cliente)
+    public function cadastrarCliente(Cliente $clienteDAO)
     {
-<<<<<<< HEAD
-    }
-
-=======
-        include_once '../DAO/ClienteDAO.php';
+        include_once '../../DAO/ClienteDAO.php';
         $clienteDAO = new ClienteDAO();
         $clienteDAO->cadastrarCliente($this);
     }
@@ -107,28 +103,27 @@ class Cliente
     //     $autenticado = $clienteDAO->autenticarCliente($email, $senha);
     //     return $autenticado;
     // }
->>>>>>> c106afb0ead034e203a2d3bb17182bae117f2ed0
     public function listarCliente()
     {
-        include_once '../DAO/ClienteDAO.php';
+        include_once '../../DAO/ClienteDAO.php';
         $dao = new ClienteDAO();
-        return $dao->listarCliente($cpf);
+        return $dao->listarCliente();
     }
     public function resgataPorID($idCliente)
     {
-        include_once '../DAO/ClienteDAO.php';
+        include_once '../../DAO/ClienteDAO.php';
         $model = new ClienteDAO(null);
         return $model->resgataPorID($idCliente);
     }
     public function alterarCliente(Cliente $cliente)
     {
-        include_once '../DAO/ClienteDAO.php';
+        include_once '../../DAO/ClienteDAO.php';
         $clienteDAO = new ClienteDAO();
         $clienteDAO->alterarCliente($cliente);
     }
     public function excluirCliente($idCliente)
     {
-        include_once '../DAO/ClienteDAO.php';
+        include_once '../../DAO/ClienteDAO.php';
         $cliente = new ClienteDAO();
         $cliente->excluirCliente($idCliente);
     }

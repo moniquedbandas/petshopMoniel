@@ -34,13 +34,16 @@ class Cachorro extends Animal
         $this->porte = $value;
     }
 
-    public function cadastrarCachorro(Cachorro $cachorro)
+    public function cadastrarCachorro(Cachorro $cachorroDAO)
     {
+        include_once "../../DAO/CachorroDAO.php";
+        $cachorroDAO = new CachorroDAO();
+        $cachorroDAO->cadastrarCachorro($this);
     }
 
     public function listarCachorro()
     {
-        include_once "../DAO/CachorroDAO.php";
+        include_once "../../DAO/CachorroDAO.php";
         $dao = new CachorroDAO();
         return $dao->listarCachorro();
     }

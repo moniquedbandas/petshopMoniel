@@ -52,7 +52,6 @@
                             <th scope="col">Endereço</th>
                             <th scope="col">CPF</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Senha</th>
                             <th scope="col">Ação</th>
                         </tr>
                     </thead>
@@ -70,10 +69,9 @@
                                     <td><?= $row->endereco ?></td>
                                     <td><?= $row->cpf ?></td>
                                     <td><?= $row->email ?></td>
-                                    <td><?= $row->senha ?></td>
                                     <td>
-                                        <button class="btListar"><a href="../../view/alterarCliente.php?idCliente=<?= $row->idCliente ?>">Editar</a></button>
-                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarCliente.php?oc=deletarCliente&idCliente=<?= $row->idCliente ?>">Excluir</a></button>
+                                        <button class="btListar"><a href="./alterarCliente.php?idCliente=<?= $row->idCliente ?>">Editar</a></button>
+                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarCliente.php?op=excluirCliente&idCliente=<?= $row->idCliente ?>">Excluir</a></button>
                                     </td>
                                 </tr>
                             <?php

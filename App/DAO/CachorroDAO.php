@@ -21,22 +21,20 @@ class CachorroDAO
         $stmt->bindValue(':porte', $cachorro->getPorte());
         $stmt->bindValue(':idCliente', $cachorro->getIdCliente());
 
-
         $res = $stmt->execute();
         if ($res) {
             echo "<script>alert('O cachorro foi cadastrado com sucesso');</script>";
         } else {
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
-        echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
+        // echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
     }
 
     public function listarCachorro()
     {
-
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM cachorro WHERE idCachorro= :idCachorro ORDER BY idCliente";
+        $sql = "SELECT * FROM cachorro ORDER BY idCachorro";
         $query = $conex->conn->prepare($sql);
         $query->execute();
         return $query;
@@ -58,7 +56,7 @@ class CachorroDAO
         $stmt->bindValue(':sexo', $cachorro->getSexo());
         $stmt->bindValue(':raca', $cachorro->getRaca());
         $stmt->bindValue(':castrado', $cachorro->getCastrado());
-        $stmt->bindValue('porte', $cachorro->getPorte());
+        $stmt->bindValue(':porte', $cachorro->getPorte());
         $stmt->bindValue(':id', $cachorro->getIdCachorro());
 
         $res = $stmt->execute();
@@ -67,16 +65,13 @@ class CachorroDAO
     }
     public function excluirCachorro($idCachorro)
     {
-        include_once 'Conexao.php';
+        // include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "DELETE FROM cachorro WHERE idCachorro='$idCachorro'";
-        $res = $conex->conn->query($sql);
-        if ($res) {
-            echo "<script>alert('Exclusão do cachorro realizada com sucesso!');</script>";
-        } else {
-            echo "<script>alert('Não foi possível excluir o cachorro!');</script>";
-        }
-        echo "<script>location.href='../view/telasCRUD/crudCachorro.php';</script>";
+        $sql = "DELETE FROM cachorro WHERE idCachorro= :idCachorro";
+        $stmt = $conex->conn->prepare($sql);
+        $stmt->bindParam(':idCachorro', $idCachorro, PDO::PARAM_INT);
+        $res = $stmt->execute();
+        return $res;
     }
 }

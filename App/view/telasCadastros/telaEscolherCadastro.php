@@ -12,8 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
 </head>
@@ -48,19 +48,20 @@
 
             <div class="escolha">
                 <div class="opcao">
-                    <input type="radio" id="cachorro" name="animal" value="Cachorro">
+                    <input type="radio" id="cachorro" name="escolha" value="Cachorro">
                     <label for="cachorro">Cachorro</label>
                 </div>
                 <div class="opcao">
-                    <input type="radio" id="gato" name="animal" value="Gato">
+                    <input type="radio" id="gato" name="escolha" value="Gato">
                     <label for="gato">Gato</label>
                 </div>
                 <div class="opcao">
-                    <input type="radio" id="tutor" name="tutor" value="Tutor">
+                    <input type="radio" id="tutor" name="escolha" value="Tutor">
                     <label for="tutor">Tutor</label>
                 </div>
-                <input type="submit" value="Selecionar">
+                <input type="submit" value="Selecionar" onclick="redirecionarCadastro()">
             </div>
+
         </div>
     </main>
 
@@ -85,7 +86,7 @@
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

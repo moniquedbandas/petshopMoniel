@@ -4,84 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Public/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/5bc1ff5e4a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
-    <title>PETSHOP MONIEL</title>
+    <link rel="stylesheet" href="./Public/css/teste.css">
+    <title>Petshop Moniel</title>
 </head>
 
 <body>
     <?php
+    echo $_REQUEST['op'];
     switch ($_REQUEST['op']) {
-        case "criarTela":
-            criarTela();
-            break;
-        case "criarUsuario":
-            criarUsuario();
-            break;
-<<<<<<< HEAD
-     
-=======
+            // case "criarTela":
+            //     criarTela();
+            //     break;
         case "listarTela";
             listarTela();
+            break;
+        case "cadastrarUsuario":
+            cadastrarUsuario();
             break;
         case "alterarCliente";
             alterarCliente();
             break;
->>>>>>> c106afb0ead034e203a2d3bb17182bae117f2ed0
-        case "telaBoasVindas":
-            telaBoasVindas();
-            break;
-        case "deletarCliente";
-            deletarCliente();
+
+        case "excluirCliente";
+            excluirCliente();
             break;
         default:
             echo "Erro no processamento das requisições.";
     }
-    function criarTela()
-    {
-        echo "<script>location.href='../../view/telasCadastros/telaCadastroCliente.php';</script>";
-    }
+    // function criarTela()
+    // {
+    //     echo "<script>location.href='../../view/telasCadastros/telaCadastroCliente.php';</script>";
+    // }
 
-    function criarUsuario()
-    {
-    $nomeCliente = $_POST["nome"];
-    $telefone = $_POST["telefone"];
-    $endereco = $_POST["endereco"];
-    $cpf = $_POST["cpf"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
-    include 'ClienteController.php';
-    $contr = new ClienteController();
-    $contr->cadastrarCliente($nomeCliente, $telefone, $endereco, $cpf, $email, $senha);
-    }
-<<<<<<< HEAD
-
-
-=======
     function listarTela()
     {
-        echo "<script>location.href='./../view/telasCRUD/listarCliente.php';</script>";
+        echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</script>";
+    }
+    function cadastrarUsuario()
+    {
+        $nomeCliente = $_POST['nome'];
+        $telefone = $_POST['tel'];
+        $endereco = $_POST['endereco'];
+        $cpf = $_POST['cpf'];
+        $email = $_POST['email'];
+        include_once '../ClienteController.php';
+        $contr = new ClienteController();
+        $contr->cadastrarCliente($nomeCliente, $telefone, $endereco, $cpf, $email);
+        echo "<script>location.href='../../view/telasCadastros/telaCadastroCliente.php';</script>";
     }
     function alterarCliente()
     {
     }
->>>>>>> c106afb0ead034e203a2d3bb17182bae117f2ed0
-    function telaBoasVindas()
-    {
-        echo "<script>location.href='../../view/telasCadastros/telaEscolherCadastro.php';</script>";
-    }
-    function deletarCliente()
+
+    function excluirCliente()
     {
         if (isset($_GET['idCliente'])) {
             $idCliente = $_GET['idCliente'];
-            include_once 'CompromissoController.php';
+            include_once '../ClienteController.php';
             $controller = new ClienteController();
             $controller->excluirCliente($idCliente);
             echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</script>";
         } else {
-            echo 'Erro: ID do compromisso não fornecido.';
+            echo 'Erro: ID do cliente não identificado.';
         }
     }
     ?>

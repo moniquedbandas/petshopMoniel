@@ -34,12 +34,15 @@ class Gato extends Animal
         $this->temperamento = $value;
     }
 
-    public function cadastrarGato(Gato $gato)
+    public function cadastrarGato(Gato $gatoDAO)
     {
+        include_once "../../DAO/GatoDAO.php";
+        $gatoDAO = new GatoDAO();
+        $gatoDAO->cadastrarGato($this);
     }
     public function listarGato()
     {
-        include_once "../DAO/GatoDAO.php";
+        include_once "../../DAO/GatoDAO.php";
         $dao = new GatoDAO();
         return $dao->listarGato();
     }

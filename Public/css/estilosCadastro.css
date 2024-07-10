@@ -40,7 +40,13 @@ body {
   background-color: #a7c6865d;
   margin: 0;
   padding: 0;
+  gap: 1rem;
   list-style-type: none;
+}
+
+.menuHeader a {
+  text-decoration: none;
+  color: black;
 }
 
 /* parte do main da tela de escolher oq cadastrar agora */

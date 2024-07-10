@@ -15,7 +15,7 @@
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
-    <title>Petshop Moniel</title>
+    <title>Petshop Moniels</title>
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
@@ -34,6 +34,7 @@
         </nav>
         <nav class="menuHeader">
             <ul>
+                <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
                 <li><strong>Área de login</strong></li>
             </ul>
         </nav>
@@ -48,12 +49,8 @@
 
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
-                            <label for="id">ID do Tutor: </label>
-                            <input type="text" id="id" name="id" autocomplete="off" required>
-                        </div>
-                        <div class="input-wrapper">
                             <label for="nome">Nome do pet: </label>
-                            <input type="text" id="nome" name="nome" autocomplete="off">
+                            <input type="text" id="nomePet" name="nomePet" autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
@@ -79,14 +76,16 @@
                             <label for="temperamento">Temperamento: </label>
                             <input type="text" id="temperamento" name="temperamento" autocomplete="off">
                         </div>
+                        <div class="input-wrapper">
+                            <label for="id">ID do Tutor: </label>
+                            <input type="text" id="idCliente" name="idCliente" autocomplete="off">
+                        </div>
 
                         <input type="hidden" id="og" name="og">
                         <div class="areaBotoes3">
-                            <input type="hidden" name="og" value="criarGato">
-                            <input type="submit" name="create" value="Cadastrar">
+                            <input type="submit" name="create" value="Cadastrar" onclick="setOgValue('cadastrarGato')">
 
-                            <input type="hidden" name="og" value="listarGato">
-                            <input type="submit" name="listar" value="Listar">
+                            <input type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>
@@ -116,7 +115,7 @@
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

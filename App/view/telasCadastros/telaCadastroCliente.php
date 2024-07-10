@@ -34,6 +34,7 @@
         </nav>
         <nav class="menuHeader">
             <ul>
+                <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
                 <li><strong>Área de login</strong></li>
             </ul>
         </nav>
@@ -67,14 +68,11 @@
                             <label for="email">E-mail: </label>
                             <input type="text" id="email" name="email" autocomplete="off">
                         </div>
-                        <!-- <div class="input-wrapper">
-                            <label for="password">Senha: </label>
-                            <input type="password" id="password" name="password" autocomplete="off">
-                        </div> -->
+
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
-                            <input type="hidden" name="op" value="criarUsuario">
-                            <input type="submit" name="criar" value="Criar" onclick="document.getElementById('op').value='telaBoasVindas'">
+                            <input type="submit" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario')">
+                            <input type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>
@@ -104,7 +102,7 @@
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

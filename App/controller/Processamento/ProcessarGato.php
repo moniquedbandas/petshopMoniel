@@ -21,6 +21,7 @@
 
 <body>
     <?php
+    echo $_REQUEST['og'];
     switch ($_REQUEST['og']) {
         case "listarTela";
             listarTela();
@@ -44,16 +45,44 @@
     }
     function cadastrarGato()
     {
+        $nomePet = $_POST['nomePet'];
+        $idade = $_POST['idade'];
+        $peso = $_POST['peso'];
+        $sexo = $_POST['sexo'];
+        $raca = $_POST['raca'];
+        $castrado = $_POST['castrado'];
+        $temperamento = $_POST['temperamento'];
+        $idCliente = $_POST['idCliente'];
+        include_once '../GatoController.php';
+        $contr = new GatoController();
+        $contr->cadastrarGato($nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente);
+        echo "<script>location.href='../../view/telasCadastros/telaCadastroGato.php';</script>";
     }
     function telaAlterarGato()
     {
-        echo "<script>location.href='../../view/telasCRUD/alterarGato.php';</script>";
+        // echo "<script>location.href='../../view/telasCRUD/alterarGato.php';</script>";
     }
     function alterarGato()
     {
+        $idGato = $_REQUEST['idGato'];
+        $nomePet = $_POST['nomePet'];
+        $idade = $_POST['idade'];
+        $peso = $_POST['peso'];
+        $sexo = $_POST['sexo'];
+        $raca = $_POST['raca'];
+        $castrado = $_POST['castrado'];
+        $temperamento = $_POST['temperamento'];
+        $idCliente = $_POST['idCliente'];
+        include '../GatoController.php';
+        $contr = new GatoController();
+        $contr->alterarGato($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente);
     }
     function deletarGato()
     {
+        $idGato = $_REQUEST['idGato'];
+        include '../GatoController.php';
+        $contr = new GatoController();
+        $contr->excluirGato($idGato);
     }
 
     ?>
