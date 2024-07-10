@@ -38,11 +38,10 @@ class ClienteDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM cliente WHERE cpf= ':cpf' ORDER BY idCliente";
-        $stmt = $conex->conn->prepare($sql);
-        // $stmt->bindValue(':cpf', $cpf);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_OBJ);
+        $sql = "SELECT * FROM cliente ORDER BY idCliente";
+        $query = $conex->conn->prepare($sql);
+        $query->execute();
+        return $query;
     }
     public function alterarCliente(Cliente $cliente)
     {
@@ -68,7 +67,7 @@ class ClienteDAO
             if ($res === false) {
                 throw new Exception("Erro ao executar a consulta.");
             }
-            echo "<script>location.href='../controller/Processamento/ProcessarCliente.php?oc=listarTela';</script>";
+            echo "<script>location.href='../controller/Processamento/ProcessarCliente.php?op=listarTela';</script>";
         } catch (Exception $e) {
             echo "Erro: " . $e->getMessage();
             return false;
@@ -78,17 +77,16 @@ class ClienteDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "DELETE FROM cliente WHERE idCliente=:idCliente";
-        $stmt = $conex->conn->query($sql);
+        $sql = "DELETE FROM cliente WHERE idCliente = :idCliente";
+        $stmt = $conex->conn->prepare($sql);
         $stmt->bindParam(':idCliente', $idCliente, PDO::PARAM_INT);
         $res = $stmt->execute();
-
         return $res;
-        // if ($res) {
-        //     echo "<script>alert('Exclusão realizada com sucesso!');</script>";
-        // } else {
-        //     echo "<script>alert('Não foi possível excluir o usuário!');</script>";
-        // }
-        // echo "<script>location.href='../../App/view/telasCRUD/crudCliente.php';</script>";
+
+        if ($res) {
+            echo "<script>alert('Exclusão realizada com sucesso!');</script>";
+        } else {
+            echo "<script>alert('Não foi possível excluir o usuário!');</script>";
+        }
     }
 }

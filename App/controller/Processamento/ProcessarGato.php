@@ -64,9 +64,25 @@
     }
     function alterarGato()
     {
+        $idGato = $_REQUEST['idGato'];
+        $nomePet = $_POST['nomePet'];
+        $idade = $_POST['idade'];
+        $peso = $_POST['peso'];
+        $sexo = $_POST['sexo'];
+        $raca = $_POST['raca'];
+        $castrado = $_POST['castrado'];
+        $temperamento = $_POST['temperamento'];
+        $idCliente = $_POST['idCliente'];
+        include '../GatoController.php';
+        $contr = new GatoController();
+        $contr->alterarGato($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente);
     }
     function deletarGato()
     {
+        $idGato = $_REQUEST['idGato'];
+        include '../GatoController.php';
+        $contr = new GatoController();
+        $contr->excluirGato($idGato);
     }
 
     ?>
