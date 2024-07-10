@@ -20,7 +20,9 @@
 </head>
 
 <body>
+    
     <?php
+    //Teste
     echo $_REQUEST['og'];
     switch ($_REQUEST['og']) {
         case "listarTela";
