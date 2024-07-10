@@ -64,10 +64,26 @@
         // echo "<script>location.href='../../../../view/telasCRUD/alterarCachorro.php';</script>";
     }
     function alterarCachorro()
-    {
+    { 
+        $idCachorro = $_REQUEST["idCachorro"];
+        $nomePet = $_POST["nomePet"];
+        $idade = $_POST["idade"];
+        $peso = $_POST["peso"];
+        $sexo = $_POST["sexo"];
+        $raca = $_POST["raca"];
+        $castrado = $_POST["castrado"];
+        $porte = $_POST["porte"];
+        $idCliente = $_POST["idCliente"];
+        include 'CachorroController.php';
+        $contr = new CachorroController();
+        $contr->alterarCachorro($idCachorro, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente);
     }
     function deletarCachorro()
     {
+        $idCachorro = $_REQUEST["idCachorro"];
+        include 'CachorroController.php';
+        $contr = new CachorroController();
+        $contr->excluirCachorro($idCachorro);
     }
 
     ?>
