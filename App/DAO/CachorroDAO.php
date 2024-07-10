@@ -34,7 +34,7 @@ class CachorroDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM cachorro WHERE idCachorro= ':idCachorro' ORDER BY idCliente";
+        $sql = "SELECT * FROM cachorro ORDER BY idCachorro";
         $query = $conex->conn->prepare($sql);
         $query->execute();
         return $query;
@@ -65,7 +65,7 @@ class CachorroDAO
     }
     public function excluirCachorro($idCachorro)
     {
-        include_once 'Conexao.php';
+        // include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
         $sql = "DELETE FROM cachorro WHERE idCachorro= :idCachorro";

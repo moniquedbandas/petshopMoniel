@@ -76,7 +76,7 @@
                                     <td><?= $row->porte ?></td>
                                     <td><?= $row->idCliente ?></td>
                                     <td>
-                                        <button class="btListar"><a href="../../view/alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a></button>
+                                        <button class="btListar"><a href="./alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a></button>
                                         <button class="btListar"><a href="../../controller/Processamento/ProcessarCachorro.php?oc=deletarCachorro&idCachorro=<?= $row->idCachorro ?>">Excluir</a></button>
                                     </td>
                                 </tr>

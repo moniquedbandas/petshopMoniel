@@ -35,8 +35,8 @@
             alterarCliente();
             break;
 
-        case "deletarCliente";
-            deletarCliente();
+        case "excluirCliente";
+            excluirCliente();
             break;
         default:
             echo "Erro no processamento das requisições.";
@@ -66,16 +66,16 @@
     {
     }
 
-    function deletarCliente()
+    function excluirCliente()
     {
         if (isset($_GET['idCliente'])) {
             $idCliente = $_GET['idCliente'];
-            include_once 'CompromissoController.php';
+            include_once '../ClienteController.php';
             $controller = new ClienteController();
             $controller->excluirCliente($idCliente);
             echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</script>";
         } else {
-            echo 'Erro: ID do compromisso não fornecido.';
+            echo 'Erro: ID do cliente não identificado.';
         }
     }
     ?>
