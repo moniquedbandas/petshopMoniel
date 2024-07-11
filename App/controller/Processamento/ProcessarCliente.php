@@ -64,6 +64,15 @@
     }
     function alterarCliente()
     {
+        $idCliente = $_REQUEST['idCliente'];
+        $nomeCliente = $_POST['nomeCliente'];
+        $telefone = $_POST['telefone'];
+        $endereco = $_POST['endereco'];
+        $cpf = $_POST['cpf'];
+        $email = $_POST['email'];
+        include_once '../ClienteController.php';
+        $contr = new ClienteController();
+        $contr->alterarCliente($idCliente, $nomeCliente, $telefone, $endereco, $cpf, $email);
     }
 
     function excluirCliente()
@@ -73,7 +82,7 @@
             include_once '../ClienteController.php';
             $controller = new ClienteController();
             $controller->excluirCliente($idCliente);
-            echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</script>";
+            echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</scrip>";
         } else {
             echo 'Erro: ID do cliente não identificado.';
         }
