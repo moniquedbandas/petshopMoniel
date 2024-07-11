@@ -40,15 +40,23 @@ class Cachorro extends Animal
         $cachorroDAO = new CachorroDAO();
         $cachorroDAO->cadastrarCachorro($this);
     }
-
     public function listarCachorro()
     {
         include_once "../../DAO/CachorroDAO.php";
         $dao = new CachorroDAO();
         return $dao->listarCachorro();
     }
+    public function resgataPorID($idCachorro)
+    {
+        include_once "../../DAO/CachorroDAO.php";
+        $model = new CachorroDAO(null);
+        return $model->resgataPorID($idCachorro);
+    }
     public function alterarCachorro(Cachorro $cachorro)
     {
+        include_once "../../DAO/CachorroDAO.php";
+        $cachorroDAO = new CachorroDAO();
+        $cachorroDAO->alterarCachorro($cachorro);
     }
     public function deletarCachorro($idCachorro)
     {

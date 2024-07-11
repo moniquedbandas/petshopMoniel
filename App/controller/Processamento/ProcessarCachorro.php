@@ -21,17 +21,12 @@
 
 <body>
     <?php
-    echo $_REQUEST['oc'];
-    var_dump('oc');
     switch ($_REQUEST['oc']) {
         case "listarTela";
             listarTela();
             break;
         case "cadastrarCachorro";
             cadastrarCachorro();
-            break;
-        case "telaAlterarCachorro";
-            telaAlterarCachorro();
             break;
         case "alterarCachorro";
             alterarCachorro();
@@ -40,6 +35,7 @@
             deletarCachorro();
             break;
     }
+
     function listarTela()
     {
         echo "<script>location.href='../../view/telasCRUD/listarCachorro.php';</script>";
@@ -59,24 +55,21 @@
         $contr->cadastrarCachorro($nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente);
         echo "<script>location.href='../../view/telasCadastros/telaCadastroCachorro.php';</script>";
     }
-    function telaAlterarCachorro()
-    {
-        // echo "<script>location.href='../../../../view/telasCRUD/alterarCachorro.php';</script>";
-    }
     function alterarCachorro()
     {
-        $idCachorro = $_REQUEST["idCachorro"];
-        $nomePet = $_POST["nomePet"];
-        $idade = $_POST["idade"];
-        $peso = $_POST["peso"];
-        $sexo = $_POST["sexo"];
-        $raca = $_POST["raca"];
-        $castrado = $_POST["castrado"];
-        $porte = $_POST["porte"];
-        $idCliente = $_POST["idCliente"];
+        $idCachorro = $_REQUEST['idCachorro'];
+        $nomePet = $_POST['nomePet'];
+        $idade = $_POST['idade'];
+        $peso = $_POST['peso'];
+        $sexo = $_POST['sexo'];
+        $raca = $_POST['raca'];
+        $castrado = $_POST['castrado'];
+        $porte = $_POST['porte'];
+        $idCliente = $_POST['idCliente'];
         include '../CachorroController.php';
         $contr = new CachorroController();
         $contr->alterarCachorro($idCachorro, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente);
+        echo "<script>alert('O cachorro foi alterado com sucesso!');</script>";
     }
     function deletarCachorro()
     {
@@ -86,7 +79,6 @@
         $controller->deletarCachorro($idCachorro);
         echo "<script>location.href='../../view/telasCRUD/listarCachorro.php';</script>";
     }
-
     ?>
 </body>
 

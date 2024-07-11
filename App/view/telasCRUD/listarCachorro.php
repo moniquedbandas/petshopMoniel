@@ -35,7 +35,6 @@
         <nav class="menuHeader">
             <ul>
                 <li><a href="../telasCadastros/telaCadastroCachorro.php"><strong>Voltar</strong></a></li>
-                <li><strong>Listagem de cachorros</strong></li>
             </ul>
         </nav>
     </header>

@@ -81,6 +81,9 @@ body {
   align-items: center;
   gap: 10px;
 }
+caption {
+  text-align: center;
+}
 /* .escolha input[type="radio"] {
     ainda nao decidi o que fazer aqui.
 } */
