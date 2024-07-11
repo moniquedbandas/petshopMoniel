@@ -43,7 +43,7 @@
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <form action="../../controller/Processamento/ProcessarCachorro.php" method="post">
+            <form action="../../controller/Processamento/ProcessarCachorro.php" method="post" onsubmit="return validateCachForm()">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -118,6 +118,7 @@
     </footer>
 
     <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/regex.js"></script>
 </body>
 
 </html>

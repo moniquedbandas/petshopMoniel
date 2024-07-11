@@ -43,7 +43,7 @@
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <form class="formularioCadUsuario" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+            <form class="formularioCadUsuario" action="../../controller/Processamento/ProcessarCliente.php" method="post" onsubmit="return validateClienteForm()">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -103,6 +103,7 @@
     </footer>
 
     <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/regex.js"></script>
 </body>
 
 </html>
