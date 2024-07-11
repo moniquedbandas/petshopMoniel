@@ -16,6 +16,7 @@
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
+    
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
@@ -119,6 +120,7 @@
 
     <script src="../../../Public/JS/script.js"></script>
     <script src="../../../Public/JS/regex.js"></script>
+    
 </body>
 
 </html>

@@ -19,6 +19,7 @@ function validateCachForm() {
 
     if (!nomeRegex.test(nomePet)) {
         alert("Por favor, insira um nome válido.");
+        return false;
     }
     if (!idadeRegex.test(idade)) {
         alert("Por favor, insira uma idade válida.");
@@ -80,6 +81,7 @@ function validateGatoForm() {
 
     if (!nomeRegex.test(nomePet)) {
         alert("Por favor, insira um nome válido.");
+        return false;
     }
 
     if (!idadeRegex.test(idade)) {
