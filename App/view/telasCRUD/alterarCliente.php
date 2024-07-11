@@ -79,7 +79,7 @@
                             </tr>
                         <?php
                         } else {
-                            echo "<tr><td colspan='6'>Nenhum compromisso encontrado.</td></tr>";
+                            echo "<tr><td colspan='6'>Nenhum cliente encontrado.</td></tr>";
                         }
                         ?>
                     </tbody>
