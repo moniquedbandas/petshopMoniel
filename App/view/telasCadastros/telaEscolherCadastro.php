@@ -1,3 +1,15 @@
+<?php
+session_start();
+echo $_SESSION['user_id'];
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../telaLogin.php');
+    exit;
+    // echo 'oi';
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
