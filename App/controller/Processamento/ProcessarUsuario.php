@@ -34,7 +34,7 @@
             $contr = new UsuarioController();
             $usuarioLogado = $contr->autenticarUsuario($email, $senha);
             if ($usuarioLogado) {
-                $_SESSION['user_id'] = $usuarioLogado; //se usuario e senha corretos, entra
+                $_SESSION['usuarioLogado'] = $usuarioLogado; //se usuario senha corretos, entra
                 echo "<script>location.href='../../view/telasCadastros/telaEscolherCadastro.php';</script>";
             } else {
                 echo "<script>alert('Usuario ou senha incorretos');</script>";
