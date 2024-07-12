@@ -13,7 +13,7 @@ class UsuarioDAO
         $stmt->execute();
         $emailUser = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($emailUser && $senha == $emailUser['senha']) {
-            $_SESSION['user_id'] = $email;
+            $_SESSION['usuarioLogado'] = $email;
             header('Location: ../../view/telasCadastros/telaEscolherCadastro.php');
             exit;
         } else {
