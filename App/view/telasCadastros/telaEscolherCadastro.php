@@ -1,8 +1,8 @@
 <?php
 session_start();
-echo $_SESSION['user_id'];
+echo $_SESSION['usuarioLogado'];
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['usuarioLogado'])) {
     header('Location: ../telaLogin.php');
     exit;
     // echo 'oi';
