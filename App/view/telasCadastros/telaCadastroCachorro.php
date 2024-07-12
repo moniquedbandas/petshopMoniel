@@ -85,7 +85,7 @@
                         <div class="areaBotoes2">
                             <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
                             <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
-                            <input type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <input type="submit" id="criar" name="criar" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
                             <!-- <input type="hidden" name="oc" value="listarTela"> -->
                             <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTela'"> -->
                             <input type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">

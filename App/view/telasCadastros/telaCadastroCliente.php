@@ -43,7 +43,7 @@
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <form class="formularioCadUsuario" action="../../controller/Processamento/ProcessarCliente.php" method="post" onsubmit="return validateClienteForm()">
+            <form class="formularioCadUsuario" action="../../controller/Processamento/ProcessarCliente.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -71,14 +71,17 @@
 
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
-                            <input type="submit" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario')">
-                            <input type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')">
+                        <button type="button" id="criar">Criar</button>
+                        <button type="button" id="listar">Listar</button>
+                            <!-- <input type="submit" id="criar" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario')"> -->
+                            <!-- <input type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')"> -->
+                            
                         </div>
                     </div>
                 </fieldset>
-            </form>
-
+            </form>  
         </div>
+        <script src="../../../Public/JS/teste.js"></script>
     </main>
 
     <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
@@ -103,7 +106,7 @@
     </footer>
 
     <script src="../../../Public/JS/script.js"></script>
-    <script src="../../../Public/JS/regex.js"></script>
+    
 </body>
 
 </html>
