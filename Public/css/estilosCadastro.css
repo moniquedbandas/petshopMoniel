@@ -32,6 +32,10 @@ body {
   align-items: center;
   padding-top: 5px;
 }
+.logout {
+  position: absolute;
+  left: 2.25rem;
+}
 .menuHeader ul {
   display: flex;
   justify-content: center;

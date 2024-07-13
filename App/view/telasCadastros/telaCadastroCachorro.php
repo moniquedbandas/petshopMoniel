@@ -1,3 +1,13 @@
+<?php
+session_start();
+echo $_SESSION['usuarioLogado'];
+
+if (!isset($_SESSION['usuarioLogado'])) {
+    header('Location: ../telaLogin.php');
+    exit;
+    // echo 'oi';
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -30,6 +40,7 @@
                 <a class="navbar-brand" href="../../../index.html">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
                 </a>
+                <a class="logout" href="../../DAO/Logout.php">Sair</a>
             </div>
         </nav>
         <nav class="menuHeader">
