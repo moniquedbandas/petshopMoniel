@@ -34,7 +34,7 @@ body {
 }
 .logout {
   position: absolute;
-  left: 2.25rem;
+  left: 3.25rem;
 }
 .menuHeader ul {
   display: flex;
@@ -47,8 +47,7 @@ body {
   gap: 1rem;
   list-style-type: none;
 }
-
-.menuHeader a {
+a {
   text-decoration: none;
   color: black;
 }
@@ -101,7 +100,7 @@ input[type="submit"] {
 }
 
 .cadastro {
-  margin: 1rem 0;
+  margin: 3rem 0;
   display: flex;
   justify-content: center;
 }
@@ -173,6 +172,7 @@ input:focus {
 }
 
 #footerIndex {
+  /* margin-top: 5rem; */
   padding: 1rem !important;
   justify-content: space-between;
   width: 100%;
@@ -194,6 +194,9 @@ input:focus {
   scale: 1.1;
 }
 
+.crud {
+  text-align: justify;
+}
 @media (min-width: 52rem) {
   #footerIndex {
     width: 100%;

@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuarioLogado'])) {
+    header('Location: ../telaLogin.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -20,16 +29,13 @@
 
 <body class="m-0 border-0 m-0 border-0">
     <header class="areaHeader">
-        <nav class="navbar">
+        <nav class="navbar ">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Petshop Moniel</span>
-            </div>
-        </nav>
-        <nav class="areaLogos">
-            <div class="container" id="contLogos">
                 <a class="navbar-brand" href="../../../index.html">
-                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
+                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
+                    Petshop Moniel
                 </a>
+                <a class="logout" href="../../DAO/Logout.php">Sair</a>
             </div>
         </nav>
         <nav class="menuHeader">
@@ -41,7 +47,7 @@
 
     <main class="crud">
         <form id="formComp" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
-            <div class="table-responsive-sm">
+            <div class="table-responsive-xxl">
                 <table class="table caption-top">
                     <caption>Listagem de cachorros</caption>
                     <thead>
@@ -54,7 +60,7 @@
                             <th scope="col">Raça</th>
                             <th scope="col">Castrado</th>
                             <th scope="col">Porte</th>
-                            <th scope="col">IdTutor</th>
+                            <th scope="col">Tutor</th>
                             <th scope="col">Ação</th>
                         </tr>
                     </thead>

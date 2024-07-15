@@ -35,7 +35,7 @@ body {
 }
 #iconeLogin {
   position: absolute;
-  right: 1.25rem;
+  right: 0;
 }
 /* área do main */
 .p-3 {
@@ -78,5 +78,9 @@ body {
   #footerIndex {
     width: 100%;
     justify-content: center;
+  }
+  #iconeLogin {
+    position: absolute;
+    right: 3.25rem;
   }
 }

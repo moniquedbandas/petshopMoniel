@@ -1,13 +1,12 @@
 <?php
 session_start();
-echo $_SESSION['usuarioLogado'];
 
 if (!isset($_SESSION['usuarioLogado'])) {
     header('Location: ../telaLogin.php');
     exit;
-    // echo 'oi';
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -30,15 +29,11 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
 <body class="m-0 border-0 m-0 border-0">
     <header class="areaHeader">
-        <nav class="navbar">
+        <nav class="navbar ">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Petshop Moniel</span>
-            </div>
-        </nav>
-        <nav class="areaLogos">
-            <div class="container" id="contLogos">
                 <a class="navbar-brand" href="../../../index.html">
-                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
+                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
+                    Petshop Moniel
                 </a>
                 <a class="logout" href="../../DAO/Logout.php">Sair</a>
             </div>
@@ -46,7 +41,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
         <nav class="menuHeader">
             <ul>
                 <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
-                <li><strong>Área de login</strong></li>
+                <li><strong>Área de cadastro</strong></li>
             </ul>
         </nav>
     </header>

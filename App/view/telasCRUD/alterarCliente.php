@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuarioLogado'])) {
+    header('Location: ../telaLogin.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -20,22 +29,17 @@
 
 <body class="m-0 border-0 m-0 border-0">
     <header class="areaHeader">
-        <nav class="navbar">
+        <nav class="navbar ">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Petshop Moniel</span>
-            </div>
-        </nav>
-        <nav class="areaLogos">
-            <div class="container" id="contLogos">
                 <a class="navbar-brand" href="../../../index.html">
-                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
+                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
+                    Petshop Moniel
                 </a>
             </div>
         </nav>
         <nav class="menuHeader">
             <ul>
                 <li><a href="../telasCadastros/telaCadastroCliente.php"><strong>Voltar</strong></a></li>
-                <li><strong>Listagem de clientes</strong></li>
             </ul>
         </nav>
     </header>
