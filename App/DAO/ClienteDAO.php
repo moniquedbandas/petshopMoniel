@@ -49,26 +49,22 @@ class ClienteDAO
         try {
             $conex = new Conexao();
             $conex->fazConexao();
-
             $conex->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "UPDATE cliente SET nomeCliente = :nome, telefone = :telefone, endereco = :endereco,
-            email = :email WHERE idCliente = :idCliente";
+            $sql = "UPDATE cliente SET nomeCliente = :nomeCliente, telefone = :telefone, endereco = :endereco, cpf = :cpf, email = :email WHERE idCliente = :idCliente";
             $stmt = $conex->conn->prepare($sql);
-
             $stmt->bindValue(':idCliente', $cliente->getIdCliente());
-            $stmt->bindValue(':nome', $cliente->getNomeCliente());
+            $stmt->bindValue(':nomeCliente', $cliente->getNomeCliente());
             $stmt->bindValue(':telefone', $cliente->getTelefone());
             $stmt->bindValue(':endereco', $cliente->getEndereco());
             $stmt->bindValue(':cpf', $cliente->getCpf());
             $stmt->bindValue(':email', $cliente->getEmail());
-            // $stmt->bindValue(':senha', $cliente->getSenha());
 
             $res = $stmt->execute();
             if ($res === false) {
                 throw new Exception("Erro ao executar a consulta.");
             }
-            echo "<script>location.href='../controller/Processamento/ProcessarCliente.php?op=listarTela';</script>";
+            echo "<script>location.href='../../controller/Processamento/ProcessarCliente.php?op=listarTela';</script>";
         } catch (Exception $e) {
             echo "Erro: " . $e->getMessage();
             return false;

@@ -3,13 +3,13 @@ require_once 'Animal.php';
 
 class Gato extends Animal
 {
-
     protected $idGato;
     protected $temperamento;
 
     public function __construct($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente)
     {
         parent::__construct($nomePet, $idade, $peso, $sexo, $raca, $castrado, $idCliente);
+        error_log("Criando objeto Gato com ID: " . $idGato);
         $this->idGato = $idGato;
         $this->temperamento = $temperamento;
     }
@@ -46,8 +46,17 @@ class Gato extends Animal
         $dao = new GatoDAO();
         return $dao->listarGato();
     }
+    public function resgataPorID($idGato)
+    {
+        include_once "../../DAO/GatoDAO.php";
+        $model = new GatoDAO(null);
+        return $model->resgataPorID($idGato);
+    }
     public function alterarGato(Gato $gato)
     {
+        include_once "../../DAO/GatoDAO.php";
+        $gatoDAO = new GatoDAO();
+        $gatoDAO->alterarGato($gato);
     }
     public function deletarGato($idGato)
     {

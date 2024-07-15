@@ -22,16 +22,12 @@
 <body>
 
     <?php
-    echo $_REQUEST['og'];
     switch ($_REQUEST['og']) {
         case "listarTela";
             listarTela();
             break;
         case "cadastrarGato";
             cadastrarGato();
-            break;
-        case "telaAlterarGato";
-            telaAlterarGato();
             break;
         case "alterarGato";
             alterarGato();
@@ -59,10 +55,6 @@
         $contr->cadastrarGato($nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente);
         echo "<script>location.href='../../view/telasCadastros/telaCadastroGato.php';</script>";
     }
-    function telaAlterarGato()
-    {
-        // echo "<script>location.href='../../view/telasCRUD/alterarGato.php';</script>";
-    }
     function alterarGato()
     {
         $idGato = $_REQUEST['idGato'];
@@ -74,14 +66,15 @@
         $castrado = $_POST['castrado'];
         $temperamento = $_POST['temperamento'];
         $idCliente = $_POST['idCliente'];
-        include '../GatoController.php';
+        include_once '../GatoController.php';
         $contr = new GatoController();
         $contr->alterarGato($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente);
+        echo "<script>alert('O gato foi alterado com sucesso!');</script>";
     }
     function deletarGato()
     {
         $idGato = $_GET['idGato'];
-        include '../GatoController.php';
+        include_once '../GatoController.php';
         $contr = new GatoController();
         $contr->deletarGato($idGato);
         echo "<script>location.href='../../view/telasCRUD/listarGato.php';</script>";

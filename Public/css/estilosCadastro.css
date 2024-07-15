@@ -32,6 +32,10 @@ body {
   align-items: center;
   padding-top: 5px;
 }
+.logout {
+  position: absolute;
+  left: 2.25rem;
+}
 .menuHeader ul {
   display: flex;
   justify-content: center;
@@ -80,6 +84,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+caption {
+  text-align: center;
 }
 /* .escolha input[type="radio"] {
     ainda nao decidi o que fazer aqui.

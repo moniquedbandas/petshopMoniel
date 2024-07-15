@@ -17,6 +17,7 @@
 
 <body>
     <?php
+    session_start();
     switch ($_REQUEST['ou']) {
         case "autenticar";
             autenticar();
@@ -32,11 +33,12 @@
             include '../UsuarioController.php';
             $contr = new UsuarioController();
             $usuarioLogado = $contr->autenticarUsuario($email, $senha);
-            if ($usuarioLogado) { //se usuario e senha corretos, entra
+            if ($usuarioLogado) {
+                $_SESSION['usuarioLogado'] = $usuarioLogado; //se usuario senha corretos, entra
                 echo "<script>location.href='../../view/telasCadastros/telaEscolherCadastro.php';</script>";
             } else {
                 echo "<script>alert('Usuario ou senha incorretos');</script>";
-                echo "<script>location.href='../../view/telaLogin.html';</script>";
+                echo "<script>location.href='../../view/telaLogin.php';</script>";
             }
         }
     }

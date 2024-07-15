@@ -7,6 +7,7 @@ class Conexao
     private $username = 'root';
     //private $password = 'Moni@1958';
     private $password = ''; //pc senac
+    // private $password = 'Moni@1958';
     public $conn;
 
     public function fazConexao()

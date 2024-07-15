@@ -1,13 +1,7 @@
 <?php
 session_start();
-echo $_SESSION['usuarioLogado'];
-
-if (!isset($_SESSION['usuarioLogado'])) {
-    header('Location: ../telaLogin.php');
-    exit;
-    // echo 'oi';
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -24,7 +18,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
-    <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
+    <link rel="stylesheet" href="../../Public/css/estilosLogin.css">
     <title>Petshop Moniel</title>
 </head>
 
@@ -37,67 +31,46 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </nav>
         <nav class="areaLogos">
             <div class="container" id="contLogos">
-                <a class="navbar-brand" href="../../../index.html">
-                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="../../Public/imagens/iconePet.png" alt="iconePatinha">
                 </a>
             </div>
         </nav>
         <nav class="menuHeader">
             <ul>
-                <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
                 <li><strong>Área de login</strong></li>
             </ul>
         </nav>
     </header>
+    <main class="login p-3 border-0 border-0">
+        <div class="telaLogin">
 
-    <main class="cadastro">
-        <div class="areaCadastro">
-
-            <form class="formularioCadUsuario" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+            <form id="formularioLogin" class="formularioLogin" action="../../App/controller/Processamento/ProcessarUsuario.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
-
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
-                            <label for="nome">Nome: </label>
-                            <input type="text" id="nome" name="nome" autocomplete="off">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="tel">Telefone: </label>
-                            <input type="text" id="tel" name="tel" autocomplete="off">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="endereco">Endereço: </label>
-                            <input type="text" id="endereco" name="endereco" autocomplete="off">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="cpf">CPF: </label>
-                            <input type="text" id="cpf" name="cpf" autocomplete="off">
-                        </div>
-                        <div class="input-wrapper">
                             <label for="email">E-mail: </label>
-                            <input type="text" id="email" name="email" autocomplete="off">
+                            <input type="text" id="email" name="email" autocomplete="off" placeholder="Informe seu e-mail">
                         </div>
-
-                        <input type="hidden" id="op" name="op">
+                        <div class="input-wrapper">
+                            <label for="password">Senha: </label>
+                            <input type="password" id="password" name="password" autocomplete="off" placeholder="Senha de 5 a 10 caracteres">
+                        </div>
+                        <input type="hidden" id="ou" name="ou" value="ou">
                         <div class="areaBotoes">
-                        <button type="button" id="criar">Criar</button>
-                        <button type="button" id="listar">Listar</button>
-                            <!-- <input type="submit" id="criar" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario')"> -->
-                            <!-- <input type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')"> -->
-                            
+                            <input type="submit" name="entrar" value="Entrar" onclick="document.getElementById('ou').value='autenticar'">
                         </div>
                     </div>
                 </fieldset>
-            </form>  
+            </form>
         </div>
-        <script src="../../../Public/JS/teste.js"></script>
     </main>
 
     <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                <img src="../../../Public/imagens/patinha.png" alt="">
+                <img src="../../Public/imagens/patinha.png" alt="">
             </a>
             <span class="mb-md-0 text-body-secondary">&copy; Petshop Moniel</span>
         </div>
@@ -115,8 +88,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </ul>
     </footer>
 
-    <script src="../../../Public/JS/script.js"></script>
-    
+    <!-- <script src="../../Public/JS/script.js"></script> -->
 </body>
 
 </html>

@@ -81,28 +81,12 @@ class Cliente
         $this->email = $value;
     }
 
-    // public function getSenha()
-    // {
-    //     return $this->senha;
-    // }
-
-    // public function setSenha($value)
-    // {
-    //     $this->senha = $value;
-    // }
-
     public function cadastrarCliente(Cliente $clienteDAO)
     {
         include_once '../../DAO/ClienteDAO.php';
         $clienteDAO = new ClienteDAO();
         $clienteDAO->cadastrarCliente($this);
     }
-    // public function autenticarCliente($email, $senha)
-    // {
-    //     $clienteDAO = new ClienteDAO();
-    //     $autenticado = $clienteDAO->autenticarCliente($email, $senha);
-    //     return $autenticado;
-    // }
     public function listarCliente()
     {
         include_once '../../DAO/ClienteDAO.php';

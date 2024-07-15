@@ -35,7 +35,6 @@
         <nav class="menuHeader">
             <ul>
                 <li><a href="../telasCadastros/telaCadastroGato.php"><strong>Voltar</strong></a></li>
-                <li><strong>Listagem de gatos</strong></li>
             </ul>
         </nav>
     </header>

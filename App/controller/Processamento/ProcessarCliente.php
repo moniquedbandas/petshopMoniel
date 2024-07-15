@@ -22,9 +22,6 @@
     <?php
     echo $_REQUEST['op'];
     switch ($_REQUEST['op']) {
-            // case "criarTela":
-            //     criarTela();
-            //     break;
         case "listarTela";
             listarTela();
             break;
@@ -34,17 +31,12 @@
         case "alterarCliente";
             alterarCliente();
             break;
-
         case "excluirCliente";
             excluirCliente();
             break;
         default:
             echo "Erro no processamento das requisições.";
     }
-    // function criarTela()
-    // {
-    //     echo "<script>location.href='../../view/telasCadastros/telaCadastroCliente.php';</script>";
-    // }
 
     function listarTela()
     {
@@ -64,8 +56,16 @@
     }
     function alterarCliente()
     {
+        $idCliente = $_REQUEST['idCliente'];
+        $nomeCliente = $_POST['nomeCliente'];
+        $telefone = $_POST['telefone'];
+        $endereco = $_POST['endereco'];
+        $cpf = $_POST['cpf'];
+        $email = $_POST['email'];
+        include_once '../ClienteController.php';
+        $contr = new ClienteController();
+        $contr->alterarCliente($idCliente, $nomeCliente, $telefone, $endereco, $cpf, $email);
     }
-
     function excluirCliente()
     {
         if (isset($_GET['idCliente'])) {
@@ -73,7 +73,7 @@
             include_once '../ClienteController.php';
             $controller = new ClienteController();
             $controller->excluirCliente($idCliente);
-            echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</script>";
+            echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</scrip>";
         } else {
             echo 'Erro: ID do cliente não identificado.';
         }

@@ -27,12 +27,21 @@ class CachorroDAO
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
     }
-
+    public function resgataPorID($idCachorro)
+    {
+        $conex = new Conexao();
+        $conex->fazConexao();
+        $sql = "SELECT * FROM cachorro WHERE idCachorro = :idCachorro";
+        $stmt = $conex->conn->prepare($sql);
+        $stmt->bindValue(':idCachorro', $idCachorro);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
     public function listarCachorro()
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM cachorro ORDER BY idCachorro";
+        $sql = "SELECT * FROM cachorro ORDER BY idCliente";
         $query = $conex->conn->prepare($sql);
         $query->execute();
         return $query;
@@ -40,24 +49,33 @@ class CachorroDAO
 
     public function alterarCachorro(Cachorro $cachorro)
     {
-        $conex = new Conexao();
-        $conex->fazConexao();
-        $sql = "UPDATE cachorro SET nomePet = :nome, idade = :idade, peso = :peso,
-            sexo = :sexo, raca= :raca, castrado = :castrado, porte = :porte WHERE idCachorro = :idCachorro";
+        try {
+            $conex = new Conexao();
+            $conex->fazConexao();
+            $conex->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "UPDATE cachorro SET nomePet = :nomePet, idade = :idade, peso = :peso,
+            sexo = :sexo, raca= :raca, castrado = :castrado, porte = :porte, idCliente = :idCliente WHERE idCachorro = :idCachorro";
+            $stmt = $conex->conn->prepare($sql);
+            $stmt->bindValue(':idCachorro', $cachorro->getidCachorro());
+            $stmt->bindValue(':nomePet', $cachorro->getNomePet());
+            $stmt->bindValue(':idade', $cachorro->getIdade());
+            $stmt->bindValue(':peso', $cachorro->getPeso());
+            $stmt->bindValue(':sexo', $cachorro->getSexo());
+            $stmt->bindValue(':raca', $cachorro->getRaca());
+            $stmt->bindValue(':castrado', $cachorro->getCastrado());
+            $stmt->bindValue(':porte', $cachorro->getPorte());
+            $stmt->bindValue(':idCliente', $cachorro->getIdCliente());
 
-        $stmt = $conex->conn->prepare($sql);
-        $stmt->bindValue(':nome', $cachorro->getNomePet());
-        $stmt->bindValue(':idade', $cachorro->getIdade());
-        $stmt->bindValue(':peso', $cachorro->getPeso());
-        $stmt->bindValue(':sexo', $cachorro->getSexo());
-        $stmt->bindValue(':raca', $cachorro->getRaca());
-        $stmt->bindValue(':castrado', $cachorro->getCastrado());
-        $stmt->bindValue(':porte', $cachorro->getPorte());
-        $stmt->bindValue(':idCachorro', $cachorro->getIdCachorro());
-
-        $res = $stmt->execute();
-
-        return $res;
+            $res = $stmt->execute();
+            if ($res === false) {
+                throw new Exception("Erro ao executar a consulta");
+            }
+            echo "<script>alert('O cachorro foi alterado com sucesso!');</script>";
+            echo "<script>location.href='../../controller/Processamento/ProcessarCachorro.php?oc=listarTela';</script>";
+        } catch (Exception $e) {
+            echo "Erro: " . $e->getMessage();
+            return false;
+        }
     }
 
     public function deletarCachorro($idCachorro)
