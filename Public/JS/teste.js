@@ -1,7 +1,6 @@
 
 
 // INÍCIO DO REGEX DA TELA DE CADASTRO DO CLIENTE
-
 const nomeCliente = document.getElementById('nome');
 const telefone = document.getElementById('tel');
 const endereco = document.getElementById('endereco');
@@ -14,11 +13,12 @@ const opInput = document.getElementById('op');
 
 telefone.addEventListener('keyup', formatarTelefone);
 cpf.addEventListener('keyup', formatarCpf);
+nomeCliente.addEventListener('keyup', formatarNome);
 
 btCadastro.addEventListener('click', function (event) {
     event.preventDefault();
     opInput.value = 'cadastrarUsuario';
-    if (validarCampos() && validarEmail() && validarTelefone() && validarCpf()) {
+    if (validarCampos() && validarEmail() && validarTelefone() && validarCpf() && validarNome()) {
         form.submit();
     } else {
         alert("Preencha os campos corretamente.");
@@ -44,13 +44,14 @@ function validarCampos() {
 }
 
 function validarEmail() {
-    const emailValidado = /^[a-zA-Z.0-9]+@[a-zA-Z](?:[a-zA-Z]{0,61}[a-zA-Z])?(?:\.[a-zA-Z](?:[a-zA-Z]{0,61}[a-zA-Z])?)*$/;
+    const emailValidado = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi;
     if (!emailValidado.test(email.value)) {
         alert("Formato de e-mail inválido");
         return false;
     }
     return true;
 }
+
 
 function validarTelefone() {
     const telefoneValidado = /^\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}$/;
@@ -85,4 +86,21 @@ function formatarCpf(e) {
     e.target.value = v;
 }
 
+function validarNome(){
+    const nomeValidado = /^(?![ ])(?!.*[ ]{2})((?:e|da|do|das|dos|de|d'|D'|la|las|el|los)\s*?|(?:[A-Z][^\s]*\s*?)(?!.*[ ]$))+$/;
+    if(!nomeValidado.test(nomeCliente.value)){
+        alert("Formato de Nome inválido");
+        return false;
+    }
+    return true;
+}
+function formatarNome(e){
+    e.target.value = e.target.value.replace(/\b\w/g, function(letra){
+
+            return letra.toUpperCase();
+        
+    });
+
+
+}
 // FIM DO REGEX DE TELA DE CADASTRO DO CLIENTE

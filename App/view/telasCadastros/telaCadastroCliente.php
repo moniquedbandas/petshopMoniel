@@ -26,6 +26,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
+
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
@@ -81,10 +82,10 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
-                        <button type="button" id="criar">Criar</button>
-                        <button type="button" id="listar">Listar</button>
-                            <!-- <input type="submit" id="criar" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario')"> -->
+                     
+                            <input type="submit" id="criar" name="criar" value="Criar">
                             <!-- <input type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')"> -->
+                            <input type="submit" id="listar" name="listar" value="Listar">
                             
                         </div>
                     </div>
@@ -92,6 +93,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
             </form>  
         </div>
         <script src="../../../Public/JS/teste.js"></script>
+        <!-- <script src="../../../Public/JS/script.js"></script> -->
     </main>
 
     <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
@@ -115,7 +117,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </ul>
     </footer>
 
-    <script src="../../../Public/JS/script.js"></script>
+    
     
 </body>
 

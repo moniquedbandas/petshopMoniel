@@ -144,7 +144,7 @@ input[type="password"] {
   margin-top: 5px;
 }
 input:focus {
-  border: 1px solid #3d6868;
+   border: 1px solid #3d6868;
   box-shadow: 0 0 5px#40957e5e;
 }
 .areaBotoes {
