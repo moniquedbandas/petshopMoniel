@@ -56,7 +56,7 @@
     }
     function alterarCliente()
     {
-        $idCliente = $_REQUEST['idCliente'];
+        $idCliente = $_POST['idCliente'];
         $nomeCliente = $_POST['nomeCliente'];
         $telefone = $_POST['telefone'];
         $endereco = $_POST['endereco'];

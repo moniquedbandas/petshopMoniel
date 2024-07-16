@@ -19,6 +19,7 @@ session_start();
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../Public/css/estilosLogin.css">
+    <link rel="stylesheet" href="../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
 </head>
 
@@ -26,7 +27,7 @@ session_start();
     <header class="areaHeader">
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.html">
+                <a class="navbar-brand" href="../../index.php">
                     <img src="../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
@@ -51,11 +52,11 @@ session_start();
                         </div>
                         <div class="input-wrapper">
                             <label for="password">Senha: </label>
-                            <input type="password" id="password" name="password" autocomplete="off" placeholder="Senha de 5 a 10 caracteres">
+                            <input type="password" id="password" name="password" autocomplete="off" placeholder="Informe uma senha">
                         </div>
                         <input type="hidden" id="ou" name="ou" value="ou">
                         <div class="areaBotoes">
-                            <input type="submit" name="entrar" value="Entrar" onclick="document.getElementById('ou').value='autenticar'">
+                            <input class="btListar" type="submit" name="entrar" value="Entrar" onclick="document.getElementById('ou').value='autenticar'">
                         </div>
                     </div>
                 </fieldset>

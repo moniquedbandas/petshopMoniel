@@ -30,7 +30,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <header class="areaHeader">
         <nav class="navbar ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../../index.html">
+                <a class="navbar-brand" href="../../../index.php">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
@@ -87,10 +87,9 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         </div>
 
                         <input type="hidden" id="og" name="og">
-                        <div class="areaBotoes3">
-                            <input type="submit" name="create" value="Cadastrar" onclick="setOgValue('cadastrarGato')">
-
-                            <input type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela')">
+                        <div class="areaBotoes">
+                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOgValue('cadastrarGato')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>

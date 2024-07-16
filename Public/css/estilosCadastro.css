@@ -25,97 +25,61 @@ body {
 .navbar {
   background-color: var(--color-for-title);
 }
-
-#contLogos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5px;
-}
 .logout {
   position: absolute;
   left: 3.25rem;
-}
-.menuHeader ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: #a7c6865d;
-  margin: 0;
-  padding: 0;
-  gap: 1rem;
-  list-style-type: none;
 }
 a {
   text-decoration: none;
   color: black;
 }
+.menuHeader ul {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-for-menu);
+  padding: 0;
+  gap: 1rem;
+  list-style-type: none;
+}
 
-/* parte do main da tela de escolher oq cadastrar agora */
+/* parte do main da telaEscolherCadastro */
 .escolherCadastro {
   margin-top: 100px;
   display: flex;
   justify-content: center;
 }
 .areaEscolha {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 .tituloEscolha {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 25px;
   height: 38px;
 }
 .escolha {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
 }
 .opcao {
   display: flex;
-  align-items: center;
   gap: 10px;
 }
-caption {
-  text-align: center;
-}
-/* .escolha input[type="radio"] {
-    ainda nao decidi o que fazer aqui.
-} */
-input[type="submit"] {
-  border-radius: 5px;
-  width: 100px;
-  height: 25px;
-  border: none;
-  cursor: pointer;
-  background-color: #3d686873;
-}
+/* fim estilos da telaEscolherCadastro */
 
+/* inicio estilos das telasCadastros */
 .cadastro {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
   display: flex;
   justify-content: center;
 }
 .areaCadastro {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   border: 5px solid;
   border-radius: 20px;
-  border-color: #40957e5e;
+  border-color: var(--color-for-title);
   padding: 0 1rem;
-}
-
-fieldset {
-  border: none;
 }
 .fieldset-wrapper {
   display: flex;
@@ -124,10 +88,8 @@ fieldset {
 }
 fieldset legend {
   text-align: center;
-  margin: 0;
-  width: 100%;
   padding-top: 10px;
-  border-bottom: 1px solid #3c515d71;
+  border-bottom: 1px solid var(--color-for-footer);
 }
 .input-wrapper {
   display: flex;
@@ -135,16 +97,15 @@ fieldset legend {
 }
 input[type="text"],
 input[type="password"] {
-  width: 200px;
-  height: 25px;
+  text-align: center;
   border-radius: 5px;
-  border: 1px solid #40957f;
+  border: 1px solid var(--color-for-borda);
   outline: none;
   margin-top: 5px;
 }
 input:focus {
-  border: 1px solid #3d6868;
-  box-shadow: 0 0 5px#40957e5e;
+  border: 1px solid var(--color-for-menuhover);
+  box-shadow: 0 0 5px var(--color-for-title);
 }
 .areaBotoes {
   display: flex;
@@ -152,25 +113,11 @@ input:focus {
   padding: 20px 0;
   gap: 15px;
 }
-.areaBotoes2 {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  gap: 15px;
-}
-.areaBotoes3 {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  gap: 15px;
+caption {
+  text-align: center;
 }
 
 /* área do footer aqui */
-
-.linhaFoot {
-  border-bottom: 2px dashed var(--color-for-footer);
-}
-
 #footerIndex {
   /* margin-top: 5rem; */
   padding: 1rem !important;
@@ -180,23 +127,23 @@ input:focus {
 }
 
 .btListar {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #3d6868d3;
   border: none;
-  border-radius: 8px;
-  width: 6.25rem;
-  cursor: pointer;
-  background-color: #3d686825;
-}
-.btListar a {
+  width: 90px;
+  border-radius: 5px;
   text-decoration: none;
-  color: black;
+  text-align: center;
 }
 .btListar:hover {
-  scale: 1.1;
+  scale: 1.07;
 }
-
-.crud {
+/* .crud {
   text-align: justify;
-}
+} */
 @media (min-width: 52rem) {
   #footerIndex {
     width: 100%;

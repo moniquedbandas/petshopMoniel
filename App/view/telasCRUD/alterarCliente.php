@@ -31,7 +31,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <header class="areaHeader">
         <nav class="navbar ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../../index.html">
+                <a class="navbar-brand" href="../../../index.php">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
@@ -78,7 +78,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
                                 <td>
                                     <input type="hidden" name="idCliente" value="<?= $row->idCliente ?>">
                                     <input type="hidden" name="op" value="alterarCliente">
-                                    <input type="submit" value="Editar">
+                                    <input type="submit" value="Editar" class="btListar">
                                 </td>
                             </tr>
                         <?php

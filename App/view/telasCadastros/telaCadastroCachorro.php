@@ -31,7 +31,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <header class="areaHeader">
         <nav class="navbar ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../../index.html">
+                <a class="navbar-brand" href="../../../index.php">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
@@ -87,13 +87,9 @@ if (!isset($_SESSION['usuarioLogado'])) {
                             <input type="text" id="idCliente" name="idCliente" autocomplete="off">
                         </div>
                         <input type="hidden" id="oc" name="oc">
-                        <div class="areaBotoes2">
-                            <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
-                            <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
-                            <input type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
-                            <!-- <input type="hidden" name="oc" value="listarTela"> -->
-                            <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTela'"> -->
-                            <input type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
+                        <div class="areaBotoes">
+                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>

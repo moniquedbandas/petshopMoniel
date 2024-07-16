@@ -1,3 +1,7 @@
+<?php
+session_start();
+$isLogado = isset($_SESSION['usuarioLogado']);
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,9 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
@@ -22,49 +24,14 @@
 
 <body class="m-0 border-0 m-0 border-0">
     <header class="areaHeader">
-        <!-- <nav class="navbar">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Petshop Moniel</span>
-            </div>
-        </nav>
-        <nav class="areaLogos">
-            <div class="container" id="contLogos">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./Public/imagens/iconePet.png" alt="iconePatinha">
-                </a>
-                <a class="navbar-brand" id="iconeLogin" href="./App/view/telaLogin.php">
-                    <img src="./Public/imagens/usuario.png" alt="iconeUsuario">
-                </a>
-            </div>
-        </nav>
-        <nav class="navbar navbar-expand-lg" id="headerMenu">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Menu</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Início</a>
-                        <a class="nav-link" href="#">Sobre nós</a>
-                        <a class="nav-link" href="#">Especialidades</a>
-                    </div>
-                </div>
-            </div>
-        </nav> -->
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./Public/imagens/iconePet.png" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top">
+                <a class="navbar-brand" href="./index.php">
+                    <img src="./Public/imagens/iconePet.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
                 <a class="navbar-brand" href="#">Menu</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -74,23 +41,19 @@
                         <a class="nav-link" href="#">Especialidades</a>
                     </div>
                 </div>
-                <a class="navbar-brand" id="iconeLogin" href="./App/view/telaLogin.php">
+                <a class="navbar-brand" id="iconeLogin" href="<?php echo $isLogado ? '/App/view/telasCadastros/telaEscolherCadastro.php' : './App/view/telaLogin.php'; ?>">
                     <img src="./Public/imagens/usuario.png" alt="iconeUsuario">
                 </a>
             </div>
         </nav>
     </header>
-
     <main class="p-3 border-0 border-0">
         <section class="p-3 m-0 border-0 bd-example m-0 border-0">
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -103,13 +66,11 @@
                         <img src="./Public/imagens/banner3.png" class="img-fluid" alt="...">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -156,16 +117,13 @@
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="https:/www.facebook.com/monique.bandas/"
-                    target="_blank">
+            <li class="ms-3"><a class="text-body-secondary" href="https:/www.facebook.com/monique.bandas/" target="_blank">
                     <i class="fa-brands fa-facebook" style="font-size: 30px"></i>
                 </a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https:/www.instagram.com/moniquebandas/"
-                    target="_blank">
+            <li class="ms-3"><a class="text-body-secondary" href="https:/www.instagram.com/moniquebandas/" target="_blank">
                     <i class="fab fa-instagram" style="font-size: 30px"></i>
                 </a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https://api.whatsapp.com/send?phone=5551998852381"
-                    target="_blank" rel="noopener noreferrer">
+            <li class="ms-3"><a class="text-body-secondary" href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp" style="font-size: 30px"></i>
                 </a></li>
         </ul>

@@ -31,7 +31,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <header class="areaHeader">
         <nav class="navbar ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../../index.html">
+                <a class="navbar-brand" href="../../../index.php">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
@@ -82,8 +82,8 @@ if (!isset($_SESSION['usuarioLogado'])) {
                                     <td><?= $row->porte ?></td>
                                     <td><?= $row->idCliente ?></td>
                                     <td>
-                                        <button class="btListar"><a href="./alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a></button>
-                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarCachorro.php?oc=deletarCachorro&idCachorro=<?= $row->idCachorro ?>">Excluir</a></button>
+                                        <a class="btListar" href="./alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a>
+                                        <a class="btListar" href="../../controller/Processamento/ProcessarCachorro.php?oc=deletarCachorro&idCachorro=<?= $row->idCachorro ?>">Excluir</a>
                                     </td>
                                 </tr>
                             <?php

@@ -57,7 +57,7 @@
     }
     function alterarCachorro()
     {
-        $idCachorro = $_REQUEST['idCachorro'];
+        $idCachorro = $_POST['idCachorro'];
         $nomePet = $_POST['nomePet'];
         $idade = $_POST['idade'];
         $peso = $_POST['peso'];

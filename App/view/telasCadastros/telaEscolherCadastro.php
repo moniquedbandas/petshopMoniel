@@ -32,7 +32,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <header class="areaHeader">
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../../index.html">
+                <a class="navbar-brand" href="../../../index.php">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
@@ -67,7 +67,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
                     <input type="radio" id="tutor" name="escolha" value="Tutor">
                     <label for="tutor">Tutor</label>
                 </div>
-                <input type="submit" value="Selecionar" onclick="redirecionarCadastro()">
+                <input class="btListar" type="submit" value="Selecionar" onclick="redirecionarCadastro()">
             </div>
 
         </div>
