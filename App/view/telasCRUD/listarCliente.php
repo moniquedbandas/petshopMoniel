@@ -47,7 +47,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <main class="crud">
         <form id="formComp" action="../../controller/Processamento/ProcessarCliente.php" method="post">
-            <div class="table-responsive-sm">
+            <div class="table-responsive-sm text-center">
                 <table class="table caption-top">
                     <caption>Listagem de clientes</caption>
                     <thead>

@@ -6,8 +6,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
     exit;
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -49,11 +47,9 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <main class="escolherCadastro">
         <div class="areaEscolha">
-
             <div class="tituloEscolha">
                 <h2>O que deseja cadastrar?</h2>
             </div>
-
             <div class="escolha">
                 <div class="opcao">
                     <input type="radio" id="cachorro" name="escolha" value="Cachorro">

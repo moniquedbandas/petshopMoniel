@@ -44,7 +44,7 @@ a {
 
 /* parte do main da telaEscolherCadastro */
 .escolherCadastro {
-  margin-top: 100px;
+  margin-top: 3.125rem;
   display: flex;
   justify-content: center;
 }
@@ -54,8 +54,8 @@ a {
   align-items: center;
 }
 .tituloEscolha {
-  margin-bottom: 25px;
-  height: 38px;
+  margin-bottom: 1.563rem;
+  height: 2.375rem;
 }
 .escolha {
   display: flex;
@@ -70,8 +70,9 @@ a {
 
 /* inicio estilos das telasCadastros */
 .cadastro {
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
 }
 .areaCadastro {
@@ -80,6 +81,14 @@ a {
   border-radius: 20px;
   border-color: var(--color-for-title);
   padding: 0 1rem;
+}
+.areaCadastroCli {
+  display: flex;
+  border: 5px solid;
+  border-radius: 20px;
+  border-color: var(--color-for-title);
+  padding: 0 1rem;
+  margin: 6rem 0;
 }
 .fieldset-wrapper {
   display: flex;
@@ -134,17 +143,20 @@ caption {
 
 /* área do footer aqui */
 #footerIndex {
-  /* margin-top: 5rem; */
   padding: 1rem !important;
   justify-content: space-between;
   width: 100%;
   border-top: 2px dashed var(--color-for-footer);
 }
-@media (min-width: 52rem) {
+@media (min-width: 85.375rem) {
   #footerIndex {
+    margin-top: 5.8rem;
     width: 100%;
     justify-content: center;
     position: fixed;
     bottom: 0;
+  }
+  .areaCadastroCli {
+    margin: 0;
   }
 }

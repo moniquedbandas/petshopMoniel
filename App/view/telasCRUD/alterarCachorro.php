@@ -45,7 +45,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <main>
         <form id="formComp" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
-            <div class="table-responsive-sm text-center">
+            <div class="table table-responsive text-center">
                 <table class="table caption-top">
                     <caption>Listagem de cachorros</caption>
                     <thead>

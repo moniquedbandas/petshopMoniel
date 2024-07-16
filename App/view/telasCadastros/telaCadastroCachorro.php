@@ -48,7 +48,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <main class="cadastro">
         <div class="areaCadastro">
-
             <form class="formularioCadCachorro" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
@@ -95,10 +94,15 @@ if (!isset($_SESSION['usuarioLogado'])) {
                 </fieldset>
             </form>
         </div>
-
     </main>
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+    </div> -->
 
-    <footer class="d-flex flex-wrap align-items-center " id="footerIndex">
+    <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <img src="../../../Public/imagens/patinha.png" alt="">

@@ -47,8 +47,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     </header>
 
     <main class="cadastro">
-        <div class="areaCadastro">
-
+        <div class="areaCadastroCli">
             <form class="formularioCadCliente" action="../../controller/Processamento/ProcessarCliente.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
@@ -87,7 +86,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </div>
     </main>
 
-    <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
+    <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <img src="../../../Public/imagens/patinha.png" alt="">

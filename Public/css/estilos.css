@@ -54,7 +54,7 @@ body {
   opacity: 0.7;
 }
 
-@media (min-width: 52rem) {
+@media (min-width: 64rem) {
   .carousel-inner {
     text-align: center;
     background-color: var(--color-for-menuhover);
