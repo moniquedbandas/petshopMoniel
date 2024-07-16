@@ -49,7 +49,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <form action="../../controller/Processamento/ProcessarCachorro.php" method="post">
+            <form class="formularioCadCachorro" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 

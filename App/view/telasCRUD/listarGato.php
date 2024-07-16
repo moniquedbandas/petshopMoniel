@@ -45,13 +45,13 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </nav>
     </header>
 
-    <main class="crud">
+    <main>
         <form id="formComp" action="../../controller/Processamento/ProcessarGato.php" method="post">
-            <div class="table-responsive-sm">
+            <div class="table-responsive-sm text-center">
                 <table class="table caption-top">
                     <caption>Listagem de gatos</caption>
                     <thead>
-                        <tr>
+                        <tr class="table-success">
                             <th scope="col">ID</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Idade</th>

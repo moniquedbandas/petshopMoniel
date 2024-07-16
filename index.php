@@ -16,10 +16,10 @@ $isLogado = isset($_SESSION['usuarioLogado']);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
-    <link rel="stylesheet" href="./Public/css/teste.css">
-    <title>Petshop Moniels</title>
+    <link rel="icon" href="./Public/imagens/patinha.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="./Public/imagens/patinha.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="./Public/css/estilos.css">
+    <title>Petshop Moniel</title>
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
@@ -41,11 +41,12 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                         <a class="nav-link" href="#">Especialidades</a>
                     </div>
                 </div>
-                <a class="navbar-brand" id="iconeLogin" href="<?php echo $isLogado ? '/App/view/telasCadastros/telaEscolherCadastro.php' : './App/view/telaLogin.php'; ?>">
+                <a class="navbar-brand" id="iconeLogin" href="<?php echo $isLogado ? './App/view/telasCadastros/telaEscolherCadastro.php' : './App/view/telaLogin.php'; ?>">
                     <img src="./Public/imagens/usuario.png" alt="iconeUsuario">
                 </a>
             </div>
         </nav>
+        <a href="./App/view/"></a>
     </header>
     <main class="p-3 border-0 border-0">
         <section class="p-3 m-0 border-0 bd-example m-0 border-0">
@@ -57,13 +58,13 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./Public/imagens/banner1.png" class="img-fluid" alt="...">
+                        <img src="./Public/imagens/banner1.png" class="img-fluid" alt="Imagem do carrossel 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="./Public/imagens/banner2.png" class="img-fluid" alt="...">
+                        <img src="./Public/imagens/banner2.png" class="img-fluid" alt="Imagem do carrossel 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="./Public/imagens/banner3.png" class="img-fluid" alt="...">
+                        <img src="./Public/imagens/banner3.png" class="img-fluid" alt="Imagem do carrossel 3">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

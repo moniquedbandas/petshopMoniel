@@ -1,55 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-image: url("../imagens/fundo.png");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-:root {
-  --color-for-footer: hsla(187, 22%, 30%, 0.349);
-  --color-for-title: hsla(164, 52%, 33%, 0.369);
-  --color-for-menu: hsla(89, 36%, 65%, 0.365);
-  --color-for-menuhover: hsla(180, 20%, 51%, 0.37);
-  --color-for-setaUp: hsla(345, 5%, 66%, 0.714);
-  --color-for-borda: hsl(89, 22%, 42%);
-}
 /* parte do main */
 .login {
   display: flex;
   justify-content: center;
-  /* padding-bottom: 6.25rem; */
 }
 .telaLogin {
   display: flex;
   margin-top: 4rem;
   padding: 2rem 1.875rem;
-  /* margin-bottom: 12rem; */
   border: 3px solid;
   border-radius: 1.25rem;
   border-color: var(--color-for-title);
-}
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-/* área do footer aqui */
-#footerIndex {
-  padding: 1rem !important;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 2px dashed var(--color-for-footer);
-}
-
-@media (min-width: 52rem) {
-  #footerIndex {
-    width: 100%;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-  }
 }

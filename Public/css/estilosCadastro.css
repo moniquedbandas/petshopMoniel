@@ -116,16 +116,6 @@ input:focus {
 caption {
   text-align: center;
 }
-
-/* área do footer aqui */
-#footerIndex {
-  /* margin-top: 5rem; */
-  padding: 1rem !important;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 2px dashed var(--color-for-footer);
-}
-
 .btListar {
   display: inline-block;
   padding: 5px 10px;
@@ -141,9 +131,15 @@ caption {
 .btListar:hover {
   scale: 1.07;
 }
-/* .crud {
-  text-align: justify;
-} */
+
+/* área do footer aqui */
+#footerIndex {
+  /* margin-top: 5rem; */
+  padding: 1rem !important;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px dashed var(--color-for-footer);
+}
 @media (min-width: 52rem) {
   #footerIndex {
     width: 100%;

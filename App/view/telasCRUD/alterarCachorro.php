@@ -28,7 +28,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
 <body class="m-0 border-0 m-0 border-0">
     <header class="areaHeader">
-        <nav class="navbar ">
+        <nav class="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../../../index.php">
                     <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
@@ -43,9 +43,9 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </nav>
     </header>
 
-    <main class="crud">
+    <main>
         <form id="formComp" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
-            <div class="table-responsive-sm">
+            <div class="table-responsive-sm text-center">
                 <table class="table caption-top">
                     <caption>Listagem de cachorros</caption>
                     <thead>
