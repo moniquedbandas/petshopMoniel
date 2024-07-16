@@ -21,9 +21,10 @@
 
 <body>
     <?php
+    echo $_REQUEST['oc'];
     switch ($_REQUEST['oc']) {
-        case "listarTela";
-            listarTela();
+        case "listarTelaCachorro";
+            listarTelaCachorro();
             break;
         case "cadastrarCachorro";
             cadastrarCachorro();
@@ -36,7 +37,7 @@
             break;
     }
 
-    function listarTela()
+    function listarTelaCachorro()
     {
         echo "<script>location.href='../../view/telasCRUD/listarCachorro.php';</script>";
     }

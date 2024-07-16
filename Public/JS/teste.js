@@ -6,29 +6,29 @@ const telefone = document.getElementById('tel');
 const endereco = document.getElementById('endereco');
 const cpf = document.getElementById('cpf');
 const email = document.getElementById('email');
-const btCadastro = document.getElementById("criar");
-const btListar = document.getElementById("listar");
-const form = document.querySelector('.formularioCadUsuario');
+const btCadastroCliente = document.getElementById("criarCliente");
+const btListarCliente = document.getElementById("listarCliente");
+const formCliente = document.querySelector('.formularioCadCliente');
 const opInput = document.getElementById('op');
 
 telefone.addEventListener('keyup', formatarTelefone);
 cpf.addEventListener('keyup', formatarCpf);
 nomeCliente.addEventListener('keyup', formatarNome);
 
-btCadastro.addEventListener('click', function (event) {
+btCadastroCliente.addEventListener('click', function (event) {
     event.preventDefault();
     opInput.value = 'cadastrarUsuario';
     if (validarCampos() && validarEmail() && validarTelefone() && validarCpf() && validarNome()) {
-        form.submit();
+        formCliente.submit();
     } else {
         alert("Preencha os campos corretamente.");
     }
 });
 
-btListar.addEventListener('click', function (event) {
+btListarCliente.addEventListener('click', function (event) {
     event.preventDefault();
     opInput.value = 'listarTela';
-    form.submit();
+    formCliente.submit();
 });
 
 function validarCampos() {
@@ -104,3 +104,28 @@ function formatarNome(e){
 
 }
 // FIM DO REGEX DE TELA DE CADASTRO DO CLIENTE
+
+// INICIO DO REGEX DE TELA DE CADASTRO DO CACHORRO
+
+    // nomePet, idade, peso, sexo, raca, castrado, porte, idCliente
+
+    const nomeCach = document.getElementById('nomePet');
+    const idade = document.getElementById('idade');
+    const peso = document.getElementById('peso');
+    const sexo = document.getElementById('sexo');
+    const raca = document.getElementById('raca');
+    const castrado = document.getElementById('castrado');
+    const porte = document.getElementById('porte');
+    const idCliente = document.getElementById('idCliente');
+    const btCadastroCach = document.getElementById("criar");
+    const btListarCach = document.getElementById("listar");
+    const formCach = document.querySelector('.formularioCadCachorro');
+    const ocInput = document.getElementById('oc');
+
+    nomeCach.addEventListener('keyup', formatarNomePet);
+    sexo.addEventListener('keyup', formatarSexoCach);
+
+//FIM DO REGEX DE TELA DE CADASTRO DO CACHORRO
+
+
+

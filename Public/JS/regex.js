@@ -1,163 +1,216 @@
-function validateCachForm() {
-    const nomePet = document.getElementById('nomePet').value;
-    const idade = document.getElementById('idade').value;
-    const peso = document.getElementById('peso').value;
-    const sexo = document.getElementById('sexo').value;
-    const raca = document.getElementById('raca').value;
-    const castrado = document.getElementById('castrado').value;
-    const porte = document.getElementById('porte').value;
-    const idcliente = document.getElementById('idcliente').value;
+document.addEventListener('DOMContentLoaded', function() {
+    // Cliente Form Elements
+    const nomeCliente = document.getElementById('nome');
+    const telefone = document.getElementById('tel');
+    const endereco = document.getElementById('endereco');
+    const cpf = document.getElementById('cpf');
+    const email = document.getElementById('email');
+    const btCadastroCliente = document.getElementById("criarCliente");
+    const btListarCliente = document.getElementById("listarCliente");
+    const formCliente = document.querySelector('.formularioCadCliente');
+    const opInput = document.getElementById('op');
 
-    const nomeRegex = /^[A-Za-z\s]+$/;
-    const idadeRegex = /^[0-9]+$/;
-    const pesoRegex = /^[0-9]+(\.[0-9]+)?$/;
-    const sexoRegex = /^(Macho|Fêmea)$/i;
-    const textoRegex = /^[A-Za-z\s]+$/;
-    const castradoRegex = /^(Sim|Não)$/i;
-    const porteRegex = /^(Pequeno|Médio|Grande)$/i;
-    const idclienteRegex = /^[0-9]+$/;
+    if (formCliente) {
+        telefone.addEventListener('keyup', formatarTelefone);
+        cpf.addEventListener('keyup', formatarCpf);
+        nomeCliente.addEventListener('keyup', formatarNome);
 
-    if (!nomeRegex.test(nomePet)) {
-        alert("Por favor, insira um nome válido.");
-        return false;
-    }
-    if (!idadeRegex.test(idade)) {
-        alert("Por favor, insira uma idade válida.");
-        return false;
-    }
+        btCadastroCliente.addEventListener('click', function (event) {
+            event.preventDefault();
+            opInput.value = 'cadastrarUsuario';
+            if (validarCampos(formCliente) && validarEmail(email) && validarTelefone(telefone) && validarCpf(cpf) && validarNome(nomeCliente)) {
+                formCliente.submit();
+            } else {
+                alert("Preencha os campos corretamente.");
+            }
+        });
 
-    if (!pesoRegex.test(peso)) {
-        alert("Por favor, insira um peso válido.");
-        return false;
-    }
-
-    if (!sexoRegex.test(sexo)) {
-        alert("Por favor, insira um sexo válido (Macho ou Fêmea).");
-        return false;
+        btListarCliente.addEventListener('click', function (event) {
+            event.preventDefault();
+            opInput.value = 'listarTela';
+            formCliente.submit();
+        });
     }
 
-    if (!textoRegex.test(raca)) {
-        alert("Por favor, insira uma raça válida.");
-        return false;
+    // Cachorro Form Elements
+    const nomeCach = document.getElementById('nomePet');
+    const idade = document.getElementById('idade');
+    const peso = document.getElementById('peso');
+    const sexo = document.getElementById('sexo');
+    const raca = document.getElementById('raca');
+    const castrado = document.getElementById('castrado');
+    const porte = document.getElementById('porte');
+    const idCliente = document.getElementById('idCliente');
+    const btCadastroCachorro = document.getElementById("criarCachorro");
+    const btListarCachorro = document.getElementById("listarCachorro");
+    const formCachorro = document.querySelector('.formularioCadCachorro');
+    const ocInput = document.getElementById('oc');
+
+    if (formCachorro) {
+        nomeCach.addEventListener('keyup', formatarNomePet);
+        sexo.addEventListener('keyup', formatarSexoCach);
+
+        btCadastroCachorro.addEventListener('click', function (event) {
+            event.preventDefault();
+            ocInput.value = 'cadastrarCachorro';
+            if (validarCampos(formCachorro) && validarNomePet(nomeCach) && validarIdade(idade) && validarPeso(peso) && validarSexoCach(sexo) && validarRaca(raca) && validarCastrado(castrado) && validarPorte(porte) && validarIdCliente(idCliente)) {
+                formCachorro.submit();
+            } else {
+                alert("Preencha os campos corretamente.");
+            }
+        });
+
+        btListarCachorro.addEventListener('click', function (event) {
+            event.preventDefault();
+            ocInput.value = 'listarTelaCachorro';
+            formCachorro.submit();
+
+        });
     }
 
-    if (!castradoRegex.test(castrado)) {
-        alert("Por favor, insira 'Sim' ou 'Não' para castrado.");
-        return false;
+    // Validation and Formatting Functions
+    function validarCampos(form) {
+        const camposObrigatorios = form.querySelectorAll('input[required]');
+        let todosPreenchidos = true;
+        camposObrigatorios.forEach((campo) => {
+            if (!campo.value.trim()) {
+                todosPreenchidos = false;
+            }
+        });
+        return todosPreenchidos;
     }
 
-    if (!porteRegex.test(porte)) {
-        alert("Por favor, insira um porte válido (Pequeno, Médio ou Grande).");
-        return false;
+    function validarEmail(email) {
+        const emailValidado = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        if (!emailValidado.test(email.value)) {
+            alert("Formato de e-mail inválido");
+            return false;
+        }
+        return true;
     }
 
-    if (!idclienteRegex.test(idcliente)) {
-        alert("Por favor, insira um ID do Tutor válido.");
-        return false;
+    function validarTelefone(telefone) {
+        const telefoneValidado = /^\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}$/;
+        if (!telefoneValidado.test(telefone.value)) {
+            alert("Formato de telefone inválido");
+            return false;
+        }
+        return true;
     }
 
-    return true;
-}
-
-function validateGatoForm() {
-
-    const nomePet = document.getElementById('nomePet').value;
-    const idade = document.getElementById('idade').value;
-    const peso = document.getElementById('peso').value;
-    const sexo = document.getElementById('sexo').value;
-    const raca = document.getElementById('raca').value;
-    const porte = document.getElementById('porte').value;
-    const temperamento = document.getElementById('temperamento').value;
-    const idcliente = document.getElementById('idcliente').value;
-
-    const nomeRegex = /^[A-Za-z\s]+$/;
-    const idadeRegex = /^[0-9]+$/;
-    const pesoRegex = /^[0-9]+(\.[0-9]+)?$/;
-    const sexoRegex = /^(Macho|Fêmea)$/i;
-    const textoRegex = /^[A-Za-z\s]+$/;
-    const porteRegex = /^(Pequeno|Médio|Grande)$/i;
-    const temperamentoRegex = /^[A-Za-z\s]+$/;
-    const idclienteRegex = /^[0-9]+$/;
-
-    if (!nomeRegex.test(nomePet)) {
-        alert("Por favor, insira um nome válido.");
-        return false;
+    function formatarTelefone(e) {
+        var v = e.target.value.replace(/\D/g, "");
+        v = v.replace(/^(\d\d)(\d)/g, "($1) $2");
+        v = v.replace(/(\d{5})(\d)/, "$1-$2");
+        e.target.value = v;
     }
 
-    if (!idadeRegex.test(idade)) {
-        alert("Por favor, insira uma idade válida.");
-        return false;
+    function validarCpf(cpf) {
+        const cpfValidado = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/;
+        if (!cpfValidado.test(cpf.value)) {
+            alert("Formato de CPF inválido");
+            return false;
+        }
+        return true;
     }
 
-    if (!pesoRegex.test(peso)) {
-        alert("Por favor, insira um peso válido.");
-        return false;
+    function formatarCpf(e) {
+        var v = e.target.value.replace(/\D/g, "");
+        v = v.replace(/(\d{3})(\d)/, "$1.$2");
+        v = v.replace(/(\d{3})(\d)/, "$1.$2");
+        v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        e.target.value = v;
     }
 
-    if (!sexoRegex.test(sexo)) {
-        alert("Por favor, insira um sexo válido (Macho ou Fêmea).");
-        return false;
+    function validarNome(nomeCliente) {
+        const nomeValidado = /^(?![ ])(?!.*[ ]{2})((?:e|da|do|das|dos|de|d'|D'|la|las|el|los)\s*?|(?:[A-Z][^\s]*\s*?)(?!.*[ ]$))+$/;
+        if (!nomeValidado.test(nomeCliente.value)) {
+            alert("Formato de Nome inválido");
+            return false;
+        }
+        return true;
     }
 
-    if (!textoRegex.test(raca)) {
-        alert("Por favor, insira uma raça válida.");
-        return false;
+    function formatarNome(e) {
+        e.target.value = e.target.value.replace(/\b\w/g, function(letra) {
+            return letra.toUpperCase();
+        });
     }
 
-    if (!porteRegex.test(porte)) {
-        alert("Por favor, insira um porte válido (Pequeno, Médio ou Grande).");
-        return false;
+    // Cachorro specific validations
+    function validarNomePet(nomeCach) {
+        const nomeValidado = /^[A-Za-z\s]{3,}$/;
+        if (!nomeValidado.test(nomeCach.value)) {
+            alert("Formato de Nome do Cachorro inválido");
+            return false;
+        }
+        return true;
     }
 
-    if (!temperamentoRegex.test(temperamento)) {
-        alert("Por favor, insira um temperamento válido.");
-        return false;
+    function validarIdade(idade) {
+        const idadeValidada = /^\d+$/;
+        if (!idadeValidada.test(idade.value) || idade.value <= 0) {
+            alert("Idade inválida");
+            return false;
+        }
+        return true;
     }
 
-    if (!idclienteRegex.test(idcliente)) {
-        alert("Por favor, insira um ID do Tutor válido.");
-        return false;
+    function validarPeso(peso) {
+        const pesoValidado = /^\d+(\.\d{1,2})?$/;
+        if (!pesoValidado.test(peso.value) || peso.value <= 0) {
+            alert("Peso inválido");
+            return false;
+        }
+        return true;
     }
 
-    return true;
-}
-
-function validateClienteForm(){
-    $idCliente, $nomeCliente, $telefone, $endereco, $cpf, $email
-
-    const nomeCliente = document.getElementById('nome').value;
-    const telefone = document.getElementById('tel').value;
-    const endereco = document.getElementById('endereco').value;
-    const cpf = document.getElementById('cpf').value;
-    const email = document.getElementById('email').value;
-
-    const nomeRegex = /^[A-Za-z\s]+$/;
-    const telefoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
-    const enderecoRegex = /^[A-Za-z0-9\s,.ºª-]+$/;
-    const cpfRegex = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/;
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    if(!nomeRegex.test(nomeCliente)){
-        alert("Por favor, insira um nome válido.");
-        return false;
-    }
-    if(!telefoneRegex.test(telefone)){
-        alert("Por favor, insira um telefone válido");
-        return false;
+    function validarSexoCach(sexo) {
+        const sexoValidado = /^(Macho|Fêmea)$/i;
+        if (!sexoValidado.test(sexo.value)) {
+            alert("Sexo inválido");
+            return false;
+        }
+        return true;
     }
 
-    if(!enderecoRegex.test(endereco)){
-        alert("Por favor, insira um endereço válido");
-        return false;
+    function formatarSexoCach(e) {
+        e.target.value = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1).toLowerCase();
     }
-    if(!cpfRegex.test(cpf)){
-        alert("Por favor, insira um cpf válido");
-        return false;
+
+    function validarRaca(raca) {
+        const racaValidada = /^[A-Za-z\s]{3,}$/;
+        if (!racaValidada.test(raca.value)) {
+            alert("Raça inválida");
+            return false;
+        }
+        return true;
     }
-    if(!emailRegex.test(email)){
-        alert("Por favor, insira um e-mail válido");
-        return false;
+
+    function validarCastrado(castrado) {
+        const castradoValidado = /^(Sim|Não)$/i;
+        if (!castradoValidado.test(castrado.value)) {
+            alert("Valor para Castrado inválido");
+            return false;
+        }
+        return true;
     }
-    
-    return true;
-}
+
+    function validarPorte(porte) {
+        const porteValidado = /^(Pequeno|Médio|Grande)$/i;
+        if (!porteValidado.test(porte.value)) {
+            alert("Porte inválido");
+            return false;
+        }
+        return true;
+    }
+
+    function validarIdCliente(idCliente) {
+        const idValidado = /^\d+$/;
+        if (!idValidado.test(idCliente.value)) {
+            alert("ID Cliente inválido");
+            return false;
+        }
+        return true;
+    }
+});

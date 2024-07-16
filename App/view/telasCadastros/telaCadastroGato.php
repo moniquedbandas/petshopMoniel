@@ -53,7 +53,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <form action="../../controller/Processamento/ProcessarGato.php" method="post" onsubmit="return validateGatoForm()">
+            <form class="formularioCadGato" action="../../controller/Processamento/ProcessarGato.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -93,15 +93,15 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
                         <input type="hidden" id="og" name="og">
                         <div class="areaBotoes3">
-                            <input type="submit" name="create" value="Cadastrar" onclick="setOgValue('cadastrarGato')">
+                            <input type="submit" id="criarGato" name="create" value="Cadastrar">
 
-                            <input type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela')">
+                            <input type="submit" id="listarGato" name="listar" value="Listar">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
-
+        <script src="../../../Public/JS/teste.js"></script>
     </main>
 
     <footer class="d-flex flex-wrap align-items-center " id="footerIndex">
@@ -125,8 +125,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </ul>
     </footer>
 
-    <script src="../../../Public/JS/script.js"></script>
-    <script src="../../../Public/JS/regex.js"></script>
 </body>
 
 </html>

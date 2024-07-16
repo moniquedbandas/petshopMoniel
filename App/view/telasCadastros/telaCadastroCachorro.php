@@ -55,7 +55,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <form action="../../controller/Processamento/ProcessarCachorro.php" method="post" onsubmit="return validateCachForm()">
+            <form class="formularioCadCachorro" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -96,16 +96,17 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         <div class="areaBotoes2">
                             <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
                             <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
-                            <input type="submit" id="criar" name="criar" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <input type="submit" id="criarCachorro" name="criar" value="Criar">
                             <!-- <input type="hidden" name="oc" value="listarTela"> -->
-                            <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTela'"> -->
-                            <input type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
+                            <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTelaCachorro'"> -->
+                            <input type="submit" id="listarCachorro" name="listar" value="Listar">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
-
+        <script src="../../../Public/JS/regex.js"></script>
+        <!-- <script src="../../../Public/JS/script.js"></script> -->
     </main>
 
     <footer class="d-flex flex-wrap align-items-center " id="footerIndex">
@@ -128,9 +129,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
                 </a></li>
         </ul>
     </footer>
-
-    <script src="../../../Public/JS/script.js"></script>
-    <script src="../../../Public/JS/regex.js"></script>
     
 </body>
 
