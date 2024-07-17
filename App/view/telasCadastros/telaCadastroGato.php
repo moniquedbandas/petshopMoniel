@@ -88,14 +88,14 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
                         <input type="hidden" id="og" name="og">
                         <div class="areaBotoes">
-                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOgValue('cadastrarGato')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela')">
+                            <input class="btListar" type="submit" id="criarGato" name="create" value="Cadastrar">
+
+                            <input class="btListar" type="submit" id="listarGato" name="listar" value="Listar">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
-
     </main>
 
     <footer class="d-flex flex-wrap align-items-center " id="footerIndex">
@@ -118,8 +118,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
                 </a></li>
         </ul>
     </footer>
-
-    <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/teste.js"></script>
 </body>
 
 </html>

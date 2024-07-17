@@ -25,6 +25,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
+
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
@@ -87,8 +88,10 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes">
-                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
+                            <input class="btListar" type="submit" id="criarCachorro" name="criar" value="Criar">
+
+                            <input class="btListar" type="submit" id="listarCachorro" name="listar" value="Listar">
+
                         </div>
                     </div>
                 </fieldset>
@@ -122,8 +125,8 @@ if (!isset($_SESSION['usuarioLogado'])) {
                 </a></li>
         </ul>
     </footer>
-
-    <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/regex.js"></script>
+    <!-- <script src="../../../Public/JS/script.js"></script> -->
 </body>
 
 </html>

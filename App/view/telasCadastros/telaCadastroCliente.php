@@ -25,6 +25,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
+
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
@@ -48,7 +49,8 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <main class="cadastro">
         <div class="areaCadastroCli">
-            <form class="formularioCadCliente" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+
+            <form class="formularioCadUsuario" action="../../controller/Processamento/ProcessarCliente.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -76,14 +78,14 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
-                            <input class="btListar" type="submit" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')">
+                            <input class="btListar" type="submit" id="criarCliente" name="criar" value="Criar">
+                            <input class="btListar" type="submit" id="listarCliente" name="listar" value="Listar">
                         </div>
                     </div>
                 </fieldset>
             </form>
-
         </div>
+
     </main>
 
     <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
@@ -106,8 +108,8 @@ if (!isset($_SESSION['usuarioLogado'])) {
                 </a></li>
         </ul>
     </footer>
-
-    <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/regex.js"></script>
+    <!-- <script src="../../../Public/JS/script.js"></script> -->
 </body>
 
 </html>
