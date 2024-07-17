@@ -55,23 +55,23 @@ if (!isset($_SESSION['usuarioLogado'])) {
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
                             <label for="nome">Nome: </label>
-                            <input type="text" id="nome" name="nome" autocomplete="off">
+                            <input type="text" id="nome" name="nome" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="tel">Telefone: </label>
-                            <input type="text" id="tel" name="tel" autocomplete="off">
+                            <input type="tel" id="tel" name="tel" required autocomplete="off" maxlength="15">
                         </div>
                         <div class="input-wrapper">
                             <label for="endereco">Endereço: </label>
-                            <input type="text" id="endereco" name="endereco" autocomplete="off">
+                            <input type="text" id="endereco" name="endereco" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="cpf">CPF: </label>
-                            <input type="text" id="cpf" name="cpf" autocomplete="off">
+                            <input type="text" id="cpf" name="cpf" required autocomplete="off" maxlength="14">
                         </div>
                         <div class="input-wrapper">
                             <label for="email">E-mail: </label>
-                            <input type="text" id="email" name="email" autocomplete="off">
+                            <input type="text" id="email" name="email" required autocomplete="off">
                         </div>
 
                         <input type="hidden" id="op" name="op">

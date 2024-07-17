@@ -6,7 +6,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 

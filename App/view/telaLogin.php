@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -48,11 +47,11 @@ session_start();
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
                             <label for="email">E-mail: </label>
-                            <input type="text" id="email" name="email" autocomplete="off" placeholder="Informe seu e-mail">
+                            <input type="text" id="email" name="email" required autocomplete="off" placeholder="Informe seu e-mail" required>
                         </div>
                         <div class="input-wrapper">
                             <label for="password">Senha: </label>
-                            <input type="password" id="password" name="password" autocomplete="off" placeholder="Informe uma senha">
+                            <input type="password" id="password" name="password" required autocomplete="off" placeholder="Informe uma senha">
                         </div>
                         <input type="hidden" id="ou" name="ou" value="ou">
                         <div class="areaBotoes">
