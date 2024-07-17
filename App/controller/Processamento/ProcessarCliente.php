@@ -73,7 +73,7 @@
             include_once '../ClienteController.php';
             $controller = new ClienteController();
             $controller->excluirCliente($idCliente);
-            echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</scrip>";
+            echo "<script>location.href='../../view/telasCRUD/listarCliente.php';</script>";
         } else {
             echo 'Erro: ID do cliente não identificado.';
         }
