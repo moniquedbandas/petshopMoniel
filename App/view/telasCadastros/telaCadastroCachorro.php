@@ -62,35 +62,35 @@ if (!isset($_SESSION['usuarioLogado'])) {
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
                             <label for="nomePet">Nome do pet: </label>
-                            <input type="text" id="nomePet" name="nomePet" autocomplete="off">
+                            <input type="text" id="nomePet" name="nomePet" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
-                            <input type="text" id="idade" name="idade" autocomplete="off">
+                            <input type="text" id="idade" name="idade" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
-                            <label for="peso">Peso: </label>
-                            <input type="text" id="peso" name="peso" autocomplete="off">
+                            <label for="peso">Peso(kg): </label>
+                            <input type="text" id="peso" name="peso" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
-                            <input type="text" id="sexo" name="sexo" autocomplete="off">
+                            <input type="text" id="sexo" name="sexo" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="raca">Raça: </label>
-                            <input type="text" id="raca" name="raca" autocomplete="off">
+                            <input type="text" id="raca" name="raca" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="castrado">Castrado: </label>
-                            <input type="text" id="castrado" name="castrado" autocomplete="off">
+                            <input type="text" id="castrado" name="castrado" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="porte">Porte: </label>
-                            <input type="text" id="porte" name="porte" autocomplete="off">
+                            <input type="text" id="porte" name="porte" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="idCliente">ID do Tutor: </label>
-                            <input type="text" id="idCliente" name="idCliente" autocomplete="off">
+                            <input type="text" id="idCliente" name="idCliente" required autocomplete="off">
                         </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes2">

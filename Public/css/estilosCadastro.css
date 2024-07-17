@@ -135,6 +135,7 @@ fieldset legend {
   flex-direction: column;
 }
 input[type="text"],
+input[type="tel"],
 input[type="password"] {
   width: 200px;
   height: 25px;
