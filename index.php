@@ -30,13 +30,12 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                     <img src="./Public/imagens/iconePet.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                     Petshop Moniel
                 </a>
-                <a class="navbar-brand" href="#">Menu</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        <a class="nav-link" aria-current="page" href="#">Início</a>
                         <a class="nav-link" href="#">Sobre nós</a>
                         <a class="nav-link" href="#">Especialidades</a>
                     </div>
