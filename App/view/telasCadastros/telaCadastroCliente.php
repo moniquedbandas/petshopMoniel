@@ -48,7 +48,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <main class="cadastro">
         <div class="areaCadastroCli">
-            <form class="formularioCadCliente" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+            <form class="formularioCadCliente" id="clienteForm" action="../../controller/Processamento/ProcessarCliente.php" method="post" onsubmit="return validateForm()">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -77,12 +77,11 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
                             <input class="btListar" type="submit" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela'); listarClientes(event);">
                         </div>
                     </div>
                 </fieldset>
             </form>
-
         </div>
     </main>
 
@@ -108,6 +107,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     </footer>
 
     <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/RegEx.js"></script>
 </body>
 
 </html>
