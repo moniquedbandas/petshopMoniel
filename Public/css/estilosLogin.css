@@ -1,132 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-image: url("../imagens/fundo.png");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-:root {
-  --color-for-footer: hsla(187, 22%, 30%, 0.349);
-  --color-for-title: hsla(164, 52%, 33%, 0.369);
-  --color-for-menu: hsla(89, 36%, 65%, 0.365);
-  --color-for-menuhover: hsla(180, 20%, 51%, 0.37);
-  --color-for-setaUp: hsla(345, 5%, 66%, 0.714);
-  --color-for-borda: hsl(89, 22%, 42%);
-}
-/* parte do header */
-
-.container-fluid {
-  width: auto;
-}
-.navbar {
-  background-color: var(--color-for-title);
-}
-
-#contLogos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5px;
-}
-
-.menuHeader ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: #a7c6865d;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-/* parte do main agora */
+/* parte do main */
 .login {
   display: flex;
   justify-content: center;
-  padding-bottom: 6.25rem;
 }
 .telaLogin {
   display: flex;
-  margin-top: 3.75rem;
-  padding: 0 1.875rem;
-  margin-bottom: 12rem;
+  margin-top: 4rem;
+  padding: 2rem 1.875rem;
   border: 3px solid;
   border-radius: 1.25rem;
   border-color: var(--color-for-title);
-}
-
-fieldset {
-  border: none;
-}
-.fieldset-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9375rem;
-}
-fieldset legend {
-  text-align: center;
-  margin: 0;
-  width: 100%;
-  padding-top: 0.625rem;
-  border-bottom: 1px solid #3c515d71;
-}
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-/* partes do formulario aqui */
-input[type="text"],
-input[type="password"] {
-  width: 12.5rem;
-  height: 1.5625rem;
-  border-radius: 5px;
-  border: 1px solid #40957f;
-  outline: none;
-  margin-top: 5px;
-}
-input:focus {
-  border: 1px solid #3d6868;
-  box-shadow: 0 0 5px#40957e5e;
-}
-input[type="submit"] {
-  border-radius: 5px;
-  width: 6.25rem;
-  height: 1.5625rem;
-  border: none;
-  cursor: pointer;
-  background-color: #3d686873;
-}
-.areaBotoes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.625rem;
-  padding: 1.25rem 0;
-}
-
-/* área do footer aqui */
-.linhaFoot {
-  border-bottom: 2px dashed var(--color-for-footer);
-}
-
-#footerIndex {
-  padding: 1rem !important;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 2px dashed var(--color-for-footer);
-}
-
-@media (min-width: 52rem) {
-  #footerIndex {
-    width: 100%;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-  }
 }

@@ -20,7 +20,6 @@
 </head>
 
 <body>
-
     <?php
     switch ($_REQUEST['og']) {
         case "listarTela";
@@ -57,7 +56,7 @@
     }
     function alterarGato()
     {
-        $idGato = $_REQUEST['idGato'];
+        $idGato = $_POST['idGato'];
         $nomePet = $_POST['nomePet'];
         $idade = $_POST['idade'];
         $peso = $_POST['peso'];

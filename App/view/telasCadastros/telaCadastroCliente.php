@@ -1,13 +1,12 @@
 <?php
 session_start();
-echo $_SESSION['usuarioLogado'];
 
 if (!isset($_SESSION['usuarioLogado'])) {
     header('Location: ../telaLogin.php');
     exit;
-    // echo 'oi';
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,30 +30,32 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
 <body class="m-0 border-0 m-0 border-0">
     <header class="areaHeader">
-        <nav class="navbar">
+        <nav class="navbar ">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Petshop Moniel</span>
-            </div>
-        </nav>
-        <nav class="areaLogos">
-            <div class="container" id="contLogos">
-                <a class="navbar-brand" href="../../../index.html">
-                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
+                <a class="navbar-brand" href="../../../index.php">
+                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
+                    Petshop Moniel
                 </a>
+                <a class="logout" href="../../DAO/Logout.php">Sair</a>
             </div>
         </nav>
         <nav class="menuHeader">
             <ul>
                 <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
-                <li><strong>Área de login</strong></li>
+                <li><strong>Área de cadastro</strong></li>
             </ul>
         </nav>
     </header>
 
     <main class="cadastro">
+<<<<<<< HEAD
         <div class="areaCadastro">
 
             <form class="formularioCadCliente" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+=======
+        <div class="areaCadastroCli">
+            <form class="formularioCadCliente" id="clienteForm" action="../../controller/Processamento/ProcessarCliente.php" method="post" onsubmit="return validateForm()">
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -73,7 +74,11 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         </div>
                         <div class="input-wrapper">
                             <label for="cpf">CPF: </label>
+<<<<<<< HEAD
                             <input type="text" id="cpf" name="cpf" required autocomplete="off" maxlength="14">
+=======
+                            <input type="text" id="cpf" name="cpf" autocomplete="off" maxlength="14">
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
                         </div>
                         <div class="input-wrapper">
                             <label for="email">E-mail: </label>
@@ -82,6 +87,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
+<<<<<<< HEAD
                      
                             <input type="submit" id="criarCliente" name="criar" value="Criar">
                             <!-- <input type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')"> -->
@@ -91,12 +97,20 @@ if (!isset($_SESSION['usuarioLogado'])) {
                     </div>
                 </fieldset>
             </form>  
+=======
+                            <input class="btListar" type="submit" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario');">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela'); listarClientes(event);">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
         </div>
         <script src="../../../Public/JS/regex.js"></script>
         <!-- <script src="../../../Public/JS/script.js"></script> -->
     </main>
 
-    <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
+    <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <img src="../../../Public/imagens/patinha.png" alt="">
@@ -117,8 +131,13 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </ul>
     </footer>
 
+<<<<<<< HEAD
     
     
+=======
+    <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/RegEx.js"></script>
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
 </body>
 
 </html>

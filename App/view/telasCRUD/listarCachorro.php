@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuarioLogado'])) {
+    header('Location: ../telaLogin.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -22,14 +30,11 @@
     <header class="areaHeader">
         <nav class="navbar">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Petshop Moniel</span>
-            </div>
-        </nav>
-        <nav class="areaLogos">
-            <div class="container" id="contLogos">
-                <a class="navbar-brand" href="../../../index.html">
-                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
+                <a class="navbar-brand" href="../../../index.php">
+                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
+                    Petshop Moniel
                 </a>
+                <a class="logout" href="../../DAO/Logout.php">Sair</a>
             </div>
         </nav>
         <nav class="menuHeader">
@@ -39,13 +44,13 @@
         </nav>
     </header>
 
-    <main class="crud">
+    <main>
         <form id="formComp" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
-            <div class="table-responsive-sm">
+            <div class="table-responsive-sm text-center">
                 <table class="table caption-top">
                     <caption>Listagem de cachorros</caption>
                     <thead>
-                        <tr>
+                        <tr class="table-success">
                             <th scope="col">ID</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Idade</th>
@@ -54,7 +59,7 @@
                             <th scope="col">Raça</th>
                             <th scope="col">Castrado</th>
                             <th scope="col">Porte</th>
-                            <th scope="col">IdTutor</th>
+                            <th scope="col">Tutor</th>
                             <th scope="col">Ação</th>
                         </tr>
                     </thead>
@@ -76,8 +81,8 @@
                                     <td><?= $row->porte ?></td>
                                     <td><?= $row->idCliente ?></td>
                                     <td>
-                                        <button class="btListar"><a href="./alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a></button>
-                                        <button class="btListar"><a href="../../controller/Processamento/ProcessarCachorro.php?oc=deletarCachorro&idCachorro=<?= $row->idCachorro ?>">Excluir</a></button>
+                                        <a class="btListar" href="./alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a>
+                                        <a class="btListar" href="../../controller/Processamento/ProcessarCachorro.php?oc=deletarCachorro&idCachorro=<?= $row->idCachorro ?>">Excluir</a>
                                     </td>
                                 </tr>
                             <?php
@@ -90,6 +95,7 @@
                         <?php } ?>
                     </tbody>
                 </table>
+            </div>
         </form>
 
     </main>
@@ -120,21 +126,3 @@
 </body>
 
 </html>
-<!-- <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr> -->

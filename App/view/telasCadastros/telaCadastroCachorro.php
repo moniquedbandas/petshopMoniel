@@ -1,13 +1,12 @@
 <?php
 session_start();
-echo $_SESSION['usuarioLogado'];
 
 if (!isset($_SESSION['usuarioLogado'])) {
     header('Location: ../telaLogin.php');
     exit;
-    // echo 'oi';
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,15 +30,11 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
 <body class="m-0 border-0 m-0 border-0">
     <header class="areaHeader">
-        <nav class="navbar">
+        <nav class="navbar ">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Petshop Moniel</span>
-            </div>
-        </nav>
-        <nav class="areaLogos">
-            <div class="container" id="contLogos">
-                <a class="navbar-brand" href="../../../index.html">
-                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha">
+                <a class="navbar-brand" href="../../../index.php">
+                    <img src="../../../Public/imagens/iconePet.png" alt="iconePatinha" width="30" height="24" class="d-inline-block align-text-top">
+                    Petshop Moniel
                 </a>
                 <a class="logout" href="../../DAO/Logout.php">Sair</a>
             </div>
@@ -47,14 +42,17 @@ if (!isset($_SESSION['usuarioLogado'])) {
         <nav class="menuHeader">
             <ul>
                 <li><a href="../telasCadastros/telaEscolherCadastro.php"><strong>Voltar</strong></a></li>
-                <li><strong>Área de login</strong></li>
+                <li><strong>Área de cadastro</strong></li>
             </ul>
         </nav>
     </header>
 
     <main class="cadastro">
         <div class="areaCadastro">
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
             <form class="formularioCadCachorro" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
@@ -93,6 +91,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
                             <input type="text" id="idCliente" name="idCliente" required autocomplete="off">
                         </div>
                         <input type="hidden" id="oc" name="oc">
+<<<<<<< HEAD
                         <div class="areaBotoes2">
                             <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
                             <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
@@ -100,16 +99,30 @@ if (!isset($_SESSION['usuarioLogado'])) {
                             <!-- <input type="hidden" name="oc" value="listarTela"> -->
                             <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTelaCachorro'"> -->
                             <input type="submit" id="listarCachorro" name="listar" value="Listar">
+=======
+                        <div class="areaBotoes">
+                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
+<<<<<<< HEAD
         <script src="../../../Public/JS/regex.js"></script>
         <!-- <script src="../../../Public/JS/script.js"></script> -->
+=======
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
     </main>
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
+    </div> -->
 
-    <footer class="d-flex flex-wrap align-items-center " id="footerIndex">
+    <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <img src="../../../Public/imagens/patinha.png" alt="">

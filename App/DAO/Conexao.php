@@ -5,9 +5,14 @@ class Conexao
     private $host = 'localhost:3306';
     private $db_name = 'petshopmoniel';
     private $username = 'root';
+<<<<<<< HEAD
     //private $password = 'Moni@1958';
     private $password = ''; //pc senac
     // private $password = 'Moni@1958';
+=======
+    private $password = 'Moni@1958';
+    // private $password = ''; //pc senac
+>>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
     public $conn;
 
     public function fazConexao()
