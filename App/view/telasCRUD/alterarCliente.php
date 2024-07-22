@@ -115,7 +115,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     </footer>
 
     <script src="../../../Public/JS/script.js"></script>
-    <script src="../../../Public/JS/regex.js"></script>
+    <script src="../../../Public/JS/arquivoRegex.js"></script>
 
 </body>
 
