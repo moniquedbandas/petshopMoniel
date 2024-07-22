@@ -63,11 +63,12 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
-                            <input type="text" id="idade" name="idade" autocomplete="off">
+                            <input type="text" id="idade" name="idade" title="Informe em anos" autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="peso">Peso: </label>
-                            <input type="text" id="peso" name="peso" autocomplete="off">
+                            <input type="text" id="peso" name="peso" title="Informe em kg" autocomplete="off">
+
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
