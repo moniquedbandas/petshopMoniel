@@ -52,38 +52,38 @@ $clientes = $cliente->listarCliente();
     <main class="cadastro">
         <div class="areaCadastro">
 
-            <form class="formularioCadGato" action="../../controller/Processamento/ProcessarGato.php" method="post">
+            <form class="formularioCadGato" id="gatoForm" action="../../controller/Processamento/ProcessarGato.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
                             <label for="nome">Nome do pet: </label>
-                            <input type="text" id="nomePet" name="nomePet" autocomplete="off">
+                            <input type="text" id="nomePet" name="nomePet" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
-                            <input type="text" id="idade" name="idade" title="Informe em anos" autocomplete="off">
+                            <input type="text" id="idade" name="idade" title="Informe em anos" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="peso">Peso: </label>
-                            <input type="text" id="peso" name="peso" title="Informe em Kg" autocomplete="off">
+                            <input type="text" id="peso" name="peso" title="Informe em Kg" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
-                            <input type="text" id="sexo" name="sexo" autocomplete="off">
+                            <input type="text" id="sexo" name="sexo" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="raca">Raça: </label>
-                            <input type="text" id="raca" name="raca" autocomplete="off">
+                            <input type="text" id="raca" name="raca" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="castrado">Castrado: </label>
-                            <input type="text" id="castrado" name="castrado" autocomplete="off">
+                            <input type="text" id="castrado" name="castrado" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="temperamento">Temperamento: </label>
-                            <input type="text" id="temperamento" name="temperamento" autocomplete="off">
+                            <input type="text" id="temperamento" name="temperamento" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="id">ID do Tutor: </label>
@@ -99,7 +99,7 @@ $clientes = $cliente->listarCliente();
                         <input type="hidden" id="og" name="og">
                         <div class="areaBotoes">
                             <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOgValue('cadastrarGato')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela'); listarGatos(event);">
                         </div>
                     </div>
                 </fieldset>

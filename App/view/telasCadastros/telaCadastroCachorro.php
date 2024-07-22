@@ -52,39 +52,38 @@ $clientes = $cliente->listarCliente();
 
     <main class="cadastro">
         <div class="areaCadastro">
-            <form class="formularioCadCachorro" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
+            <form class="formularioCadCachorro" id="cachorroForm" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
                     <div class="fieldset-wrapper">
                         <div class="input-wrapper">
                             <label for="nomePet">Nome do pet: </label>
-                            <input type="text" id="nomePet" name="nomePet" autocomplete="off">
+                            <input type="text" id="nomePet" name="nomePet" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
-                            <input type="text" id="idade" name="idade" title="Informe em anos" autocomplete="off">
+                            <input type="text" id="idade" name="idade" title="Informe em anos" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="peso">Peso: </label>
-                            <input type="text" id="peso" name="peso" title="Informe em kg" autocomplete="off">
-
+                            <input type="text" id="peso" name="peso" title="Informe em kg" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
-                            <input type="text" id="sexo" name="sexo" autocomplete="off">
+                            <input type="text" id="sexo" name="sexo" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="raca">Raça: </label>
-                            <input type="text" id="raca" name="raca" autocomplete="off">
+                            <input type="text" id="raca" name="raca" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="castrado">Castrado: </label>
-                            <input type="text" id="castrado" name="castrado" autocomplete="off">
+                            <input type="text" id="castrado" name="castrado" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="porte">Porte: </label>
-                            <input type="text" id="porte" name="porte" autocomplete="off">
+                            <input type="text" id="porte" name="porte" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="idCliente">ID do Tutor: </label>
@@ -99,20 +98,13 @@ $clientes = $cliente->listarCliente();
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes">
                             <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela'); listarCachorros(event);">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
     </main>
-    <!-- <div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-    </div> -->
-
     <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">

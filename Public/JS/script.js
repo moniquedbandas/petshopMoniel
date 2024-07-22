@@ -1,25 +1,3 @@
-// function validarFormulario() {
-//   var email = document.getElementById("email").value;
-//   var password = document.getElementById("password").value;
-
-//   if (document.activeElement.value == "Entrar") {
-//     if (email == "" || password == "") {
-//       alert("Preencha todos os campos");
-//       return false;
-//     }
-//     document.getElementById("formularioLogin").action =
-//       "../../App/controller/Processamento/ProcessarUsuario.php?ou=autenticar";
-//   }
-//   return true;
-// }
-//Abaixo: script para fixar o footer na parte de baixo do navegador
-// $(function () {
-//   $("#js-heightControl").css(
-//     "height",
-//     $(window).height() - $("html").height() + "px"
-//   );
-// });
-
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 // When the user scrolls down 20px from the top of the document, show the button
@@ -71,6 +49,8 @@ function redirecionarCadastro() {
   return true;
 }
 
+//funcoes para identificar se é cachorro, gato e cliente
+
 function setOcValue(value) {
   document.getElementById("oc").value = value;
 }
@@ -79,4 +59,23 @@ function setOgValue(value) {
 }
 function setOpValue(value) {
   document.getElementById("op").value = value;
+}
+
+function listarClientes(event) {
+  event.preventDefault();
+  // document.getElementById("clienteForm").action =
+  //   "../../view/telasCRUD/listarCachorro.php";
+  document.getElementById("clienteForm").submit();
+}
+function cadastrarClientes(event) {
+  event.preventDefault();
+  document.getElementById("clienteForm").submit();
+}
+function listarCachorros(event) {
+  event.preventDefault();
+  document.getElementById("cachorroForm").submit();
+}
+function listarGatos(event) {
+  event.preventDefault();
+  document.getElementById("gatoForm").submit();
 }
