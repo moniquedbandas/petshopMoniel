@@ -9,7 +9,7 @@ class Cliente
     protected $email;
     protected $senha;
     // retirei senha pq o unico que logará sera o funcionario..
-    public function __construct($idCliente, $nomeCliente, $telefone, $endereco, $cpf, $email)
+    public function __construct($idCliente = null, $nomeCliente = null, $telefone = null, $endereco = null, $cpf = null, $email = null)
     {
 
         $this->idCliente = $idCliente;
