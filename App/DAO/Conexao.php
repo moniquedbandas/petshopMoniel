@@ -6,7 +6,7 @@ class Conexao
     private $db_name = 'petshopmoniel';
     private $username = 'root';
     // private $password = 'Moni@1958';
-     private $password = ''; //pc senac
+    private $password = ''; //pc senac
     public $conn;
 
     public function fazConexao()

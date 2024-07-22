@@ -5,6 +5,10 @@ if (!isset($_SESSION['usuarioLogado'])) {
     header('Location: ../telaLogin.php');
     exit;
 }
+require_once '../../DAO/ClienteDAO.php';
+require_once '../../model/Cliente.php';
+$cliente = new Cliente();
+$clientes = $cliente->listarCliente();
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +87,13 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         </div>
                         <div class="input-wrapper">
                             <label for="idCliente">ID do Tutor: </label>
-                            <input type="text" id="idCliente" name="idCliente" autocomplete="off">
+                            <select name="idCliente" id="idCliente">
+                                <?php
+                                while ($row = $clientes->fetch(PDO::FETCH_ASSOC)) {
+                                    echo "<option value='" . $row["idCliente"] . "'>" . $row["nomeCliente"] . "</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes">
