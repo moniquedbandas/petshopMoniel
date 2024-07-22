@@ -60,3 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 });
+
+function listarClientes(event) {
+  event.preventDefault();
+  // document.getElementById("clienteForm").action =
+  //   "../../view/telasCRUD/listarCachorro.php";
+  document.getElementById("clienteForm").submit();
+}
+function cadastrarClientes(event) {
+  event.preventDefault();
+  document.getElementById("clienteForm").submit();
+}
