@@ -6,7 +6,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -116,6 +115,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     </footer>
 
     <script src="../../Public/JS/script.js"></script>
+    <script src="../../Public/JS/RegEx.js"></script>
 
 </body>
 

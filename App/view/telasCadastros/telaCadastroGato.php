@@ -5,6 +5,10 @@ if (!isset($_SESSION['usuarioLogado'])) {
     header('Location: ../telaLogin.php');
     exit;
 }
+require_once '../../DAO/ClienteDAO.php';
+require_once '../../model/Cliente.php';
+$cliente = new Cliente();
+$clientes = $cliente->listarCliente();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -83,19 +87,25 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         </div>
                         <div class="input-wrapper">
                             <label for="id">ID do Tutor: </label>
-                            <input type="text" id="idCliente" name="idCliente" autocomplete="off">
+                            <select name="idCliente" id="idCliente">
+                                <?php
+                                while ($row = $clientes->fetch(PDO::FETCH_ASSOC)) {
+                                    echo "<option value='" . $row["idCliente"] . "'>" . $row["nomeCliente"] . "</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
 
                         <input type="hidden" id="og" name="og">
                         <div class="areaBotoes">
-                            <input class="btListar" type="submit" id="criarGato" name="create" value="Cadastrar">
-
-                            <input class="btListar" type="submit" id="listarGato" name="listar" value="Listar">
+                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOgValue('cadastrarGato')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOgValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
+
     </main>
 
     <footer class="d-flex flex-wrap align-items-center " id="footerIndex">
@@ -118,7 +128,8 @@ if (!isset($_SESSION['usuarioLogado'])) {
                 </a></li>
         </ul>
     </footer>
-    <script src="../../../Public/JS/teste.js"></script>
+
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

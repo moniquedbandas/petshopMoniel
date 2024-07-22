@@ -45,7 +45,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
     </header>
 
     <main class="crud">
-        <form id="formComp" action="../../controller/Processamento/ProcessarCliente.php" method="post">
+        <form class="formularioCadCliente" action="../../controller/Processamento/ProcessarCliente.php" method="post" onsubmit="return validateForm()">
             <div class="table table-responsive text-center">
                 <table class="table caption-top">
                     <caption>Listagem de clientes</caption>
@@ -71,10 +71,10 @@ if (!isset($_SESSION['usuarioLogado'])) {
                             <tr>
                                 <td><?= $res->idCliente ?></td>
                                 <td><input type="text" name="nomeCliente" value="<?= $row->nomeCliente ?>"></td>
-                                <td><input type="text" name="telefone" value="<?= $row->telefone ?>"></td>
+                                <td><input type="text" name="telefone" id="tel" maxlength="15" value="<?= $row->telefone ?>"></td>
                                 <td><input type="text" name="endereco" value="<?= $row->endereco ?>"></td>
-                                <td><input type="text" name="cpf" value="<?= $row->cpf ?>"></td>
-                                <td><input type="text" name="email" value="<?= $row->email ?>"></td>
+                                <td><input type="text" name="cpf" id="cpf" maxlength="14" value="<?= $row->cpf ?>"></td>
+                                <td><input type="text" name="email" id="email" value="<?= $row->email ?>"></td>
                                 <td>
                                     <input type="hidden" name="idCliente" value="<?= $row->idCliente ?>">
                                     <input type="hidden" name="op" value="alterarCliente">
@@ -114,7 +114,8 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/RegEx.js"></script>
 
 </body>
 
