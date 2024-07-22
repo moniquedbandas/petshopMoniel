@@ -5,7 +5,6 @@ class Conexao
     private $host = 'localhost:3306';
     private $db_name = 'petshopmoniel';
     private $username = 'root';
-    //private $password = 'Moni@1958';
     private $password = ''; //pc senac
     // private $password = 'Moni@1958';
     public $conn;

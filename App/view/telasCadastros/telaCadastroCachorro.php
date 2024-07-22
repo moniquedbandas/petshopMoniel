@@ -49,10 +49,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
     <main class="cadastro">
         <div class="areaCadastro">
-<<<<<<< HEAD
-
-=======
->>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
             <form class="formularioCadCachorro" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
@@ -91,7 +87,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
                             <input type="text" id="idCliente" name="idCliente" required autocomplete="off">
                         </div>
                         <input type="hidden" id="oc" name="oc">
-<<<<<<< HEAD
                         <div class="areaBotoes2">
                             <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
                             <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
@@ -99,21 +94,13 @@ if (!isset($_SESSION['usuarioLogado'])) {
                             <!-- <input type="hidden" name="oc" value="listarTela"> -->
                             <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTelaCachorro'"> -->
                             <input type="submit" id="listarCachorro" name="listar" value="Listar">
-=======
-                        <div class="areaBotoes">
-                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
->>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
-<<<<<<< HEAD
         <script src="../../../Public/JS/regex.js"></script>
         <!-- <script src="../../../Public/JS/script.js"></script> -->
-=======
->>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
     </main>
     <!-- <div>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>

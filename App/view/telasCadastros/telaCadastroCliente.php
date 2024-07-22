@@ -48,14 +48,9 @@ if (!isset($_SESSION['usuarioLogado'])) {
     </header>
 
     <main class="cadastro">
-<<<<<<< HEAD
         <div class="areaCadastro">
 
             <form class="formularioCadCliente" action="../../controller/Processamento/ProcessarCliente.php" method="post">
-=======
-        <div class="areaCadastroCli">
-            <form class="formularioCadCliente" id="clienteForm" action="../../controller/Processamento/ProcessarCliente.php" method="post" onsubmit="return validateForm()">
->>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -74,11 +69,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         </div>
                         <div class="input-wrapper">
                             <label for="cpf">CPF: </label>
-<<<<<<< HEAD
                             <input type="text" id="cpf" name="cpf" required autocomplete="off" maxlength="14">
-=======
-                            <input type="text" id="cpf" name="cpf" autocomplete="off" maxlength="14">
->>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
                         </div>
                         <div class="input-wrapper">
                             <label for="email">E-mail: </label>
@@ -87,7 +78,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
 
                         <input type="hidden" id="op" name="op">
                         <div class="areaBotoes">
-<<<<<<< HEAD
                      
                             <input type="submit" id="criarCliente" name="criar" value="Criar">
                             <!-- <input type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela')"> -->
@@ -97,14 +87,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
                     </div>
                 </fieldset>
             </form>  
-=======
-                            <input class="btListar" type="submit" name="criar" value="Criar" onclick="setOpValue('cadastrarUsuario');">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOpValue('listarTela'); listarClientes(event);">
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
->>>>>>> fe392ba7d1532461dc531563eb35e1064bbbef34
         </div>
         <script src="../../../Public/JS/regex.js"></script>
         <!-- <script src="../../../Public/JS/script.js"></script> -->
