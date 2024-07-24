@@ -121,7 +121,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </ul>
     </footer>
 
-    <script src="../../Public/JS/script.js"></script>
+    <script src="../../../Public/JS/script.js"></script>
 
 </body>
 

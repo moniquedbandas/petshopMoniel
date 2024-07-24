@@ -29,7 +29,6 @@ $clientes = $cliente->listarCliente();
     <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
-    
 </head>
 
 <body class="m-0 border-0 m-0 border-0">
@@ -53,7 +52,7 @@ $clientes = $cliente->listarCliente();
 
     <main class="cadastro">
         <div class="areaCadastro">
-            <form class="formularioCadCachorro" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
+            <form class="formularioCadCachorro" id="cachorroForm" action="../../controller/Processamento/ProcessarCachorro.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
 
@@ -64,11 +63,11 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
-                            <input type="text" id="idade" name="idade" required title="digite a idade em anos" autocomplete="off" >
+                            <input type="text" id="idade" name="idade" title="Informe em anos" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
-                            <label for="peso">Peso(kg): </label>
-                            <input type="text" id="peso" name="peso" required autocomplete="off">
+                            <label for="peso">Peso: </label>
+                            <input type="text" id="peso" name="peso" title="Informe em kg" required autocomplete="off">
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
@@ -98,23 +97,14 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes">
-                        <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
-                        <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
+                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela'); listarCachorros(event);">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
-        <script src="../../../Public/JS/regex.js"></script>
-        <!-- <script src="../../../Public/JS/script.js"></script> -->
     </main>
-    <!-- <div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sequi consequatur tempora sunt consectetur et voluptatem illum dolores. Numquam mollitia maiores quos delectus at dolorum eveniet repellendus eius quae cupiditate?</p>
-    </div> -->
-
     <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
@@ -135,7 +125,8 @@ $clientes = $cliente->listarCliente();
                 </a></li>
         </ul>
     </footer>
-    
+
+    <script src="../../../Public/JS/script.js"></script>
 </body>
 
 </html>

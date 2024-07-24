@@ -76,34 +76,91 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </button>
             </div>
         </section>
-        <section class="textos">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni mollitia, omnis beatae
-                veniam architecto consectetur aliquam deserunt assumenda ipsum ducimus, dolore vero perspiciatis!
-                Accusamus ex perspiciatis provident minus sapiente!</p>
+        <section class="m-0 border-0 bd-example m-0 border-0 bd-example-cssgrid">
+            <!-- <h2 class="especialidades">Especialidades</h2> -->
+            <div class="grid text-center" id="catalog">
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./Public/imagens/grid/fofinho.jpeg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>Breed runner 2058</h6>
+                        <div class="tags">
+                            <span>Ficção</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./Public/imagens/grid/fofinho2.jpeg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>A erupção dos Jedi</h6>
+                        <div class="tags">
+                            <span>Ficção</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./Public/imagens/grid/galaxy.jpg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>A misteriosa gruta Zaralek</h6>
+                        <div class="tags">
+                            <span>Aventura</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./Public/imagens/grid/chamada.jpeg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>Plantas fantásticas e onde habitam</h6>
+                        <div class="tags">
+                            <span>Ciência</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./Public/imagens/grid/chamada2.jpeg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>As guerras e onde elas começam</h6>
+                        <div class="tags">
+                            <span>História</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./Public/imagens/grid/galaxy.jpg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>Doctor..Who?</h6>
+                        <div class="tags">
+                            <span>Lazer</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <!-- <div class="g-col-12 g-col-md-4">
+                    <img src="./assets/capa11.jpeg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>The light Tower</h6>
+                        <div class="tags">
+                            <span>Lazer</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./assets/capa12.jpeg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>Sheerlok Holnes</h6>
+                        <div class="tags">
+                            <span>Lazer</span>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="g-col-12 g-col-md-4">
+                    <img src="./assets/capa12.jpeg" alt="Imagem aleatoria">
+                    <figcaption class="details">
+                        <h6>Sheerlok Holnes</h6>
+                        <div class="tags">
+                            <span>Lazer</span>
+                        </div>
+                    </figcaption>
+                </div> -->
+            </div>
         </section>
 
     </main>

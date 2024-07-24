@@ -38,7 +38,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
         </nav>
         <nav class="menuHeader">
             <ul>
-                <li><a href="../telasCadastros/telaCadastroCachorro.php"><strong>Voltar</strong></a></li>
+                <li><a href="../telasCRUD/listarCachorro.php"><strong>Voltar</strong></a></li>
             </ul>
         </nav>
     </header>
