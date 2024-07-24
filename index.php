@@ -76,90 +76,68 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </button>
             </div>
         </section>
-        <section class="m-0 border-0 bd-example m-0 border-0 bd-example-cssgrid">
-            <!-- <h2 class="especialidades">Especialidades</h2> -->
-            <div class="grid text-center" id="catalog">
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./Public/imagens/grid/fofinho.jpeg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>Breed runner 2058</h6>
-                        <div class="tags">
-                            <span>Ficção</span>
+        <section>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
+                        <title>Placeholder</title>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </figcaption>
+                    </div>
                 </div>
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./Public/imagens/grid/fofinho2.jpeg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>A erupção dos Jedi</h6>
-                        <div class="tags">
-                            <span>Ficção</span>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
+                        <title>Placeholder</title>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </figcaption>
+                    </div>
                 </div>
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./Public/imagens/grid/galaxy.jpg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>A misteriosa gruta Zaralek</h6>
-                        <div class="tags">
-                            <span>Aventura</span>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
+                        <title>Placeholder</title>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </figcaption>
+                    </div>
                 </div>
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./Public/imagens/grid/chamada.jpeg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>Plantas fantásticas e onde habitam</h6>
-                        <div class="tags">
-                            <span>Ciência</span>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
+                        <title>Placeholder</title>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </figcaption>
+                    </div>
                 </div>
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./Public/imagens/grid/chamada2.jpeg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>As guerras e onde elas começam</h6>
-                        <div class="tags">
-                            <span>História</span>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
+                        <title>Placeholder</title>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </figcaption>
+                    </div>
                 </div>
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./Public/imagens/grid/galaxy.jpg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>Doctor..Who?</h6>
-                        <div class="tags">
-                            <span>Lazer</span>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
+                        <title>Placeholder</title>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
-                    </figcaption>
+                    </div>
                 </div>
-                <!-- <div class="g-col-12 g-col-md-4">
-                    <img src="./assets/capa11.jpeg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>The light Tower</h6>
-                        <div class="tags">
-                            <span>Lazer</span>
-                        </div>
-                    </figcaption>
-                </div>
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./assets/capa12.jpeg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>Sheerlok Holnes</h6>
-                        <div class="tags">
-                            <span>Lazer</span>
-                        </div>
-                    </figcaption>
-                </div>
-                <div class="g-col-12 g-col-md-4">
-                    <img src="./assets/capa12.jpeg" alt="Imagem aleatoria">
-                    <figcaption class="details">
-                        <h6>Sheerlok Holnes</h6>
-                        <div class="tags">
-                            <span>Lazer</span>
-                        </div>
-                    </figcaption>
-                </div> -->
             </div>
         </section>
 

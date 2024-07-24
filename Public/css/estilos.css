@@ -46,32 +46,11 @@ body {
   border: 1px solid var(--color-border);
   cursor: pointer;
 }
-.g-col-12.g-col-md-4 img {
-  width: 60%;
-  object-fit: cover;
+.card img {
   border-radius: 10px;
 }
-.g-col-12.g-col-md-4 img:hover {
-  scale: 1.05;
-}
-.details {
-  padding: 1rem;
-}
-.details h2 {
-  font-size: 0.8rem;
-  z-index: 1;
-  position: relative;
-}
-.tags {
-  margin-top: 1.2rem;
-}
-.tags span {
-  padding: 0.5rem;
-  border-radius: 0.4rem;
-  line-height: 0;
-  background-color: #ada5a7b6;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+.card img:hover {
+  scale: 1.01;
 }
 /* área do footer */
 #footerIndex {
@@ -104,5 +83,12 @@ body {
   #iconeLogin {
     position: absolute;
     right: 3.25rem;
+  }
+  .card {
+    width: 80%;
+  }
+  .row {
+    margin-left: calc(5 * var(--bs-gutter-x));
+    /* dar uma arrumada aqui pra nao ficar tao torto */
   }
 }
