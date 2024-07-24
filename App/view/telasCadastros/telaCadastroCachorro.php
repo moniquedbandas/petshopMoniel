@@ -64,7 +64,7 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="idade">Idade: </label>
-                            <input type="text" id="idade" name="idade" required autocomplete="off">
+                            <input type="text" id="idade" name="idade" required title="digite a idade em anos" autocomplete="off" >
                         </div>
                         <div class="input-wrapper">
                             <label for="peso">Peso(kg): </label>
@@ -97,13 +97,9 @@ $clientes = $cliente->listarCliente();
                             </select>
                         </div>
                         <input type="hidden" id="oc" name="oc">
-                        <div class="areaBotoes2">
-                            <!-- <input type="hidden" name="oc" value="cadastrarCachorro"> -->
-                            <!-- <input type="submit" name="create" value="Cadastrar" onclick="document.getElementById('oc').value='cadastrarCachorro'"> -->
-                            <input type="submit" id="criarCachorro" name="criar" value="Criar">
-                            <!-- <input type="hidden" name="oc" value="listarTela"> -->
-                            <!-- <input type="submit" name="listar" value="Listar" onclick="document.getElementById('oc').value='listarTelaCachorro'"> -->
-                            <input type="submit" id="listarCachorro" name="listar" value="Listar">
+                        <div class="areaBotoes">
+                        <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                        <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela')">
                         </div>
                     </div>
                 </fieldset>
