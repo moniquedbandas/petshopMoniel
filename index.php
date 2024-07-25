@@ -36,8 +36,8 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="#">Início</a>
-                        <a class="nav-link" href="#">Sobre nós</a>
-                        <a class="nav-link" href="#">Especialidades</a>
+                        <a class="nav-link" href="#sobreNos">Sobre nós</a>
+                        <a class="nav-link" href="#especialidades">Especialidades</a>
                     </div>
                 </div>
                 <a class="navbar-brand" id="iconeLogin" href="<?php echo $isLogado ? './App/view/telasCadastros/telaEscolherCadastro.php' : './App/view/telaLogin.php'; ?>">
@@ -76,64 +76,63 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </button>
             </div>
         </section>
+        <article id="sobreNos">
+            <h4>Petshop e clínica veterinária Moniel</h4>
+            <p>
+                Bem-vindos à Moniel, sua pet shop e clínica veterinária em Porto Alegre! Desde 2016, estamos dedicados a proporcionar o melhor cuidado para os seus animais de estimação. Nossa missão é garantir a saúde e o bem-estar dos pets, oferecendo serviços de alta qualidade e atendimento personalizado.
+                Na Moniel, contamos com uma ampla equipe de profissionais qualificados e apaixonados por animais, prontos para atender todas as necessidades dos seus bichinhos e também dos seus tutores. Seja para consultas veterinárias, procedimentos cirúrgicos, ou cuidados diários, estamos aqui para oferecer o melhor.
+                Nossa estrutura moderna e equipada permite que realizemos desde simples check-ups até tratamentos mais complexos, sempre com o compromisso de cuidar dos seus pets com amor e dedicação.
+                Venha nos visitar e descubra como podemos ajudar a manter seu amigo de quatro patas feliz e saudável. Na Moniel, seu pet encontra o cuidado que merece!
+            </p>
+            <img src="./Public/imagens/banner3.png" alt="imagem ilustrativa" width="100%">
+        </article>
         <section>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <h4 id="especialidades">Especialidades</h4>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
-                        <title>Placeholder</title>
+                        <img src="./Public/imagens/grid/Cirurgias.png" alt="Cirurgias">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
-                        <title>Placeholder</title>
+                        <img src="./Public/imagens/grid/Dermatologia.png" alt="Dermatologia">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
-                        <title>Placeholder</title>
+                        <img src="./Public/imagens/grid/Fisioterapia.png" alt="Fisioterapia">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
-                        <title>Placeholder</title>
+                        <img src="./Public/imagens/grid/Neurologia.png" alt="Neurologia">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
-                        <title>Placeholder</title>
+                        <img src="./Public/imagens/grid/Nutrição.png" alt="Nutrição">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./Public/imagens/grid/fofinho.jpeg" alt="foto">
-                        <title>Placeholder</title>
+                        <img src="./Public/imagens/grid/Oftalmologia.png" alt="Oftalmologia">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
