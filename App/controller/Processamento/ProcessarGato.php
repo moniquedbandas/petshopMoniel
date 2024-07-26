@@ -1,4 +1,3 @@
-<!-- NO CACHORRO, SERA USADO O ID E NAME OC. NO GATO, SERA USADO OG. NO CLIENTE SERA USADO OP. -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -34,6 +33,8 @@
         case "deletarGato";
             deletarGato();
             break;
+        default:
+            echo "Erro no processamento das requisições.";
     }
     function listarTela()
     {
@@ -68,7 +69,6 @@
         include_once '../GatoController.php';
         $contr = new GatoController();
         $contr->alterarGato($idGato, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $temperamento, $idCliente);
-        echo "<script>alert('O gato foi alterado com sucesso!');</script>";
     }
     function deletarGato()
     {
@@ -78,7 +78,6 @@
         $contr->deletarGato($idGato);
         echo "<script>location.href='../../view/telasCRUD/listarGato.php';</script>";
     }
-
     ?>
 </body>
 

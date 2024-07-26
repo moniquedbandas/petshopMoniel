@@ -1,6 +1,5 @@
 <?php
 include_once 'Conexao.php';
-
 class ClienteDAO
 {
     public function cadastrarCliente(Cliente $cliente)
@@ -17,7 +16,7 @@ class ClienteDAO
         $stmt->bindValue(':email', $cliente->getEmail());
         $res = $stmt->execute();
         if ($res) {
-            echo "<script>alert('Cadastro realizado com sucesso');</script>";
+            echo "<script>alert('Cadastro do cliente realizado com sucesso');</script>";
         } else {
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
@@ -59,11 +58,11 @@ class ClienteDAO
             $stmt->bindValue(':endereco', $cliente->getEndereco());
             $stmt->bindValue(':cpf', $cliente->getCpf());
             $stmt->bindValue(':email', $cliente->getEmail());
-
             $res = $stmt->execute();
             if ($res === false) {
                 throw new Exception("Erro ao executar a consulta.");
             }
+            echo "<script>alert('Alteração do cliente feita com sucesso!');</script>";
             echo "<script>location.href='../../controller/Processamento/ProcessarCliente.php?op=listarTela';</script>";
         } catch (Exception $e) {
             echo "Erro: " . $e->getMessage();
@@ -80,7 +79,7 @@ class ClienteDAO
         $stmt->bindParam(':idCliente', $idCliente, PDO::PARAM_INT);
         $res = $stmt->execute();
         if ($res) {
-            echo "<script>alert('Exclusão realizada com sucesso!');</script>";
+            echo "<script>alert('Exclusão do cliente realizada com sucesso!');</script>";
         } else {
             echo "<script>alert('Não foi possível excluir o usuário!');</script>";
         }

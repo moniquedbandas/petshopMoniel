@@ -1,9 +1,7 @@
 <?php
 include_once 'Conexao.php';
-
 class CachorroDAO
 {
-
     public function cadastrarCachorro(Cachorro $cachorro)
     {
         $conex = new Conexao();
@@ -70,7 +68,7 @@ class CachorroDAO
             if ($res === false) {
                 throw new Exception("Erro ao executar a consulta");
             }
-            echo "<script>alert('O cachorro foi alterado com sucesso!');</script>";
+            echo "<script>alert('Alteração do cachorro feita com sucesso!');</script>";
             echo "<script>location.href='../../controller/Processamento/ProcessarCachorro.php?oc=listarTela';</script>";
         } catch (Exception $e) {
             echo "Erro: " . $e->getMessage();
@@ -87,7 +85,7 @@ class CachorroDAO
         $stmt->bindParam(':idCachorro', $idCachorro, PDO::PARAM_INT);
         $res = $stmt->execute();
         if ($res) {
-            echo "<script>alert('O cachorro foi deletadinho com sucesso!');</script>";
+            echo "<script>alert('Exclusão do cachorro feita com sucesso!');</script>";
         } else {
             echo "<script>alert('Erro: Não foi possível realizar a exclusão.');</script>";
         }

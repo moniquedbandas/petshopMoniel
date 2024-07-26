@@ -20,7 +20,6 @@
 
 <body>
     <?php
-    echo $_REQUEST['op'];
     switch ($_REQUEST['op']) {
         case "listarTela";
             listarTela();
