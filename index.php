@@ -84,7 +84,7 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 Nossa estrutura moderna e equipada permite que realizemos desde simples check-ups até tratamentos mais complexos, sempre com o compromisso de cuidar dos seus pets com amor e dedicação.
                 Venha nos visitar e descubra como podemos ajudar a manter seu amigo de quatro patas feliz e saudável. Na Moniel, seu pet encontra o cuidado que merece!
             </p>
-            <img src="./Public/imagens/banner3.png" alt="imagem ilustrativa" width="100%">
+            <img src="./Public/imagens/imgInicial.jpg" alt="imagem ilustrativa" width="100%">
         </article>
         <section>
             <h4 id="especialidades">Especialidades</h4>
