@@ -35,7 +35,6 @@ class Cachorro extends Animal
 
     public function cadastrarCachorro(Cachorro $cachorroDAO)
     {
-
         $cachorroDAO = new CachorroDAO();
         $cachorroDAO->cadastrarCachorro($this);
     }

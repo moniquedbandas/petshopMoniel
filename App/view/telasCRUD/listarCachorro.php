@@ -79,7 +79,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
                                     <td><?= $row->raca ?></td>
                                     <td><?= $row->castrado ?></td>
                                     <td><?= $row->porte ?></td>
-                                    <td><?= $row->idCliente ?></td>
+                                    <td><?= $row->nomeCliente ?></td>
                                     <td>
                                         <a class="btListar" href="./alterarCachorro.php?idCachorro=<?= $row->idCachorro ?>">Editar</a>
                                         <a class="btListar" href="../../controller/Processamento/ProcessarCachorro.php?oc=deletarCachorro&idCachorro=<?= $row->idCachorro ?>">Excluir</a>
@@ -97,7 +97,6 @@ if (!isset($_SESSION['usuarioLogado'])) {
                 </table>
             </div>
         </form>
-
     </main>
 
     <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">

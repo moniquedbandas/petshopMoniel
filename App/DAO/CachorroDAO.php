@@ -39,7 +39,10 @@ class CachorroDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM cachorro ORDER BY idCliente";
+        $sql = "SELECT c.*, cli.nomeCliente AS nomeCliente
+            FROM cachorro c
+            JOIN cliente cli ON c.idCliente = cli.idCliente
+            ORDER BY c.idCliente";
         $query = $conex->conn->prepare($sql);
         $query->execute();
         return $query;

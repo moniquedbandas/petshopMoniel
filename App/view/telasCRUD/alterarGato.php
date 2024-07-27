@@ -79,7 +79,7 @@ if (!isset($_SESSION['usuarioLogado'])) {
                                 <td><input type="text" name="raca" value="<?= $row->raca ?>"></td>
                                 <td><input type="text" name="castrado" value="<?= $row->castrado ?>"></td>
                                 <td><input type="text" name="temperamento" value="<?= $row->temperamento ?>"></td>
-                                <td><input type="text" name="idCliente" value="<?= $row->idCliente ?>"></td>
+                                <td><input type="text" name="idCliente" readonly value="<?= $row->idCliente ?>"></td>
                                 <td>
                                     <input type="hidden" name="idGato" value="<?= $row->idGato ?>">
                                     <input type="hidden" name="og" value="alterarGato">

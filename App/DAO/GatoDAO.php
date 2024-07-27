@@ -38,7 +38,10 @@ class GatoDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM gato ORDER BY idCliente";
+        $sql = "SELECT g.*, cli.nomeCliente AS nomeCliente
+            FROM gato g
+            JOIN cliente cli ON g.idCliente = cli.idCliente
+            ORDER BY g.idCliente";
         $query = $conex->conn->prepare($sql);
         $query->execute();
         return $query;

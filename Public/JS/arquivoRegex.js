@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const validarEmail =
       /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(gmail\.com|hotmail\.com|yahoo\.com\.br)$/;
     if (!validarEmail.test(email.value)) {
-      //   alert("Por favor, insira um e-mail válido.");
+      alert("Por favor, insira um e-mail válido.");
       console.log("E-mail inválido:", email.value);
       email.setCustomValidity("Por favor, insira um e-mail válido.");
       return false;

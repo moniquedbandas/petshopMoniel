@@ -46,6 +46,7 @@ body {
   border: 1px solid var(--color-border);
   cursor: pointer;
 }
+
 #sobreNos {
   margin: 1.25rem 9.375rem;
   text-align: justify;
@@ -54,11 +55,9 @@ body {
   text-align: center;
   margin-top: 1rem;
 }
-.card img {
-  border-radius: 10px;
-}
-.card img:hover {
-  scale: 1.01;
+
+.card:hover {
+  scale: 1.03;
 }
 .row {
   margin: auto;

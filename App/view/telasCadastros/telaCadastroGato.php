@@ -71,7 +71,11 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
-                            <input type="text" id="sexo" name="sexo" required autocomplete="off">
+                            <select name="sexo" id="sexo">
+                                <option value="branco">Escolha uma opção</option>
+                                <option value="Femea">Fêmea</option>
+                                <option value="Macho">Macho</option>
+                            </select>
                         </div>
                         <div class="input-wrapper">
                             <label for="raca">Raça: </label>
@@ -79,7 +83,11 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="castrado">Castrado: </label>
-                            <input type="text" id="castrado" name="castrado" required autocomplete="off">
+                            <select name="castrado" id="castrado">
+                                <option value="branco">Escolha uma opção</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Nao">Não</option>
+                            </select>
                         </div>
                         <div class="input-wrapper">
                             <label for="temperamento">Temperamento: </label>
