@@ -57,13 +57,13 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./Public/imagens/banner1.png" class="img-fluid" alt="Imagem do carrossel 1">
+                        <img src="./Public/imagens/pet1.png" class="img-fluid d-block mx-auto" alt="Imagem do carrossel 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="./Public/imagens/banner2.png" class="img-fluid" alt="Imagem do carrossel 2">
+                        <img src="./Public/imagens/pet2.png" class="img-fluid d-block mx-auto" alt="Imagem do carrossel 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="./Public/imagens/banner3.png" class="img-fluid" alt="Imagem do carrossel 3">
+                        <img src="./Public/imagens/pet3.png" class="img-fluid d-block mx-auto" alt="Imagem do carrossel 3">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -84,8 +84,8 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 Nossa estrutura moderna e equipada permite que realizemos desde simples check-ups até tratamentos mais complexos, sempre com o compromisso de cuidar dos seus pets com amor e dedicação.
                 Venha nos visitar e descubra como podemos ajudar a manter seu amigo de quatro patas feliz e saudável. Na Moniel, seu pet encontra o cuidado que merece!
             </p>
-            <img src="./Public/imagens/imgInicial.jpg" alt="imagem ilustrativa" width="100%">
         </article>
+        <img src="./Public/imagens/imgInicial.jpg" alt="imagem ilustrativa" width="100%">
         <section>
             <h4 id="especialidades">Especialidades</h4>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">

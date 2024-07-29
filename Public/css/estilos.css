@@ -28,14 +28,17 @@ body {
   position: absolute;
   right: 0;
 }
+.carousel-indicators {
+  margin-bottom: 0;
+}
 
 /* área do main */
 .p-3 {
   padding: 0rem !important;
   margin-bottom: 1rem;
 }
-.textos {
-  padding: 1.875rem;
+#sobreNos {
+  margin: 1.25rem 1rem;
   text-align: justify;
 }
 .especialidades {
@@ -46,22 +49,17 @@ body {
   border: 1px solid var(--color-border);
   cursor: pointer;
 }
-
-#sobreNos {
-  margin: 1.25rem 9.375rem;
-  text-align: justify;
-}
 #especialidades {
   text-align: center;
   margin-top: 1rem;
 }
-
 .card:hover {
   scale: 1.03;
 }
 .row {
   margin: auto;
 }
+
 /* área do footer */
 #footerIndex {
   padding: 1rem !important;
@@ -84,7 +82,7 @@ body {
   }
   .carousel-control-next,
   .carousel-control-prev {
-    width: 40%;
+    width: 65%;
   }
   #footerIndex {
     width: 100%;
@@ -100,5 +98,9 @@ body {
   .row {
     margin-left: calc(5 * var(--bs-gutter-x));
     /* dar uma arrumada aqui pra nao ficar tao torto */
+  }
+  #sobreNos {
+    margin: 1.25rem 9.375rem;
+    text-align: justify;
   }
 }
