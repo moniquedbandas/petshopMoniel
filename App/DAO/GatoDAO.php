@@ -1,9 +1,7 @@
 <?php
 include_once 'Conexao.php';
-
 class GatoDAO
 {
-
     public function cadastrarGato(Gato $gato)
     {
         $conex = new Conexao();
@@ -19,10 +17,9 @@ class GatoDAO
         $stmt->bindValue(':castrado', $gato->getCastrado());
         $stmt->bindValue(':temperamento', $gato->getTemperamento());
         $stmt->bindValue(':idCliente', $gato->getIdCliente());
-
         $res = $stmt->execute();
         if ($res) {
-            echo "<script>alert('O gato foi cadastradinho com sucesso');</script>";
+            echo "<script>alert('Cadastro do gato feito com sucesso');</script>";
         } else {
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
@@ -41,7 +38,10 @@ class GatoDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "SELECT * FROM gato ORDER BY idCliente";
+        $sql = "SELECT g.*, cli.nomeCliente AS nomeCliente
+            FROM gato g
+            JOIN cliente cli ON g.idCliente = cli.idCliente
+            ORDER BY g.idCliente";
         $query = $conex->conn->prepare($sql);
         $query->execute();
         return $query;
@@ -68,13 +68,13 @@ class GatoDAO
             if ($res === false) {
                 throw new Exception("Erro ao executar a consulta");
             }
+            echo "<script>alert('Alteração do gato feita com sucesso!');</script>";
             echo "<script>location.href='../../controller/Processamento/ProcessarGato.php?og=listarTela';</script>";
         } catch (Exception $e) {
             echo "Erro: " . $e->getMessage();
             return false;
         }
     }
-
     public function deletarGato($idGato)
     {
         $conex = new Conexao();
@@ -84,7 +84,7 @@ class GatoDAO
         $stmt->bindParam(':idGato', $idGato, PDO::PARAM_INT);
         $res = $stmt->execute();
         if ($res) {
-            echo "<script>alert('O gato foi deletadinho com sucesso!');</script>";
+            echo "<script>alert('Exclusão do gato feita com sucesso!');</script>";
         } else {
             echo "<script>alert('Erro: Não foi possível realizar a exclusão.');</script>";
         }

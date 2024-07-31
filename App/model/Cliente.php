@@ -1,4 +1,5 @@
 <?php
+include_once '../../DAO/ClienteDAO.php';
 class Cliente
 {
     protected $idCliente;
@@ -8,7 +9,7 @@ class Cliente
     protected $cpf;
     protected $email;
     protected $senha;
-    // retirei senha pq o unico que logará sera o funcionario..
+
     public function __construct($idCliente = null, $nomeCliente = null, $telefone = null, $endereco = null, $cpf = null, $email = null)
     {
 
@@ -18,7 +19,6 @@ class Cliente
         $this->endereco = $endereco;
         $this->cpf = $cpf;
         $this->email = $email;
-        // $this->senha = $senha;
     }
 
     public function getIdCliente()
@@ -83,31 +83,26 @@ class Cliente
 
     public function cadastrarCliente(Cliente $clienteDAO)
     {
-        include_once '../../DAO/ClienteDAO.php';
         $clienteDAO = new ClienteDAO();
         $clienteDAO->cadastrarCliente($this);
     }
     public function listarCliente()
     {
-        include_once '../../DAO/ClienteDAO.php';
         $dao = new ClienteDAO();
         return $dao->listarCliente();
     }
     public function resgataPorID($idCliente)
     {
-        include_once '../../DAO/ClienteDAO.php';
         $model = new ClienteDAO(null);
         return $model->resgataPorID($idCliente);
     }
     public function alterarCliente(Cliente $cliente)
     {
-        include_once '../../DAO/ClienteDAO.php';
         $clienteDAO = new ClienteDAO();
         $clienteDAO->alterarCliente($cliente);
     }
     public function excluirCliente($idCliente)
     {
-        include_once '../../DAO/ClienteDAO.php';
         $cliente = new ClienteDAO();
         $cliente->excluirCliente($idCliente);
     }

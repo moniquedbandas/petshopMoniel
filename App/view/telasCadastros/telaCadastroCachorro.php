@@ -25,8 +25,8 @@ $clientes = $cliente->listarCliente();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../../../Public/imagens/patinha.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="../../../Public/css/estilosCadastro.css">
     <title>Petshop Moniel</title>
 </head>
@@ -71,7 +71,11 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
-                            <input type="text" id="sexo" name="sexo" required autocomplete="off">
+                            <select name="sexo" id="sexo">
+                                <option value="branco">Escolha uma opção</option>
+                                <option value="Femea">Fêmea</option>
+                                <option value="Macho">Macho</option>
+                            </select>
                         </div>
                         <div class="input-wrapper">
                             <label for="raca">Raça: </label>
@@ -79,7 +83,11 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="castrado">Castrado: </label>
-                            <input type="text" id="castrado" name="castrado" required autocomplete="off">
+                            <select name="castrado" id="castrado">
+                                <option value="branco">Escolha uma opção</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Nao">Não</option>
+                            </select>
                         </div>
                         <div class="input-wrapper">
                             <label for="porte">Porte: </label>
@@ -113,16 +121,18 @@ $clientes = $cliente->listarCliente();
             </a>
             <span class="mb-md-0 text-body-secondary">&copy; Petshop Moniel</span>
         </div>
-
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="https:/www.facebook.com/monique.bandas/" target="_blank">
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/monique.bandas/" target="_blank">
                     <i class="fa-brands fa-facebook" style="font-size: 30px"></i>
                 </a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https:/www.instagram.com/moniquebandas/" target="_blank">
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/petshopmoniel/" target="_blank">
                     <i class="fab fa-instagram" style="font-size: 30px"></i>
                 </a></li>
             <li class="ms-3"><a class="text-body-secondary" href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp" style="font-size: 30px"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="mailto:petshopmoniel@gmail.com?cc=moniquedbandas@gmail.com">
+                    <i class="fas fa-envelope" style="font-size: 30px;"></i>
                 </a></li>
         </ul>
     </footer>

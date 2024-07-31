@@ -1,6 +1,6 @@
 <?php
 require_once 'Animal.php';
-
+include_once "../../DAO/GatoDAO.php";
 class Gato extends Animal
 {
     protected $idGato;
@@ -36,31 +36,26 @@ class Gato extends Animal
 
     public function cadastrarGato(Gato $gatoDAO)
     {
-        include_once "../../DAO/GatoDAO.php";
         $gatoDAO = new GatoDAO();
         $gatoDAO->cadastrarGato($this);
     }
     public function listarGato()
     {
-        include_once "../../DAO/GatoDAO.php";
         $dao = new GatoDAO();
         return $dao->listarGato();
     }
     public function resgataPorID($idGato)
     {
-        include_once "../../DAO/GatoDAO.php";
         $model = new GatoDAO(null);
         return $model->resgataPorID($idGato);
     }
     public function alterarGato(Gato $gato)
     {
-        include_once "../../DAO/GatoDAO.php";
         $gatoDAO = new GatoDAO();
         $gatoDAO->alterarGato($gato);
     }
     public function deletarGato($idGato)
     {
-        include_once "../../DAO/GatoDAO.php";
         $gato = new GatoDAO();
         $gato->deletarGato($idGato);
     }

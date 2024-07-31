@@ -1,11 +1,10 @@
 <?php
 require_once 'Animal.php';
-
+include_once "../../DAO/CachorroDAO.php";
 class Cachorro extends Animal
 {
     protected $idCachorro;
     protected $porte;
-
 
     public function __construct($idCachorro, $nomePet, $idade, $peso, $sexo, $raca, $castrado, $porte, $idCliente)
     {
@@ -36,31 +35,26 @@ class Cachorro extends Animal
 
     public function cadastrarCachorro(Cachorro $cachorroDAO)
     {
-        include_once "../../DAO/CachorroDAO.php";
         $cachorroDAO = new CachorroDAO();
         $cachorroDAO->cadastrarCachorro($this);
     }
     public function listarCachorro()
     {
-        include_once "../../DAO/CachorroDAO.php";
         $dao = new CachorroDAO();
         return $dao->listarCachorro();
     }
     public function resgataPorID($idCachorro)
     {
-        include_once "../../DAO/CachorroDAO.php";
         $model = new CachorroDAO(null);
         return $model->resgataPorID($idCachorro);
     }
     public function alterarCachorro(Cachorro $cachorro)
     {
-        include_once "../../DAO/CachorroDAO.php";
         $cachorroDAO = new CachorroDAO();
         $cachorroDAO->alterarCachorro($cachorro);
     }
     public function deletarCachorro($idCachorro)
     {
-        include_once "../../DAO/CachorroDAO.php";
         $cachorro = new CachorroDAO();
         $cachorro->deletarCachorro($idCachorro);
     }

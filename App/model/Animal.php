@@ -1,5 +1,4 @@
 <?php
-
 class Animal
 {
     protected $nomePet;

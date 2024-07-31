@@ -35,9 +35,10 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" aria-current="page" href="#">Início</a>
+                        <!-- <a class="nav-link" aria-current="page" href="#">Início</a> -->
                         <a class="nav-link" href="#sobreNos">Sobre nós</a>
                         <a class="nav-link" href="#especialidades">Especialidades</a>
+                        <a class="nav-link" href="#contato">Contato</a>
                     </div>
                 </div>
                 <a class="navbar-brand" id="iconeLogin" href="<?php echo $isLogado ? './App/view/telasCadastros/telaEscolherCadastro.php' : './App/view/telaLogin.php'; ?>">
@@ -57,13 +58,13 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./Public/imagens/banner1.png" class="img-fluid" alt="Imagem do carrossel 1">
+                        <img src="./Public/imagens/pet1.png" class="img-fluid d-block mx-auto" alt="Imagem do carrossel 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="./Public/imagens/banner2.png" class="img-fluid" alt="Imagem do carrossel 2">
+                        <img src="./Public/imagens/pet2.png" class="img-fluid d-block mx-auto" alt="Imagem do carrossel 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="./Public/imagens/banner3.png" class="img-fluid" alt="Imagem do carrossel 3">
+                        <img src="./Public/imagens/pet3.png" class="img-fluid d-block mx-auto" alt="Imagem do carrossel 3">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -84,16 +85,18 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 Nossa estrutura moderna e equipada permite que realizemos desde simples check-ups até tratamentos mais complexos, sempre com o compromisso de cuidar dos seus pets com amor e dedicação.
                 Venha nos visitar e descubra como podemos ajudar a manter seu amigo de quatro patas feliz e saudável. Na Moniel, seu pet encontra o cuidado que merece!
             </p>
-            <img src="./Public/imagens/banner3.png" alt="imagem ilustrativa" width="100%">
         </article>
-        <section>
+        <img src="./Public/imagens/imgInicial.jpg" alt="imagem ilustrativa" width="100%">
+        <section class="especialidade">
             <h4 id="especialidades">Especialidades</h4>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="card h-100">
                         <img src="./Public/imagens/grid/Cirurgias.png" alt="Cirurgias">
                         <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">
+                                Contamos também com uma equipe especializada de cirurgiões, anestesistas e auxiliares para a realização das cirurgias.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -101,7 +104,9 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                     <div class="card h-100">
                         <img src="./Public/imagens/grid/Dermatologia.png" alt="Dermatologia">
                         <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">
+                                Alterações dermatológicas são as mais comuns na rotina da clínica veterinária. A coceira e suas consequências como infecções, mudanças de humor e lesões repetitivas na pele são capazes de reduzir muito a qualidade de vida dos pets.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -109,7 +114,9 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                     <div class="card h-100">
                         <img src="./Public/imagens/grid/Fisioterapia.png" alt="Fisioterapia">
                         <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">
+                                A avaliação periódica com um fisioterapeuta veterinário é fundamental para manter e melhorar a mobilidade e a qualidade de vida do seu animal de estimação.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -117,7 +124,9 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                     <div class="card h-100">
                         <img src="./Public/imagens/grid/Neurologia.png" alt="Neurologia">
                         <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">
+                                A avaliação periódica com um neurologista veterinário é crucial para identificar precocemente distúrbios neurológicos que podem afetar o sistema nervoso do seu animal de estimação.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +134,9 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                     <div class="card h-100">
                         <img src="./Public/imagens/grid/Nutrição.png" alt="Nutrição">
                         <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">
+                                A avaliação periódica com um nutricionista veterinário é essencial para garantir que seu animal de estimação esteja recebendo uma alimentação balanceada e adequada às suas necessidades específicas.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -133,14 +144,34 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                     <div class="card h-100">
                         <img src="./Public/imagens/grid/Oftalmologia.png" alt="Oftalmologia">
                         <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">
+                                A avaliação periódica com um oftalmologista veterinário é de extrema importância para detectar de modo precoce afecções que podem em curto e longo prazo afetar de modo importante a visão.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
+    <section class="contateNos">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="inputName">
+
+                <label for="inputSobrenome" class="form-label">Sobrenome</label>
+                <input type="text" class="form-control" id="inputSobrenome">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
+    </section>
 
     <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
@@ -151,14 +182,17 @@ $isLogado = isset($_SESSION['usuarioLogado']);
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="https:/www.facebook.com/monique.bandas/" target="_blank">
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/monique.bandas/" target="_blank">
                     <i class="fa-brands fa-facebook" style="font-size: 30px"></i>
                 </a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https:/www.instagram.com/moniquebandas/" target="_blank">
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/petshopmoniel/" target="_blank">
                     <i class="fab fa-instagram" style="font-size: 30px"></i>
                 </a></li>
             <li class="ms-3"><a class="text-body-secondary" href="https://api.whatsapp.com/send?phone=5551998852381" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp" style="font-size: 30px"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="mailto:petshopmoniel@gmail.com?cc=moniquedbandas@gmail.com">
+                    <i class="fas fa-envelope" style="font-size: 30px;"></i>
                 </a></li>
         </ul>
     </footer>
