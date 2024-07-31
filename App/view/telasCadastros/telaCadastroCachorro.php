@@ -97,13 +97,14 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <input type="hidden" id="oc" name="oc">
                         <div class="areaBotoes">
-                            <input class="btListar" type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
-                            <input class="btListar" type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela'); listarCachorros(event);">
+                            <input class="btListar " type="submit" name="create" value="Cadastrar" onclick="setOcValue('cadastrarCachorro')">
+                            <input class="btListar " type="submit" name="listar" value="Listar" onclick="setOcValue('listarTela'); listarCachorros(event);">
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
+
     </main>
     <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
         <div class="d-flex align-items-center">
@@ -127,6 +128,7 @@ $clientes = $cliente->listarCliente();
     </footer>
 
     <script src="../../../Public/JS/script.js"></script>
+ 
 </body>
 
 </html>
