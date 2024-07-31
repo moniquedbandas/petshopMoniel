@@ -41,7 +41,8 @@ body {
   margin: 1.25rem 1rem;
   text-align: justify;
 }
-.especialidades {
+.especialidades,
+.contato {
   text-align: center;
 }
 .bd-example-cssgrid [class*="grid"] > * {
@@ -59,7 +60,9 @@ body {
 .row {
   margin: auto;
 }
-
+.contateNos {
+  margin-top: 2rem;
+}
 /* área do footer */
 #footerIndex {
   padding: 1rem !important;

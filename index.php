@@ -38,7 +38,7 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                         <!-- <a class="nav-link" aria-current="page" href="#">Início</a> -->
                         <a class="nav-link" href="#sobreNos">Sobre nós</a>
                         <a class="nav-link" href="#especialidades">Especialidades</a>
-                        <a class="nav-link" href="#contato">Contato</a>
+                        <a class="nav-link" href="#contateNos">Contato</a>
                     </div>
                 </div>
                 <a class="navbar-brand" id="iconeLogin" href="<?php echo $isLogado ? './App/view/telasCadastros/telaEscolherCadastro.php' : './App/view/telaLogin.php'; ?>">
@@ -153,22 +153,34 @@ $isLogado = isset($_SESSION['usuarioLogado']);
             </div>
         </section>
     </main>
-    <section class="contateNos">
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="inputName" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="inputName">
 
-                <label for="inputSobrenome" class="form-label">Sobrenome</label>
-                <input type="text" class="form-control" id="inputSobrenome">
-            </div>
-            <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
-            </div>
+    <section class="contateNos" id="contateNos">
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+        <h4 class="contato">Contate-nos</h4>
+        <form class="mx-auto" style="max-width: 1000px;">
+            <div class="row mb-3">
+                <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
+                <div class="col-sm-10 col-md-10">
+                    <input type="text" class="form-control" id="inputName">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                <div class="col-sm-10 col-md-10">
+                    <input type="email" class="form-control" id="inputEmail">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="areaTexto" class="col-sm-2 col-form-label">Comentarios</label>
+                <div class="col-sm-10 col-md-10">
+                    <textarea class="form-control" id="areaTexto" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10 col-md-10">
+                    <div id="liveAlertPlaceholder"></div>
+                    <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+                </div>
             </div>
         </form>
     </section>
