@@ -99,8 +99,12 @@ body {
     width: 80%;
   }
   .row {
-    margin-left: calc(5 * var(--bs-gutter-x));
-    /* dar uma arrumada aqui pra nao ficar tao torto */
+    margin-left: calc(3 * var(--bs-gutter-x));
+    /* aqui estou arrumando a lateral esquerda das especialidades */
+  }
+  .row.mb-3 {
+    --bs-gutter-x: 0;
+    /* aqui estou arrumando a lateral esquerda do formulario de contato*/
   }
   #sobreNos {
     margin: 1.25rem 9.375rem;
