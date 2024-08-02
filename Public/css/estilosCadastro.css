@@ -88,7 +88,7 @@ a {
   border-radius: 20px;
   border-color: var(--color-for-title);
   padding: 0 1rem;
-  margin: 6rem 0;
+  /* margin: 6rem 0; */
 }
 .fieldset-wrapper {
   display: flex;
@@ -149,6 +149,7 @@ caption {
   width: 100%;
   border-top: 2px dashed var(--color-for-footer);
 }
+
 @media (min-width: 85.375rem) {
   #footerIndex {
     margin-top: 5.8rem;

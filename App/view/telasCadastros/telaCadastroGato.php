@@ -51,7 +51,6 @@ $clientes = $cliente->listarCliente();
 
     <main class="cadastro">
         <div class="areaCadastro">
-
             <form class="formularioCadGato" id="gatoForm" action="../../controller/Processamento/ProcessarGato.php" method="post">
                 <fieldset>
                     <legend><strong>Bem vindo</strong></legend>
@@ -113,10 +112,9 @@ $clientes = $cliente->listarCliente();
                 </fieldset>
             </form>
         </div>
-
     </main>
 
-    <footer class="d-flex flex-wrap align-items-center" id="footerIndex">
+    <footer class="d-flex flex-wrap align-items-center position-fixed bottom-0" id="footerIndex">
         <div class="d-flex align-items-center">
             <a href="/" class=" me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <img src="../../../Public/imagens/patinha.png" alt="">

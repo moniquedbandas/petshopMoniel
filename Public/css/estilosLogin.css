@@ -7,7 +7,6 @@
   display: flex;
   margin-top: 4rem;
   padding: 2rem 1.875rem;
-  border: 3px solid;
+  border: 3px solid var(--color-for-title);
   border-radius: 1.25rem;
-  border-color: var(--color-for-title);
 }
