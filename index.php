@@ -35,7 +35,6 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <!-- <a class="nav-link" aria-current="page" href="#">Início</a> -->
                         <a class="nav-link" href="#sobreNos">Sobre nós</a>
                         <a class="nav-link" href="#especialidades">Especialidades</a>
                         <a class="nav-link" href="#contateNos">Contato</a>
@@ -85,8 +84,10 @@ $isLogado = isset($_SESSION['usuarioLogado']);
                 Nossa estrutura moderna e equipada permite que realizemos desde simples check-ups até tratamentos mais complexos, sempre com o compromisso de cuidar dos seus pets com amor e dedicação.
                 Venha nos visitar e descubra como podemos ajudar a manter seu amigo de quatro patas feliz e saudável. Na Moniel, seu pet encontra o cuidado que merece!
             </p>
+            <div class="imgContainer">
+                <img class="imgCentral" src="./Public/imagens/imgInicial.jpg" alt="imagem ilustrativa">
+            </div>
         </article>
-        <img src="./Public/imagens/imgInicial.jpg" alt="imagem ilustrativa" width="100%">
         <section class="especialidade">
             <h4 id="especialidades">Especialidades</h4>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">

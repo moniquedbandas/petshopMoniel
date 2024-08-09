@@ -41,6 +41,13 @@ body {
   margin: 1.25rem 1rem;
   text-align: justify;
 }
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+.imgCentral {
+  width: 80%;
+}
 .especialidades,
 .contato {
   text-align: center;
