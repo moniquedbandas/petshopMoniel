@@ -6,19 +6,29 @@ class ClienteDAO
     {
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "INSERT INTO cliente (nomeCliente, telefone, endereco, cpf, email)
-        VALUES (:nomeCliente, :telefone, :endereco, :cpf, :email)";
-        $stmt = $conex->conn->prepare($sql);
-        $stmt->bindValue(':nomeCliente', $cliente->getNomeCliente());
-        $stmt->bindValue(':telefone', $cliente->getTelefone());
-        $stmt->bindValue(':endereco', $cliente->getEndereco());
-        $stmt->bindValue(':cpf', $cliente->getCpf());
-        $stmt->bindValue(':email', $cliente->getEmail());
-        $res = $stmt->execute();
-        if ($res) {
-            echo "<script>alert('Cadastro do cliente realizado com sucesso');</script>";
+
+        $sqlChecarCpf = "SELECT COUNT(*) FROM cliente WHERE cpf = :cpf";
+        $stmtChecarCpf = $conex->conn->prepare($sqlChecarCpf);
+        $stmtChecarCpf->bindValue(':cpf', $cliente->getCpf());
+        $stmtChecarCpf->execute();
+        $count = $stmtChecarCpf->fetchColumn();
+        if ($count > 0) {
+            echo "<script>alert('Já existe um cliente com este CPF.');</script>";
         } else {
-            echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
+            $sql = "INSERT INTO cliente (nomeCliente, telefone, endereco, cpf, email)
+            VALUES (:nomeCliente, :telefone, :endereco, :cpf, :email)";
+            $stmt = $conex->conn->prepare($sql);
+            $stmt->bindValue(':nomeCliente', $cliente->getNomeCliente());
+            $stmt->bindValue(':telefone', $cliente->getTelefone());
+            $stmt->bindValue(':endereco', $cliente->getEndereco());
+            $stmt->bindValue(':cpf', $cliente->getCpf());
+            $stmt->bindValue(':email', $cliente->getEmail());
+            $res = $stmt->execute();
+            if ($res) {
+                echo "<script>alert('Cadastro do cliente realizado com sucesso');</script>";
+            } else {
+                echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
+            }
         }
     }
 
