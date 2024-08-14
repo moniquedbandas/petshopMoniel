@@ -71,13 +71,13 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         ?>
                             <tr>
                                 <td><?= $res->idCachorro ?></td>
-                                <td><input type="text" name="nomePet" value="<?= $row->nomePet ?>"></td>
-                                <td><input type="text" name="idade" value="<?= $row->idade ?>"></td>
-                                <td><input type="text" name="peso" value="<?= $row->peso ?>"></td>
-                                <td><input type="text" name="sexo" value="<?= $row->sexo ?>"></td>
-                                <td><input type="text" name="raca" value="<?= $row->raca ?>"></td>
-                                <td><input type="text" name="castrado" value="<?= $row->castrado ?>"></td>
-                                <td><input type="text" name="porte" value="<?= $row->porte ?>"></td>
+                                <td><input type="text" name="nomePet" value="<?= $row->nomePet ?>" required></td>
+                                <td><input type="text" name="idade" title="Informe em anos" value="<?= $row->idade ?>" required></td>
+                                <td><input type="text" name="peso" title="Informe em kg" value="<?= $row->peso ?>" required></td>
+                                <td><input type="text" name="sexo" value="<?= $row->sexo ?>" required></td>
+                                <td><input type="text" name="raca" value="<?= $row->raca ?>" required></td>
+                                <td><input type="text" name="castrado" value="<?= $row->castrado ?>" required></td>
+                                <td><input type="text" name="porte" value="<?= $row->porte ?>" required></td>
                                 <td><input type="text" name="idCliente" readonly value="<?= $row->idCliente ?>"></td>
                                 <td>
                                     <input type="hidden" name="idCachorro" value="<?= $row->idCachorro ?>">

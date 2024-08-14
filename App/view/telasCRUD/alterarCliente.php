@@ -70,11 +70,11 @@ if (!isset($_SESSION['usuarioLogado'])) {
                         ?>
                             <tr>
                                 <td><?= $res->idCliente ?></td>
-                                <td><input type="text" name="nomeCliente" value="<?= $row->nomeCliente ?>"></td>
-                                <td><input type="text" name="telefone" id="tel" maxlength="15" value="<?= $row->telefone ?>"></td>
-                                <td><input type="text" name="endereco" value="<?= $row->endereco ?>"></td>
-                                <td><input type="text" name="cpf" id="cpf" maxlength="14" value="<?= $row->cpf ?>"></td>
-                                <td><input type="text" name="email" id="email" value="<?= $row->email ?>"></td>
+                                <td><input type="text" name="nomeCliente" value="<?= $row->nomeCliente ?>" required></td>
+                                <td><input type="text" name="telefone" id="tel" maxlength="15" value="<?= $row->telefone ?>" required></td>
+                                <td><input type="text" name="endereco" value="<?= $row->endereco ?>" required></td>
+                                <td><input type="text" name="cpf" id="cpf" maxlength="14" value="<?= $row->cpf ?>" required></td>
+                                <td><input type="text" name="email" id="email" value="<?= $row->email ?>" required></td>
                                 <td>
                                     <input type="hidden" name="idCliente" value="<?= $row->idCliente ?>">
                                     <input type="hidden" name="op" value="alterarCliente">

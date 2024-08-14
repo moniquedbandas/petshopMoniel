@@ -70,8 +70,8 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="sexo">Sexo: </label>
-                            <select name="sexo" id="sexo">
-                                <option value="branco">Escolha uma opção</option>
+                            <select name="sexo" id="sexo" required>
+                                <option selected value="">Escolha uma opção</option>
                                 <option value="Femea">Fêmea</option>
                                 <option value="Macho">Macho</option>
                             </select>
@@ -82,8 +82,8 @@ $clientes = $cliente->listarCliente();
                         </div>
                         <div class="input-wrapper">
                             <label for="castrado">Castrado: </label>
-                            <select name="castrado" id="castrado">
-                                <option value="branco">Escolha uma opção</option>
+                            <select name="castrado" id="castrado" required>
+                                <option selected value="">Escolha uma opção</option>
                                 <option value="Sim">Sim</option>
                                 <option value="Nao">Não</option>
                             </select>
