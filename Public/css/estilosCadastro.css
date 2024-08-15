@@ -148,9 +148,10 @@ caption {
   justify-content: space-between;
   width: 100%;
   border-top: 2px dashed var(--color-for-footer);
+  margin-top: 2rem;
 }
 
-@media (min-width: 85.375rem) {
+@media (min-width: 64rem) {
   #footerIndex {
     margin-top: 5.8rem;
     width: 100%;
